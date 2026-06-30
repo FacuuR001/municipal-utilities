@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Municipal Utilities DS</title>
+  <link rel="stylesheet" href="../dist/municipal-design-system.min.css" />
+  <link rel="stylesheet" href="./docs.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Municipal Utilities DS</h1>
+        <p>Documentación de clases utilitarias para GeneXus. Buscador, regiones y ejemplos de uso.</p>
+      </div>
+      <div class="nav-title">Regiones</div>
+      <nav id="sidebarNav" class="nav-list"></nav>
+      <p class="footer-note">Tip: usá el buscador para encontrar clases como <b>p-4</b>, <b>bg-primary</b>, <b>flex</b> o <b>rounded</b>.</p>
+    </aside>
+
+    <main class="main">
+      <section class="hero">
+        <h2>Documentación del Design System</h2>
+        <p>Esta web se puede subir al mismo GitHub Pages o servidor donde publiques el CSS. Los ejemplos usan el archivo <b>municipal-utilities.min.css</b> cargado localmente.</p>
+      </section>
+
+      <section class="toolbar">
+        <div class="search-box">
+          <span>🔎</span>
+          <input id="searchInput" type="search" placeholder="Buscar clase, propiedad o región... ej: bg-primary, padding, flex, shadow" />
+        </div>
+        <div id="count" class="counter"></div>
+      </section>
+
+      <section class="region-head">
+        <h2 id="regionTitle">Todas las utilidades</h2>
+        <p id="regionDescription">Buscá por nombre de clase, propiedad CSS o región.</p>
+      </section>
+
+      <section id="results" class="results"></section>
+    </main>
+  </div>
+
+  <script src="./docs.js"></script>
+</body>
+</html>

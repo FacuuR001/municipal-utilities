@@ -1,0 +1,20 @@
+{
+  "name": "municipal-utilities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:css": "node scripts/build-css.js",
+    "watch:css": "node scripts/build-css.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar": "^5.0.0",
+    "clean-css": "^5.3.3"
+  }
+}

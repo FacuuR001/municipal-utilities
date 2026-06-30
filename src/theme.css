@@ -1,0 +1,85 @@
+:root {
+    --color-primary: #39B3D7;
+    --color-primary-hover: #2FA9CD;
+    --color-primary-hover-border: #269ABC;
+    --color-focus: #46B8DA;
+    --color-page: #EEEEEE;
+    --color-surface: #FFFFFF;
+    --color-text: #565A5C;
+    --color-white-100: #FFFFFF;
+    --color-white-300: #DDE1E6;
+    --color-black-900: #000000;
+    --color-blue-39: #0097CB;
+    --color-blue-44: #01A7E0;
+    --color-blue-47: #00C0EF;
+    --color-blue-48: #3C8DBC;
+    --color-blue-56: #4BA6DE;
+    --color-blue-58: #689EBF;
+    --color-blue-60: #3B82F6;
+    --color-blue-85: #BCDCF5;
+    --color-blue-90: #A8EBFF;
+    --color-blue-94: #E0F1FF;
+    --color-blue-100: #F8FAFC;
+    --color-blue-300: #607AFB;
+    --color-blue-500: #009DE0;
+    --color-blue-600: #0284C7;
+    --color-blue-800: #334155;
+    --color-blue-900: #0F172A;
+    --color-gray-16: #232629;
+    --color-gray-20: #333333;
+    --color-gray-25: #383E47;
+    --color-gray-26: #263238;
+    --color-gray-29: #3E4F57;
+    --color-gray-36: #515963;
+    --color-gray-44: #707070;
+    --color-gray-50: #787C82;
+    --color-gray-400: #9CA3AF;
+    --color-gray-500: #64748B;
+    --color-gray-700: #666666;
+    --color-gray-750: #475569;
+    --color-gray-900: #717785;
+    --color-orange-51: #F39C12;
+    --color-orange-64: #FCAE47;
+    --color-orange-87: #FED6BE;
+    --color-red-55: #DD4B39;
+    --color-red-66: #FB6E52;
+    --color-red-68: #F56A67;
+    --color-red-85: #E5CCCC;
+    --color-red-91: #F2DEDE;
+    --color-yellow-89: #FAF2CC;
+    --color-green-33: #00A65A;
+    --color-green-76: #B9CCB7;
+    --color-green-85: #DFF0D8;
+
+    --color-white: var(--color-white-100);
+    --color-black: var(--color-black-900);
+    --color-muted: var(--color-gray-500);
+    --color-info: var(--color-blue-44);
+    --color-info-soft: var(--color-blue-94);
+    --color-success: var(--color-green-33);
+    --color-success-soft: var(--color-green-85);
+    --color-danger: var(--color-red-55);
+    --color-danger-soft: var(--color-red-91);
+    --color-warning: var(--color-orange-51);
+    --color-warning-soft: var(--color-yellow-89);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* #region inputs */
+    /*********************/
+    /* ---- Checkbox ---- */
+    /*********************/
+    input[type='checkbox'] {
+        cursor: pointer;
+    }
+
+    input[type='checkbox']:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+/* #endregion */

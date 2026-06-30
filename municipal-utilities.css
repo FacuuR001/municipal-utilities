@@ -70,6 +70,10 @@
     --color-warning-soft: var(--color-yellow-89);
 }
 
+.hover\:bg-primary:hover {
+    background-color: var(--color-primary);
+}
+
 *,
 *::before,
 *::after {

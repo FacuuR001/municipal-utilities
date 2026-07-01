@@ -1,0 +1,158 @@
+/* ========================================================= */
+/* 7. EMPTY STATES                                           */
+/* ========================================================= */
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 16rem;
+    padding: 2rem 1.5rem;
+
+    background: var(--component-bg);
+    border: 1px solid var(--component-border);
+    border-radius: var(--component-radius-lg);
+
+    color: var(--component-text);
+    text-align: center;
+
+    box-shadow: var(--component-shadow-xs);
+}
+
+.empty-state-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4rem;
+    height: 4rem;
+
+    margin-bottom: 1rem;
+
+    background: var(--component-primary-soft);
+    border-radius: var(--component-radius-full);
+
+    color: var(--component-primary);
+    font-size: 1.75rem;
+    line-height: 1;
+}
+
+.empty-state-title {
+    margin: 0;
+
+    color: var(--component-text-strong);
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    letter-spacing: -0.015em;
+}
+
+.empty-state-description {
+    max-width: 28rem;
+    margin: 0.5rem 0 0;
+
+    color: var(--component-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+.empty-state-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+
+    margin-top: 1.25rem;
+}
+
+/* Empty state variants */
+
+.empty-state-primary .empty-state-icon {
+    background: var(--component-primary-soft);
+    color: var(--component-primary);
+}
+
+.empty-state-success .empty-state-icon {
+    background: var(--component-success-soft);
+    color: var(--component-success);
+}
+
+.empty-state-danger .empty-state-icon,
+.empty-state-error .empty-state-icon {
+    background: var(--component-danger-soft);
+    color: var(--component-danger);
+}
+
+.empty-state-warning .empty-state-icon {
+    background: var(--component-warning-soft);
+    color: var(--component-warning);
+}
+
+.empty-state-info .empty-state-icon {
+    background: var(--component-info-soft);
+    color: var(--component-info);
+}
+
+.empty-state-muted .empty-state-icon {
+    background: var(--component-bg-muted);
+    color: var(--component-text-muted);
+}
+
+/* Empty state sizes */
+
+.empty-state-sm {
+    min-height: 11rem;
+    padding: 1.5rem 1rem;
+}
+
+.empty-state-sm .empty-state-icon {
+    width: 3rem;
+    height: 3rem;
+
+    margin-bottom: 0.75rem;
+
+    font-size: 1.25rem;
+}
+
+.empty-state-sm .empty-state-title {
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+.empty-state-lg {
+    min-height: 22rem;
+    padding: 3rem 2rem;
+}
+
+.empty-state-lg .empty-state-icon {
+    width: 5rem;
+    height: 5rem;
+
+    font-size: 2rem;
+}
+
+.empty-state-plain {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.empty-state-dashed {
+    border-style: dashed;
+}
+
+@media (max-width: 640px) {
+    .empty-state-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .empty-state-actions .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,193 @@
+/* ========================================================= */
+/* 5. BADGES                                                 */
+/* ========================================================= */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+
+    width: fit-content;
+    max-width: 100%;
+
+    padding: 0.25rem 0.55rem;
+
+    background: var(--component-bg-muted);
+    border: 1px solid transparent;
+    border-radius: var(--component-radius-sm);
+
+    color: var(--component-text);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1rem;
+    white-space: nowrap;
+}
+
+.badge-primary {
+    background: var(--component-primary);
+    color: var(--color-white);
+}
+
+.badge-success {
+    background: var(--component-success);
+    color: var(--color-white);
+}
+
+.badge-danger,
+.badge-error {
+    background: var(--component-danger);
+    color: var(--color-white);
+}
+
+.badge-warning {
+    background: var(--component-warning);
+    color: var(--color-white);
+}
+
+.badge-info {
+    background: var(--component-info);
+    color: var(--color-white);
+}
+
+.badge-muted,
+.badge-secondary {
+    background: var(--component-bg-muted);
+    color: var(--component-text-muted);
+}
+
+/* Soft badges */
+
+.badge-soft-primary {
+    background: var(--component-primary-soft);
+    color: var(--component-primary-active);
+}
+
+.badge-soft-success {
+    background: var(--component-success-soft);
+    color: var(--component-success-text);
+}
+
+.badge-soft-danger,
+.badge-soft-error {
+    background: var(--component-danger-soft);
+    color: var(--component-danger-text);
+}
+
+.badge-soft-warning {
+    background: var(--component-warning-soft);
+    color: var(--component-warning-text);
+}
+
+.badge-soft-info {
+    background: var(--component-info-soft);
+    color: var(--component-info-text);
+}
+
+/* Outline badges */
+
+.badge-outline-primary {
+    background: transparent;
+    border-color: var(--component-primary);
+    color: var(--component-primary);
+}
+
+.badge-outline-success {
+    background: transparent;
+    border-color: var(--component-success);
+    color: var(--component-success);
+}
+
+.badge-outline-danger,
+.badge-outline-error {
+    background: transparent;
+    border-color: var(--component-danger);
+    color: var(--component-danger);
+}
+
+.badge-outline-warning {
+    background: transparent;
+    border-color: var(--component-warning);
+    color: var(--component-warning);
+}
+
+.badge-outline-info {
+    background: transparent;
+    border-color: var(--component-info);
+    color: var(--component-info);
+}
+
+.badge-outline-muted {
+    background: transparent;
+    border-color: var(--component-border);
+    color: var(--component-text-muted);
+}
+
+/* Badge sizes */
+
+.badge-sm {
+    padding: 0.125rem 0.425rem;
+    font-size: 0.6875rem;
+    line-height: 0.875rem;
+}
+
+.badge-lg {
+    padding: 0.375rem 0.7rem;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+/* Badge helpers */
+
+.badge-pill {
+    border-radius: var(--component-radius-full);
+}
+
+.badge-square {
+    border-radius: var(--component-radius-sm);
+}
+
+.badge-dot::before {
+    content: "";
+
+    width: 0.45rem;
+    height: 0.45rem;
+
+    background: currentColor;
+    border-radius: var(--component-radius-full);
+}
+
+.badge-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0;
+
+    border-radius: var(--component-radius-full);
+}
+
+/* Status aliases */
+
+.badge-active {
+    background: var(--component-success-soft);
+    color: var(--component-success-text);
+}
+
+.badge-inactive {
+    background: var(--component-bg-muted);
+    color: var(--component-text-muted);
+}
+
+.badge-pending {
+    background: var(--component-warning-soft);
+    color: var(--component-warning-text);
+}
+
+.badge-approved {
+    background: var(--component-success-soft);
+    color: var(--component-success-text);
+}
+
+.badge-rejected {
+    background: var(--component-danger-soft);
+    color: var(--component-danger-text);
+}

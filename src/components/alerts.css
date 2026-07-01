@@ -1,0 +1,181 @@
+/* ========================================================= */
+/* 4. ALERTS                                                 */
+/* ========================================================= */
+
+.alert {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+
+    width: 100%;
+    padding: 1rem;
+
+    border: 1px solid transparent;
+    border-radius: var(--component-radius-xl);
+
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+
+    box-shadow: var(--component-shadow-xs);
+}
+
+.alert-icon {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.025rem;
+
+    border-radius: var(--component-radius-full);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.alert-content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.alert-title {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 750;
+    line-height: 1.25rem;
+}
+
+.alert-description {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    opacity: 0.92;
+}
+
+.alert-close {
+    flex: 0 0 auto;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+    margin: -0.25rem -0.25rem -0.25rem 0.5rem;
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+    border-radius: var(--component-radius-lg);
+
+    color: currentColor;
+    cursor: pointer;
+    opacity: 0.7;
+
+    transition:
+        opacity var(--component-transition),
+        background-color var(--component-transition),
+        transform var(--component-transition-fast);
+}
+
+.alert-close:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.alert-close:active {
+    transform: scale(0.96);
+}
+
+.alert-success {
+    background: var(--component-success-soft);
+    border-color: var(--component-success-border);
+    color: var(--component-success-text);
+}
+
+.alert-danger,
+.alert-error {
+    background: var(--component-danger-soft);
+    border-color: var(--component-danger-border);
+    color: var(--component-danger-text);
+}
+
+.alert-warning {
+    background: var(--component-warning-soft);
+    border-color: var(--component-warning-border);
+    color: var(--component-warning-text);
+}
+
+.alert-info {
+    background: var(--component-info-soft);
+    border-color: var(--component-info-border);
+    color: var(--component-info-text);
+}
+
+.alert-primary {
+    background: var(--component-primary-soft);
+    border-color: rgba(57, 179, 215, 0.35);
+    color: var(--component-primary-active);
+}
+
+.alert-muted {
+    background: var(--component-bg-soft);
+    border-color: var(--component-border);
+    color: var(--component-text);
+}
+
+.alert-outline {
+    background: var(--component-bg);
+}
+
+.alert-soft {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.alert-sm {
+    padding: 0.75rem;
+    border-radius: var(--component-radius-lg);
+    font-size: 0.8125rem;
+}
+
+.alert-lg {
+    padding: 1.25rem;
+    border-radius: var(--component-radius-2xl);
+    font-size: 1rem;
+}
+
+.alert-center {
+    align-items: center;
+}
+
+.alert-full {
+    border-radius: 0;
+}
+
+.alert-border-left {
+    border-left-width: 4px;
+}
+
+.alert-success.alert-border-left {
+    border-left-color: var(--component-success);
+}
+
+.alert-danger.alert-border-left,
+.alert-error.alert-border-left {
+    border-left-color: var(--component-danger);
+}
+
+.alert-warning.alert-border-left {
+    border-left-color: var(--component-warning);
+}
+
+.alert-info.alert-border-left {
+    border-left-color: var(--component-info);
+}
+
+.alert-primary.alert-border-left {
+    border-left-color: var(--component-primary);
+}

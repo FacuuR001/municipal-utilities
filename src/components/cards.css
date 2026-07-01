@@ -1,0 +1,541 @@
+/* ========================================================= */
+/* 3. CARDS                                                  */
+/* ========================================================= */
+
+.card {
+    position: relative;
+
+    background: var(--component-bg);
+    border: 1px solid var(--component-border);
+    border-radius: var(--component-radius-lg);
+
+    color: var(--component-text);
+
+    box-shadow: var(--component-shadow-xs, 0 1px 2px rgba(15, 23, 42, 0.04));
+
+    overflow: hidden;
+
+    transition:
+        border-color var(--component-transition),
+        box-shadow var(--component-transition),
+        transform var(--component-transition),
+        background-color var(--component-transition);
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+
+    padding: 1rem 1.125rem;
+
+    background: var(--component-bg);
+    border-bottom: 1px solid var(--component-border);
+}
+
+.card-body {
+    padding: 1.125rem;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+
+    padding: 0.875rem 1.125rem;
+
+    background: var(--component-bg-soft);
+    border-top: 1px solid var(--component-border);
+}
+
+.card-title {
+    margin: 0;
+
+    color: var(--component-text-strong);
+    font-size: 1rem;
+    font-weight: 750;
+    line-height: 1.375rem;
+    letter-spacing: -0.01em;
+}
+
+.card-subtitle {
+    margin: 0.25rem 0 0;
+
+    color: var(--component-text-muted);
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+}
+
+.card-text {
+    margin: 0;
+
+    color: var(--component-text);
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+.card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.card-media {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card-divider {
+    height: 1px;
+    margin: 0;
+    border: 0;
+    background-color: var(--component-border);
+}
+
+/* Variants */
+
+.card-flat {
+    box-shadow: none;
+}
+
+.card-shadow {
+    box-shadow: var(--component-shadow-sm);
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    border-color: var(--component-border-hover);
+    box-shadow: var(--component-shadow-md);
+}
+
+.card-muted {
+    background: var(--component-bg-soft);
+}
+
+.card-glass {
+    background: rgba(255, 255, 255, 0.88);
+    border-color: rgba(226, 232, 240, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+/* Accent cards */
+
+.card-primary,
+.card-success,
+.card-danger,
+.card-warning,
+.card-info {
+    border-top-width: 3px;
+}
+
+.card-primary {
+    border-top-color: var(--component-primary);
+}
+
+.card-success {
+    border-top-color: var(--component-success);
+}
+
+.card-danger {
+    border-top-color: var(--component-danger);
+}
+
+.card-warning {
+    border-top-color: var(--component-warning);
+}
+
+.card-info {
+    border-top-color: var(--component-info);
+}
+
+/* Soft accent cards */
+
+.card-soft-primary {
+    background: rgba(0, 157, 224, 0.04);
+    border-color: rgba(0, 157, 224, 0.22);
+}
+
+.card-soft-success {
+    background: var(--component-success-soft);
+    border-color: var(--component-success-border);
+}
+
+.card-soft-danger {
+    background: var(--component-danger-soft);
+    border-color: var(--component-danger-border);
+}
+
+.card-soft-warning {
+    background: var(--component-warning-soft);
+    border-color: var(--component-warning-border);
+}
+
+.card-soft-info {
+    background: var(--component-info-soft);
+    border-color: var(--component-info-border);
+}
+
+/* Sizes */
+
+.card-sm .card-header,
+.card-sm .card-body,
+.card-sm .card-footer {
+    padding: 0.875rem;
+}
+
+.card-lg .card-header,
+.card-lg .card-body,
+.card-lg .card-footer {
+    padding: 1.375rem;
+}
+
+/* Compact card */
+
+.card-compact .card-header {
+    padding: 0.75rem 0.875rem;
+}
+
+.card-compact .card-body {
+    padding: 0.875rem;
+}
+
+.card-compact .card-footer {
+    padding: 0.75rem 0.875rem;
+}
+
+/* Card sections */
+
+.card-section {
+    padding: 1rem 1.125rem;
+    border-top: 1px solid var(--component-border);
+}
+
+.card-section:first-child {
+    border-top: 0;
+}
+
+.card-kicker {
+    margin: 0 0 0.25rem;
+
+    color: var(--component-primary);
+    font-size: 0.75rem;
+    font-weight: 750;
+    line-height: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Stat card */
+
+.stat-card {
+    position: relative;
+
+    padding: 1.125rem;
+
+    background: var(--component-bg);
+    border: 1px solid var(--component-border);
+    border-radius: var(--component-radius-lg);
+
+    box-shadow: var(--component-shadow-xs, 0 1px 2px rgba(15, 23, 42, 0.04));
+
+    overflow: hidden;
+
+    transition:
+        border-color var(--component-transition),
+        box-shadow var(--component-transition),
+        transform var(--component-transition);
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+
+    height: 3px;
+
+    background: var(--component-primary);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--component-border-hover);
+    box-shadow: var(--component-shadow-sm);
+}
+
+.stat-label {
+    margin: 0;
+
+    color: var(--component-text-muted);
+    font-size: 0.8125rem;
+    font-weight: 650;
+    line-height: 1.125rem;
+}
+
+.stat-value {
+    margin: 0.35rem 0 0;
+
+    color: var(--component-text-strong);
+    font-size: 1.875rem;
+    font-weight: 800;
+    line-height: 2.125rem;
+    letter-spacing: -0.035em;
+}
+
+.stat-description {
+    margin: 0.35rem 0 0;
+
+    color: var(--component-text-muted);
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+/* Stat color variants */
+
+.stat-card.stat-primary::before {
+    background: var(--component-primary);
+}
+
+.stat-card.stat-success::before {
+    background: var(--component-success);
+}
+
+.stat-card.stat-danger::before {
+    background: var(--component-danger);
+}
+
+.stat-card.stat-warning::before {
+    background: var(--component-warning);
+}
+
+.stat-card.stat-info::before {
+    background: var(--component-info);
+}
+
+/* ========================================================= */
+/* SERVICE CARD                                              */
+/* Card tipo acceso/trámite municipal                        */
+/* ========================================================= */
+
+.service-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 18rem;
+    padding: 2rem 1.5rem 1.75rem;
+
+    background: var(--component-bg);
+    border: 1px solid var(--component-border);
+    border-radius: var(--component-radius-xl);
+
+    color: var(--component-text);
+    text-align: center;
+
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+
+    overflow: hidden;
+    cursor: pointer;
+
+    transition:
+        transform var(--component-transition),
+        box-shadow var(--component-transition),
+        border-color var(--component-transition);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 157, 224, 0.35);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
+}
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 4px;
+
+    background: var(--component-primary, #009DE0);
+}
+
+/* Esquina superior derecha */
+
+.service-card-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 4rem;
+    height: 4rem;
+
+    background: var(--component-primary, #009DE0);
+
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.service-card-corner::after {
+    content: "→";
+
+    position: absolute;
+    top: 0.55rem;
+    right: 0.65rem;
+
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Icono */
+
+.service-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 7rem;
+    height: 7rem;
+
+    margin-bottom: 1.25rem;
+
+    background: rgba(0, 157, 224, 0.08);
+    border-radius: 9999px;
+}
+
+.service-card-icon-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4.25rem;
+    height: 4.25rem;
+
+    background: var(--component-primary, #009DE0);
+    color: #ffffff;
+
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+
+    clip-path: polygon(
+        50% 0%,
+        60% 12%,
+        75% 7%,
+        82% 22%,
+        97% 25%,
+        88% 40%,
+        100% 50%,
+        88% 60%,
+        97% 75%,
+        82% 78%,
+        75% 93%,
+        60% 88%,
+        50% 100%,
+        40% 88%,
+        25% 93%,
+        18% 78%,
+        3% 75%,
+        12% 60%,
+        0% 50%,
+        12% 40%,
+        3% 25%,
+        18% 22%,
+        25% 7%,
+        40% 12%
+    );
+}
+
+.service-card-title {
+    margin: 0;
+
+    color: var(--component-text-strong);
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+}
+
+.service-card-line {
+    width: 2.5rem;
+    height: 3px;
+
+    margin: 1rem auto;
+
+    background: var(--component-primary, #009DE0);
+    border-radius: 9999px;
+}
+
+.service-card-description {
+    max-width: 14rem;
+    margin: 0;
+
+    color: var(--component-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.45rem;
+}
+
+/* Variante compacta */
+
+.service-card-sm {
+    min-height: 15rem;
+    padding: 1.5rem 1.25rem;
+}
+
+.service-card-sm .service-card-icon {
+    width: 5.75rem;
+    height: 5.75rem;
+    margin-bottom: 1rem;
+}
+
+.service-card-sm .service-card-icon-badge {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.625rem;
+}
+
+.service-card-sm .service-card-title {
+    font-size: 1rem;
+}
+
+/* Variante sin esquina */
+
+.service-card-no-corner .service-card-corner {
+    display: none;
+}
+
+/* Variante sin línea inferior */
+
+.service-card-no-line::after {
+    display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+    .card-header,
+    .card-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card-actions,
+    .card-footer {
+        width: 100%;
+    }
+
+    .card-actions .btn,
+    .card-footer .btn {
+        width: 100%;
+    }
+}

@@ -8,7 +8,15 @@ const root = path.resolve(__dirname, "..");
 const srcFiles = [
     path.join(root, "src", "theme.css"),
     path.join(root, "src", "utilities.css"),
-    path.join(root, "src", "components.css"),
+
+    path.join(root, "src", "components", "buttons.css"),
+    path.join(root, "src", "components", "forms.css"),
+    path.join(root, "src", "components", "cards.css"),
+    path.join(root, "src", "components", "alerts.css"),
+    path.join(root, "src", "components", "badges.css"),
+    path.join(root, "src", "components", "tables.css"),
+    path.join(root, "src", "components", "empty-states.css"),
+    path.join(root, "src", "components", "page-layout.css"),
 ];
 
 const buildDir = path.join(root, "build");
@@ -29,7 +37,7 @@ function buildCss() {
 
     const css = srcFiles
         .map((file) => {
-            const fileName = path.basename(file);
+            const fileName = path.relative(root, file).replace(/\\/g, "/");
 
             if (!fs.existsSync(file)) {
                 throw new Error(`No existe el archivo: ${fileName}`);
@@ -70,7 +78,7 @@ if (process.argv.includes("--watch")) {
     console.log("Modo watch activo. Esperando cambios en /src...");
 
     chokidar.watch(srcFiles).on("change", (filePath) => {
-        console.log(`Cambio detectado: ${path.basename(filePath)}`);
+        console.log(`Cambio detectado: ${path.relative(root, filePath).replace(/\\/g, "/")}`);
         buildCss();
     });
 }

@@ -5,7 +5,7 @@
  */
 
 /* ========================================================= */
-/* theme.css */
+/* src/theme.css */
 /* ========================================================= */
 
 :root {
@@ -200,7 +200,7 @@
 /* #endregion */
 
 /* ========================================================= */
-/* utilities.css */
+/* src/utilities.css */
 /* ========================================================= */
 
 /*
@@ -3306,12 +3306,7 @@
 }
 
 /* ========================================================= */
-/* components.css */
-/* ========================================================= */
-
-/* ========================================================= */
-/* MUNICIPAL DESIGN SYSTEM - COMPONENTS                      */
-/* Buttons, Forms, Cards, Alerts                             */
+/* src/components/buttons.css */
 /* ========================================================= */
 
 /* ========================================================= */
@@ -3791,7 +3786,21 @@
     margin-left: -1px;
 }
 
+/* Responsive */
 
+@media (max-width: 640px) {
+    .btn-group {
+        width: 100%;
+    }
+
+    .btn-group .btn {
+        flex: 1 1 0;
+    }
+}
+
+/* ========================================================= */
+/* src/components/forms.css */
+/* ========================================================= */
 
 /* ========================================================= */
 /* 2. FORMS                                                  */
@@ -4189,6 +4198,8 @@
     justify-content: flex-start;
 }
 
+/* Responsive */
+
 @media (max-width: 640px) {
     .form-row {
         flex-direction: column;
@@ -4206,16 +4217,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
+/* ========================================================= */
+/* src/components/cards.css */
+/* ========================================================= */
 
 /* ========================================================= */
 /* 3. CARDS                                                  */
@@ -4739,21 +4743,29 @@
     display: none;
 }
 
+/* Responsive */
 
+@media (max-width: 640px) {
+    .card-header,
+    .card-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
+    .card-actions,
+    .card-footer {
+        width: 100%;
+    }
 
+    .card-actions .btn,
+    .card-footer .btn {
+        width: 100%;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
+/* ========================================================= */
+/* src/components/alerts.css */
+/* ========================================================= */
 
 /* ========================================================= */
 /* 4. ALERTS                                                 */
@@ -4938,48 +4950,864 @@
 }
 
 
-
-
+/* ========================================================= */
+/* src/components/badges.css */
+/* ========================================================= */
 
 /* ========================================================= */
-/* RESPONSIVE COMPONENT HELPERS                              */
+/* 5. BADGES                                                 */
 /* ========================================================= */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+
+    width: fit-content;
+    max-width: 100%;
+
+    padding: 0.25rem 0.55rem;
+
+    background: var(--component-bg-muted);
+    border: 1px solid transparent;
+    border-radius: var(--component-radius-sm);
+
+    color: var(--component-text);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1rem;
+    white-space: nowrap;
+}
+
+.badge-primary {
+    background: var(--component-primary);
+    color: var(--color-white);
+}
+
+.badge-success {
+    background: var(--component-success);
+    color: var(--color-white);
+}
+
+.badge-danger,
+.badge-error {
+    background: var(--component-danger);
+    color: var(--color-white);
+}
+
+.badge-warning {
+    background: var(--component-warning);
+    color: var(--color-white);
+}
+
+.badge-info {
+    background: var(--component-info);
+    color: var(--color-white);
+}
+
+.badge-muted,
+.badge-secondary {
+    background: var(--component-bg-muted);
+    color: var(--component-text-muted);
+}
+
+/* Soft badges */
+
+.badge-soft-primary {
+    background: var(--component-primary-soft);
+    color: var(--component-primary-active);
+}
+
+.badge-soft-success {
+    background: var(--component-success-soft);
+    color: var(--component-success-text);
+}
+
+.badge-soft-danger,
+.badge-soft-error {
+    background: var(--component-danger-soft);
+    color: var(--component-danger-text);
+}
+
+.badge-soft-warning {
+    background: var(--component-warning-soft);
+    color: var(--component-warning-text);
+}
+
+.badge-soft-info {
+    background: var(--component-info-soft);
+    color: var(--component-info-text);
+}
+
+/* Outline badges */
+
+.badge-outline-primary {
+    background: transparent;
+    border-color: var(--component-primary);
+    color: var(--component-primary);
+}
+
+.badge-outline-success {
+    background: transparent;
+    border-color: var(--component-success);
+    color: var(--component-success);
+}
+
+.badge-outline-danger,
+.badge-outline-error {
+    background: transparent;
+    border-color: var(--component-danger);
+    color: var(--component-danger);
+}
+
+.badge-outline-warning {
+    background: transparent;
+    border-color: var(--component-warning);
+    color: var(--component-warning);
+}
+
+.badge-outline-info {
+    background: transparent;
+    border-color: var(--component-info);
+    color: var(--component-info);
+}
+
+.badge-outline-muted {
+    background: transparent;
+    border-color: var(--component-border);
+    color: var(--component-text-muted);
+}
+
+/* Badge sizes */
+
+.badge-sm {
+    padding: 0.125rem 0.425rem;
+    font-size: 0.6875rem;
+    line-height: 0.875rem;
+}
+
+.badge-lg {
+    padding: 0.375rem 0.7rem;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+/* Badge helpers */
+
+.badge-pill {
+    border-radius: var(--component-radius-full);
+}
+
+.badge-square {
+    border-radius: var(--component-radius-sm);
+}
+
+.badge-dot::before {
+    content: "";
+
+    width: 0.45rem;
+    height: 0.45rem;
+
+    background: currentColor;
+    border-radius: var(--component-radius-full);
+}
+
+.badge-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0;
+
+    border-radius: var(--component-radius-full);
+}
+
+/* Status aliases */
+
+.badge-active {
+    background: var(--component-success-soft);
+    color: var(--component-success-text);
+}
+
+.badge-inactive {
+    background: var(--component-bg-muted);
+    color: var(--component-text-muted);
+}
+
+.badge-pending {
+    background: var(--component-warning-soft);
+    color: var(--component-warning-text);
+}
+
+.badge-approved {
+    background: var(--component-success-soft);
+    color: var(--component-success-text);
+}
+
+.badge-rejected {
+    background: var(--component-danger-soft);
+    color: var(--component-danger-text);
+}
+
+/* ========================================================= */
+/* src/components/tables.css */
+/* ========================================================= */
+
+/* ========================================================= */
+/* 6. TABLES                                                 */
+/* ========================================================= */
+
+.table-wrapper {
+    width: 100%;
+
+    background: var(--component-bg);
+    border: 1px solid var(--component-border);
+    border-radius: var(--component-radius-lg);
+
+    box-shadow: var(--component-shadow-xs);
+    overflow: hidden;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    min-width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    color: var(--component-text);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.table caption {
+    padding: 0.875rem 1rem;
+
+    color: var(--component-text-muted);
+    font-size: 0.8125rem;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem 1rem;
+
+    border-bottom: 1px solid var(--component-border);
+
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    background: var(--component-bg-soft);
+
+    color: var(--component-text-strong);
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.035em;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.table td {
+    background: var(--component-bg);
+}
+
+.table-hover tbody tr {
+    transition:
+        background-color var(--component-transition),
+        color var(--component-transition);
+}
+
+.table-hover tbody tr:hover td {
+    background: var(--component-bg-hover);
+}
+
+.table-striped tbody tr:nth-child(even) td {
+    background: var(--component-bg-soft);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border-right: 1px solid var(--component-border);
+}
+
+.table-bordered th:last-child,
+.table-bordered td:last-child {
+    border-right: 0;
+}
+
+/* Table sizes */
+
+.table-sm th,
+.table-sm td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+}
+
+.table-lg th,
+.table-lg td {
+    padding: 1rem 1.25rem;
+}
+
+.table-compact th,
+.table-compact td {
+    padding: 0.425rem 0.625rem;
+    font-size: 0.8125rem;
+}
+
+/* Table helpers */
+
+.table-nowrap th,
+.table-nowrap td,
+.table-cell-nowrap {
+    white-space: nowrap;
+}
+
+.table-cell-muted {
+    color: var(--component-text-muted);
+}
+
+.table-cell-strong {
+    color: var(--component-text-strong);
+    font-weight: 700;
+}
+
+.table-cell-actions,
+.table-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.table-align-center th,
+.table-align-center td {
+    text-align: center;
+}
+
+.table-align-right th,
+.table-align-right td {
+    text-align: right;
+}
+
+/* Table toolbar */
+
+.table-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    padding: 1rem;
+
+    background: var(--component-bg);
+    border-bottom: 1px solid var(--component-border);
+}
+
+.table-title {
+    margin: 0;
+
+    color: var(--component-text-strong);
+    font-size: 1rem;
+    font-weight: 750;
+    line-height: 1.375rem;
+}
+
+.table-subtitle {
+    margin: 0.25rem 0 0;
+
+    color: var(--component-text-muted);
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+.table-toolbar-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+}
+
+/* Empty table */
+
+.table-empty {
+    padding: 2rem 1rem;
+
+    color: var(--component-text-muted);
+    text-align: center;
+    font-size: 0.875rem;
+}
 
 @media (max-width: 640px) {
-    .form-row {
+    .table-toolbar {
+        align-items: stretch;
         flex-direction: column;
     }
 
-    .form-actions {
-        flex-direction: column-reverse;
-        align-items: stretch;
+    .table-toolbar-actions {
+        justify-content: stretch;
     }
 
-    .form-actions .btn {
+    .table-toolbar-actions .btn {
         width: 100%;
     }
+}
 
-    .card-header,
-    .card-footer {
+/* ========================================================= */
+/* src/components/empty-states.css */
+/* ========================================================= */
+
+/* ========================================================= */
+/* 7. EMPTY STATES                                           */
+/* ========================================================= */
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 16rem;
+    padding: 2rem 1.5rem;
+
+    background: var(--component-bg);
+    border: 1px solid var(--component-border);
+    border-radius: var(--component-radius-lg);
+
+    color: var(--component-text);
+    text-align: center;
+
+    box-shadow: var(--component-shadow-xs);
+}
+
+.empty-state-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4rem;
+    height: 4rem;
+
+    margin-bottom: 1rem;
+
+    background: var(--component-primary-soft);
+    border-radius: var(--component-radius-full);
+
+    color: var(--component-primary);
+    font-size: 1.75rem;
+    line-height: 1;
+}
+
+.empty-state-title {
+    margin: 0;
+
+    color: var(--component-text-strong);
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    letter-spacing: -0.015em;
+}
+
+.empty-state-description {
+    max-width: 28rem;
+    margin: 0.5rem 0 0;
+
+    color: var(--component-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+.empty-state-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+
+    margin-top: 1.25rem;
+}
+
+/* Empty state variants */
+
+.empty-state-primary .empty-state-icon {
+    background: var(--component-primary-soft);
+    color: var(--component-primary);
+}
+
+.empty-state-success .empty-state-icon {
+    background: var(--component-success-soft);
+    color: var(--component-success);
+}
+
+.empty-state-danger .empty-state-icon,
+.empty-state-error .empty-state-icon {
+    background: var(--component-danger-soft);
+    color: var(--component-danger);
+}
+
+.empty-state-warning .empty-state-icon {
+    background: var(--component-warning-soft);
+    color: var(--component-warning);
+}
+
+.empty-state-info .empty-state-icon {
+    background: var(--component-info-soft);
+    color: var(--component-info);
+}
+
+.empty-state-muted .empty-state-icon {
+    background: var(--component-bg-muted);
+    color: var(--component-text-muted);
+}
+
+/* Empty state sizes */
+
+.empty-state-sm {
+    min-height: 11rem;
+    padding: 1.5rem 1rem;
+}
+
+.empty-state-sm .empty-state-icon {
+    width: 3rem;
+    height: 3rem;
+
+    margin-bottom: 0.75rem;
+
+    font-size: 1.25rem;
+}
+
+.empty-state-sm .empty-state-title {
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+.empty-state-lg {
+    min-height: 22rem;
+    padding: 3rem 2rem;
+}
+
+.empty-state-lg .empty-state-icon {
+    width: 5rem;
+    height: 5rem;
+
+    font-size: 2rem;
+}
+
+.empty-state-plain {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.empty-state-dashed {
+    border-style: dashed;
+}
+
+@media (max-width: 640px) {
+    .empty-state-actions {
+        width: 100%;
         flex-direction: column;
         align-items: stretch;
     }
 
-    .card-actions,
-    .card-footer {
+    .empty-state-actions .btn {
+        width: 100%;
+    }
+}
+
+/* ========================================================= */
+/* src/components/page-layout.css */
+/* ========================================================= */
+
+/* ========================================================= */
+/* 8. PAGE LAYOUT                                            */
+/* ========================================================= */
+
+.page {
+    width: 100%;
+    min-height: 100%;
+
+    color: var(--component-text);
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.page-container-sm {
+    max-width: 768px;
+}
+
+.page-container-md {
+    max-width: 1024px;
+}
+
+.page-container-lg {
+    max-width: 1280px;
+}
+
+.page-container-xl {
+    max-width: 1440px;
+}
+
+/* Header */
+
+.page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    margin-bottom: 1.25rem;
+}
+
+.page-heading {
+    min-width: 0;
+}
+
+.page-kicker {
+    margin: 0 0 0.25rem;
+
+    color: var(--component-primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.045em;
+}
+
+.page-title {
+    margin: 0;
+
+    color: var(--component-text-strong);
+    font-size: 1.75rem;
+    font-weight: 850;
+    line-height: 2.125rem;
+    letter-spacing: -0.035em;
+}
+
+.page-subtitle {
+    max-width: 46rem;
+    margin: 0.375rem 0 0;
+
+    color: var(--component-text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+}
+
+.page-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+}
+
+/* Content */
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.page-section {
+    background: var(--component-bg);
+    border: 1px solid var(--component-border);
+    border-radius: var(--component-radius-lg);
+    box-shadow: var(--component-shadow-xs);
+    overflow: hidden;
+}
+
+.page-section-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    padding: 1rem 1.125rem;
+
+    background: var(--component-bg);
+    border-bottom: 1px solid var(--component-border);
+}
+
+.page-section-heading {
+    min-width: 0;
+}
+
+.page-section-title {
+    margin: 0;
+
+    color: var(--component-text-strong);
+    font-size: 1rem;
+    font-weight: 750;
+    line-height: 1.375rem;
+}
+
+.page-section-subtitle {
+    margin: 0.25rem 0 0;
+
+    color: var(--component-text-muted);
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+.page-section-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.page-section-body {
+    padding: 1.125rem;
+}
+
+.page-section-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+
+    padding: 0.875rem 1.125rem;
+
+    background: var(--component-bg-soft);
+    border-top: 1px solid var(--component-border);
+}
+
+/* Toolbar */
+
+.page-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    padding: 1rem;
+
+    background: var(--component-bg);
+    border: 1px solid var(--component-border);
+    border-radius: var(--component-radius-lg);
+
+    box-shadow: var(--component-shadow-xs);
+}
+
+.page-toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+}
+
+/* Grids */
+
+.page-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.page-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.page-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.page-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.page-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.page-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.page-divider {
+    height: 1px;
+    margin: 1rem 0;
+
+    background: var(--component-border);
+    border: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .page-grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .page-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .page-container {
+        padding: 1rem;
+    }
+
+    .page-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+
+    .page-actions,
+    .page-section-actions,
+    .page-section-footer,
+    .page-toolbar,
+    .page-toolbar-group {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .page-actions .btn,
+    .page-section-actions .btn,
+    .page-section-footer .btn,
+    .page-toolbar .btn {
         width: 100%;
     }
 
-    .card-actions .btn,
-    .card-footer .btn {
-        width: 100%;
-    }
-
-    .btn-group {
-        width: 100%;
-    }
-
-    .btn-group .btn {
-        flex: 1 1 0;
+    .page-grid-2,
+    .page-grid-3,
+    .page-grid-4 {
+        grid-template-columns: 1fr;
     }
 }

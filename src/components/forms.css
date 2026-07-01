@@ -1,0 +1,413 @@
+/* ========================================================= */
+/* 2. FORMS                                                  */
+/* ========================================================= */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+}
+
+.form-col {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+/* Labels */
+
+.form-label,
+.label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    margin: 0;
+
+    color: var(--component-text-strong);
+    font-size: 0.8125rem;
+    font-weight: 650;
+    line-height: 1.125rem;
+}
+
+.form-label-required::after,
+.label-required::after {
+    content: "*";
+    color: var(--component-danger);
+    margin-left: 0.125rem;
+}
+
+/* Help / Error / Success text */
+
+.form-help,
+.help-text {
+    margin: 0;
+    color: var(--component-text-muted);
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+.form-error,
+.error-text {
+    margin: 0;
+    color: var(--component-danger-text);
+    font-size: 0.75rem;
+    font-weight: 550;
+    line-height: 1.125rem;
+}
+
+.form-success,
+.success-text {
+    margin: 0;
+    color: var(--component-success-text);
+    font-size: 0.75rem;
+    font-weight: 550;
+    line-height: 1.125rem;
+}
+
+/* Base inputs */
+
+.input,
+.select,
+.textarea,
+.form-control {
+    display: block;
+    width: 100%;
+    min-height: 1.25rem;
+
+    padding: 0.5rem 0.7rem;
+
+    appearance: none;
+    background-color: var(--component-bg);
+    border: 1px solid var(--component-border);
+    border-radius: var(--component-radius-md);
+
+    color: var(--component-text-strong);
+    font-family: inherit;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    box-shadow: none;
+
+    transition:
+        background-color var(--component-transition),
+        border-color var(--component-transition),
+        color var(--component-transition),
+        box-shadow var(--component-transition),
+        opacity var(--component-transition);
+}
+
+.input::placeholder,
+.textarea::placeholder,
+.form-control::placeholder {
+    color: var(--component-text-soft);
+    opacity: 1;
+}
+
+.input:hover,
+.select:hover,
+.textarea:hover,
+.form-control:hover {
+    border-color: var(--component-border-hover);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus,
+.form-control:focus {
+    outline: none;
+    border-color: var(--component-primary);
+    box-shadow: 0 0 0 3px rgba(0, 157, 224, 0.16);
+}
+
+.input:disabled,
+.select:disabled,
+.textarea:disabled,
+.form-control:disabled,
+.input[disabled],
+.select[disabled],
+.textarea[disabled],
+.form-control[disabled] {
+    background-color: var(--component-bg-muted);
+    color: var(--component-text-muted);
+    border-color: var(--component-border);
+    cursor: not-allowed;
+    opacity: 0.8;
+    box-shadow: none;
+}
+
+.input[readonly],
+.textarea[readonly],
+.form-control[readonly] {
+    background-color: var(--component-bg-soft);
+    cursor: default;
+}
+
+/* Textarea */
+
+.textarea {
+    min-height: 5.5rem;
+    resize: vertical;
+}
+
+/* Select */
+
+.select {
+    padding-right: 2.25rem;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 7.5L10 12L14.5 7.5' stroke='%2364758B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: right 0.65rem center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+
+/* Sizes */
+
+.input-sm,
+.select-sm,
+.textarea-sm {
+    min-height: 1rem;
+    padding: 0.35rem 0.55rem;
+
+    border-radius: var(--component-radius-sm);
+
+    font-size: 0.8125rem;
+    line-height: 1rem;
+}
+
+.input-lg,
+.select-lg,
+.textarea-lg {
+    min-height: 1.75rem;
+    padding: 0.625rem 0.875rem;
+
+    border-radius: var(--component-radius-lg);
+
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+}
+
+/* Validation */
+
+.input-error,
+.select-error,
+.textarea-error,
+.form-control-error,
+.is-invalid,
+.form-group.has-error .input,
+.form-group.has-error .select,
+.form-group.has-error .textarea,
+.form-group.has-error .form-control {
+    border-color: var(--component-danger);
+}
+
+.input-error:focus,
+.select-error:focus,
+.textarea-error:focus,
+.form-control-error:focus,
+.is-invalid:focus,
+.form-group.has-error .input:focus,
+.form-group.has-error .select:focus,
+.form-group.has-error .textarea:focus,
+.form-group.has-error .form-control:focus {
+    border-color: var(--component-danger);
+    box-shadow: 0 0 0 3px var(--component-danger-ring);
+}
+
+.input-success,
+.select-success,
+.textarea-success,
+.form-control-success,
+.is-valid,
+.form-group.has-success .input,
+.form-group.has-success .select,
+.form-group.has-success .textarea,
+.form-group.has-success .form-control {
+    border-color: var(--component-success);
+}
+
+.input-success:focus,
+.select-success:focus,
+.textarea-success:focus,
+.form-control-success:focus,
+.is-valid:focus,
+.form-group.has-success .input:focus,
+.form-group.has-success .select:focus,
+.form-group.has-success .textarea:focus,
+.form-group.has-success .form-control:focus {
+    border-color: var(--component-success);
+    box-shadow: 0 0 0 3px var(--component-success-ring);
+}
+
+/* Input group */
+
+.input-group {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    isolation: isolate;
+}
+
+.input-group .input,
+.input-group .select,
+.input-group .form-control,
+.input-group .btn,
+.input-group-text {
+    position: relative;
+    border-radius: 0;
+}
+
+.input-group .input:focus,
+.input-group .select:focus,
+.input-group .form-control:focus,
+.input-group .btn:focus-visible {
+    z-index: 1;
+}
+
+.input-group .input:first-child,
+.input-group .select:first-child,
+.input-group .form-control:first-child,
+.input-group .btn:first-child,
+.input-group-text:first-child {
+    border-top-left-radius: var(--component-radius-md);
+    border-bottom-left-radius: var(--component-radius-md);
+}
+
+.input-group .input:last-child,
+.input-group .select:last-child,
+.input-group .form-control:last-child,
+.input-group .btn:last-child,
+.input-group-text:last-child {
+    border-top-right-radius: var(--component-radius-md);
+    border-bottom-right-radius: var(--component-radius-md);
+}
+
+.input-group .input + .input,
+.input-group .input + .select,
+.input-group .select + .input,
+.input-group .input + .btn,
+.input-group .btn + .input,
+.input-group-text + .input,
+.input-group .input + .input-group-text,
+.input-group .select + .btn,
+.input-group .btn + .select {
+    margin-left: -1px;
+}
+
+.input-group-text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 1.25rem;
+    padding: 0.5rem 0.7rem;
+
+    background-color: var(--component-bg-soft);
+    border: 1px solid var(--component-border);
+
+    color: var(--component-text-muted);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Checkbox / Radio */
+
+.checkbox,
+.radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+
+    color: var(--component-text);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    cursor: pointer;
+}
+
+.checkbox input,
+.radio input {
+    width: 0.95rem;
+    height: 0.95rem;
+
+    accent-color: var(--component-primary);
+    cursor: pointer;
+}
+
+.checkbox input:disabled,
+.radio input:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.checkbox-disabled,
+.radio-disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Fieldset */
+
+.fieldset {
+    padding: 0.875rem;
+
+    background: var(--component-bg);
+    border: 1px solid var(--component-border);
+    border-radius: var(--component-radius-lg);
+}
+
+.legend {
+    padding: 0 0.375rem;
+
+    color: var(--component-text-strong);
+    font-size: 0.8125rem;
+    font-weight: 750;
+}
+
+/* Form actions */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.625rem;
+    margin-top: 0.375rem;
+}
+
+.form-actions-between {
+    justify-content: space-between;
+}
+
+.form-actions-start {
+    justify-content: flex-start;
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+}
+

@@ -16,7 +16,6 @@ pnpm-debug.log*
 
 # Builds / dist
 dist/
-build/
 
 # Sistema / editor
 .DS_Store

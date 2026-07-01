@@ -1,14 +1,22 @@
 :root {
-    --color-primary: #39B3D7;
-    --color-primary-hover: #2FA9CD;
-    --color-primary-hover-border: #269ABC;
-    --color-focus: #46B8DA;
+    /* ========================================================= */
+    /* BASE COLORS / LEGACY TOKENS                               */
+    /* ========================================================= */
+
+    --color-primary: #009DE0;
+    --color-primary-hover: #008FCC;
+    --color-primary-hover-border: #007DB3;
+    --color-focus: #009DE0;
+
     --color-page: #EEEEEE;
     --color-surface: #FFFFFF;
     --color-text: #565A5C;
+
     --color-white-100: #FFFFFF;
     --color-white-300: #DDE1E6;
+
     --color-black-900: #000000;
+
     --color-blue-39: #0097CB;
     --color-blue-44: #01A7E0;
     --color-blue-47: #00C0EF;
@@ -25,6 +33,7 @@
     --color-blue-600: #0284C7;
     --color-blue-800: #334155;
     --color-blue-900: #0F172A;
+
     --color-gray-16: #232629;
     --color-gray-20: #333333;
     --color-gray-25: #383E47;
@@ -38,30 +47,126 @@
     --color-gray-700: #666666;
     --color-gray-750: #475569;
     --color-gray-900: #717785;
+
     --color-orange-51: #F39C12;
     --color-orange-64: #FCAE47;
     --color-orange-87: #FED6BE;
+
+    --color-yellow-55: #D97706;
+    --color-yellow-89: #FAF2CC;
+
     --color-red-55: #DD4B39;
     --color-red-66: #FB6E52;
     --color-red-68: #F56A67;
     --color-red-85: #E5CCCC;
     --color-red-91: #F2DEDE;
-    --color-yellow-89: #FAF2CC;
+
     --color-green-33: #00A65A;
     --color-green-76: #B9CCB7;
     --color-green-85: #DFF0D8;
 
+    /* ========================================================= */
+    /* SEMANTIC COLORS                                           */
+    /* ========================================================= */
+
     --color-white: var(--color-white-100);
     --color-black: var(--color-black-900);
+
     --color-muted: var(--color-gray-500);
+
     --color-info: var(--color-blue-44);
     --color-info-soft: var(--color-blue-94);
+
     --color-success: var(--color-green-33);
     --color-success-soft: var(--color-green-85);
+
     --color-danger: var(--color-red-55);
     --color-danger-soft: var(--color-red-91);
+
     --color-warning: var(--color-orange-51);
     --color-warning-soft: var(--color-yellow-89);
+
+    /* ========================================================= */
+    /* COMPONENT TOKENS                                          */
+    /* ========================================================= */
+
+    /* Radius */
+    --component-radius-xs: 0.25rem;
+    --component-radius-sm: 0.375rem;
+    --component-radius-md: 0.5rem;
+    --component-radius-lg: 0.75rem;
+    --component-radius-xl: 1rem;
+    --component-radius-2xl: 1.25rem;
+    --component-radius-full: 9999px;
+
+    /* Brand */
+    --component-primary: var(--color-primary);
+    --component-primary-hover: var(--color-primary-hover);
+    --component-primary-active: var(--color-primary-hover-border);
+    --component-primary-soft: rgba(0, 157, 224, 0.12);
+    --component-primary-ring: rgba(0, 157, 224, 0.28);
+
+    /* Success */
+    --component-success: var(--color-success);
+    --component-success-hover: #008F4D;
+    --component-success-soft: #ECFDF3;
+    --component-success-border: #BBF7D0;
+    --component-success-text: #166534;
+    --component-success-ring: rgba(0, 166, 90, 0.22);
+
+    /* Danger */
+    --component-danger: var(--color-danger);
+    --component-danger-hover: #C43F30;
+    --component-danger-soft: #FEF2F2;
+    --component-danger-border: #FECACA;
+    --component-danger-text: #991B1B;
+    --component-danger-ring: rgba(221, 75, 57, 0.22);
+
+    /* Warning */
+    --component-warning: var(--color-warning);
+    --component-warning-hover: #D97706;
+    --component-warning-soft: #FFFBEB;
+    --component-warning-border: #FDE68A;
+    --component-warning-text: #92400E;
+    --component-warning-ring: rgba(243, 156, 18, 0.22);
+
+    /* Info */
+    --component-info: var(--color-info);
+    --component-info-hover: #0284C7;
+    --component-info-soft: #EFF6FF;
+    --component-info-border: #BFDBFE;
+    --component-info-text: #1E40AF;
+    --component-info-ring: rgba(1, 167, 224, 0.22);
+
+    /* Surfaces */
+    --component-bg: #FFFFFF;
+    --component-bg-soft: #F8FAFC;
+    --component-bg-muted: #F1F5F9;
+    --component-bg-hover: #F8FAFC;
+
+    /* Text */
+    --component-text: #334155;
+    --component-text-strong: #0F172A;
+    --component-text-muted: #64748B;
+    --component-text-soft: #94A3B8;
+
+    /* Border */
+    --component-border: #E2E8F0;
+    --component-border-hover: #CBD5E1;
+    --component-border-strong: #94A3B8;
+
+    /* Shadow */
+    --component-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+    --component-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+    --component-shadow-md: 0 8px 18px rgba(15, 23, 42, 0.09), 0 2px 6px rgba(15, 23, 42, 0.05);
+    --component-shadow-lg: 0 18px 36px rgba(15, 23, 42, 0.12), 0 6px 14px rgba(15, 23, 42, 0.06);
+
+    /* Focus */
+    --component-focus-ring: 0 0 0 4px var(--component-primary-ring);
+
+    /* Transitions */
+    --component-transition-fast: 150ms ease;
+    --component-transition: 200ms ease;
 }
 
 *,

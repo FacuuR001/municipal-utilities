@@ -11,14 +11,14 @@ const srcFiles = [
     path.join(root, "src", "components.css"),
 ];
 
-const distDir = path.join(root, "dist");
+const buildDir = path.join(root, "build");
 
-const outputCss = path.join(distDir, "municipal-design-system.css");
-const outputMinCss = path.join(distDir, "municipal-design-system.min.css");
+const outputCss = path.join(buildDir, "municipal-design-system.css");
+const outputMinCss = path.join(buildDir, "municipal-design-system.min.css");
 
 function buildCss() {
-    if (!fs.existsSync(distDir)) {
-        fs.mkdirSync(distDir);
+    if (!fs.existsSync(buildDir)) {
+        fs.mkdirSync(buildDir);
     }
 
     const banner = `/*
@@ -60,8 +60,8 @@ function buildCss() {
     fs.writeFileSync(outputMinCss, minified.styles, "utf8");
 
     console.log("CSS generado correctamente:");
-    console.log("dist/municipal-design-system.css");
-    console.log("dist/municipal-design-system.min.css");
+    console.log("build/municipal-design-system.css");
+    console.log("build/municipal-design-system.min.css");
 }
 
 buildCss();

@@ -17,6 +17,9 @@ pnpm-debug.log*
 # Builds / dist
 dist/
 
+# Backups
+backup*
+
 # Sistema / editor
 .DS_Store
 Thumbs.db

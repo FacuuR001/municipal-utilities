@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos · Municipal Design System</title>
+  <link rel="stylesheet" href="css/municipal-design-system.css">
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body class="docs-body ">
+  <header class="docs-topbar">
+    <a class="docs-brand" href="index.html" aria-label="Ir al inicio">
+      <span class="docs-brand-mark">M</span>
+      <span>
+        <strong>Municipal DS</strong>
+        <small>Documentación</small>
+      </span>
+    </a>
+    <nav class="docs-nav" aria-label="Navegación principal">
+      <a class="docs-nav-link " href="index.html">Inicio</a><a class="docs-nav-link " href="componentes.html">Componentes</a><a class="docs-nav-link " href="utilidades.html">Utilidades</a><a class="docs-nav-link " href="tokens.html">Tokens</a><a class="docs-nav-link is-active" href="ejemplos.html">Ejemplos</a>
+    </nav>
+  </header>
+  <main class="docs-main">
+    <section class="docs-hero">
+  <p class="docs-kicker">Ejemplos</p>
+  <h1>Bloques visuales más separados y útiles</h1>
+  <p>Se reorganizaron los ejemplos en secciones claras. Las tablas están cargadas directamente en el HTML y los bloques vacíos fueron reemplazados por casos más reales.</p>
+</section><section class="docs-section">
+      <div class="docs-section-header"><div><p class="docs-kicker">Ejemplo</p><h2>Panel municipal más completo</h2><p>Indicadores separados, alerta y mejor lectura visual.</p></div></div>
+      <div class="docs-preview">
+<div class="page-grid page-grid-4">
+  <article class="stat-card stat-primary"><p class="stat-label">Trámites iniciados</p><p class="stat-value">248</p><p class="stat-description">+12 esta semana</p></article>
+  <article class="stat-card stat-success"><p class="stat-label">Resueltos</p><p class="stat-value">193</p><p class="stat-description">78% de resolución</p></article>
+  <article class="stat-card stat-warning"><p class="stat-label">Pendientes</p><p class="stat-value">41</p><p class="stat-description">Requieren revisión</p></article>
+  <article class="stat-card stat-danger"><p class="stat-label">Vencidos</p><p class="stat-value">14</p><p class="stat-description">Fuera de plazo</p></article>
+</div>
+<div class="alert alert-info alert-border-left"><span class="alert-icon">i</span><div class="alert-content"><h3 class="alert-title">Resumen del día</h3><p class="alert-description">Hay 8 solicitudes nuevas y 3 trámites próximos a vencer.</p></div></div>
+</div>
+      <div class="docs-code-wrap">
+  <button class="docs-copy" type="button" data-copy>Copiar código</button>
+  <pre><code class="language-html">&lt;div class=&quot;page-grid page-grid-4&quot;&gt;
+  &lt;article class=&quot;stat-card stat-primary&quot;&gt;&lt;p class=&quot;stat-label&quot;&gt;Trámites iniciados&lt;/p&gt;&lt;p class=&quot;stat-value&quot;&gt;248&lt;/p&gt;&lt;p class=&quot;stat-description&quot;&gt;+12 esta semana&lt;/p&gt;&lt;/article&gt;
+  &lt;article class=&quot;stat-card stat-success&quot;&gt;&lt;p class=&quot;stat-label&quot;&gt;Resueltos&lt;/p&gt;&lt;p class=&quot;stat-value&quot;&gt;193&lt;/p&gt;&lt;p class=&quot;stat-description&quot;&gt;78% de resolución&lt;/p&gt;&lt;/article&gt;
+  &lt;article class=&quot;stat-card stat-warning&quot;&gt;&lt;p class=&quot;stat-label&quot;&gt;Pendientes&lt;/p&gt;&lt;p class=&quot;stat-value&quot;&gt;41&lt;/p&gt;&lt;p class=&quot;stat-description&quot;&gt;Requieren revisión&lt;/p&gt;&lt;/article&gt;
+  &lt;article class=&quot;stat-card stat-danger&quot;&gt;&lt;p class=&quot;stat-label&quot;&gt;Vencidos&lt;/p&gt;&lt;p class=&quot;stat-value&quot;&gt;14&lt;/p&gt;&lt;p class=&quot;stat-description&quot;&gt;Fuera de plazo&lt;/p&gt;&lt;/article&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-info alert-border-left&quot;&gt;&lt;span class=&quot;alert-icon&quot;&gt;i&lt;/span&gt;&lt;div class=&quot;alert-content&quot;&gt;&lt;h3 class=&quot;alert-title&quot;&gt;Resumen del día&lt;/h3&gt;&lt;p class=&quot;alert-description&quot;&gt;Hay 8 solicitudes nuevas y 3 trámites próximos a vencer.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code></pre>
+</div>
+    </section><section class="docs-section">
+      <div class="docs-section-header"><div><p class="docs-kicker">Ejemplo</p><h2>Buscador con tabla de gestión</h2><p>Tabla cargada de forma estática para que no falle por datos externos.</p></div></div>
+      <div class="docs-preview">
+<div class="page-toolbar">
+  <div class="page-toolbar-group"><input class="input" placeholder="Buscar por vecino, CUIT o trámite"></div>
+  <div class="page-toolbar-group"><select class="select"><option>Todos los estados</option><option>Pendientes</option><option>Resueltos</option></select><button class="btn btn-primary">Buscar</button></div>
+</div>
+<div class="table-wrapper">
+  <div class="table-responsive">
+    <table class="table table-hover table-striped">
+      <thead><tr><th>Trámite</th><th>Vecino</th><th>Área</th><th>Estado</th><th class="table-cell-actions">Acciones</th></tr></thead>
+      <tbody>
+        <tr><td class="table-cell-strong">Habilitación comercial</td><td>Lucía Torres</td><td>Comercio</td><td><span class="badge badge-pending">Pendiente</span></td><td class="table-actions"><button class="btn btn-xs btn-outline-primary">Ver</button><button class="btn btn-xs btn-soft-success">Aprobar</button></td></tr>
+        <tr><td class="table-cell-strong">Libre deuda</td><td>Diego Suárez</td><td>Rentas</td><td><span class="badge badge-approved">Resuelto</span></td><td class="table-actions"><button class="btn btn-xs btn-outline-primary">Ver</button></td></tr>
+        <tr><td class="table-cell-strong">Reclamo alumbrado</td><td>Camila Nuñez</td><td>Obras</td><td><span class="badge badge-active">En proceso</span></td><td class="table-actions"><button class="btn btn-xs btn-outline-primary">Ver</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+      <div class="docs-code-wrap">
+  <button class="docs-copy" type="button" data-copy>Copiar código</button>
+  <pre><code class="language-html">&lt;div class=&quot;page-toolbar&quot;&gt;
+  &lt;div class=&quot;page-toolbar-group&quot;&gt;&lt;input class=&quot;input&quot; placeholder=&quot;Buscar por vecino, CUIT o trámite&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;page-toolbar-group&quot;&gt;&lt;select class=&quot;select&quot;&gt;&lt;option&gt;Todos los estados&lt;/option&gt;&lt;option&gt;Pendientes&lt;/option&gt;&lt;option&gt;Resueltos&lt;/option&gt;&lt;/select&gt;&lt;button class=&quot;btn btn-primary&quot;&gt;Buscar&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;table-wrapper&quot;&gt;
+  &lt;div class=&quot;table-responsive&quot;&gt;
+    &lt;table class=&quot;table table-hover table-striped&quot;&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Trámite&lt;/th&gt;&lt;th&gt;Vecino&lt;/th&gt;&lt;th&gt;Área&lt;/th&gt;&lt;th&gt;Estado&lt;/th&gt;&lt;th class=&quot;table-cell-actions&quot;&gt;Acciones&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td class=&quot;table-cell-strong&quot;&gt;Habilitación comercial&lt;/td&gt;&lt;td&gt;Lucía Torres&lt;/td&gt;&lt;td&gt;Comercio&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;badge badge-pending&quot;&gt;Pendiente&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;table-actions&quot;&gt;&lt;button class=&quot;btn btn-xs btn-outline-primary&quot;&gt;Ver&lt;/button&gt;&lt;button class=&quot;btn btn-xs btn-soft-success&quot;&gt;Aprobar&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td class=&quot;table-cell-strong&quot;&gt;Libre deuda&lt;/td&gt;&lt;td&gt;Diego Suárez&lt;/td&gt;&lt;td&gt;Rentas&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;badge badge-approved&quot;&gt;Resuelto&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;table-actions&quot;&gt;&lt;button class=&quot;btn btn-xs btn-outline-primary&quot;&gt;Ver&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td class=&quot;table-cell-strong&quot;&gt;Reclamo alumbrado&lt;/td&gt;&lt;td&gt;Camila Nuñez&lt;/td&gt;&lt;td&gt;Obras&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;badge badge-active&quot;&gt;En proceso&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;table-actions&quot;&gt;&lt;button class=&quot;btn btn-xs btn-outline-primary&quot;&gt;Ver&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+    </section><section class="docs-section">
+      <div class="docs-section-header"><div><p class="docs-kicker">Ejemplo</p><h2>Accesos a servicios municipales</h2><p>Cards grandes tipo trámite con icono, línea y esquina superior.</p></div></div>
+      <div class="docs-preview">
+<div class="page-grid page-grid-3">
+  <article class="service-card"><span class="service-card-corner"></span><div class="service-card-icon"><div class="service-card-icon-badge">R</div></div><h3 class="service-card-title">Rentas municipal</h3><span class="service-card-line"></span><p class="service-card-description">Consultá deuda, generá cedulones y revisá pagos.</p></article>
+  <article class="service-card"><span class="service-card-corner"></span><div class="service-card-icon"><div class="service-card-icon-badge">H</div></div><h3 class="service-card-title">Habilitaciones</h3><span class="service-card-line"></span><p class="service-card-description">Gestioná permisos comerciales y documentación.</p></article>
+  <article class="service-card"><span class="service-card-corner"></span><div class="service-card-icon"><div class="service-card-icon-badge">O</div></div><h3 class="service-card-title">Obras privadas</h3><span class="service-card-line"></span><p class="service-card-description">Seguimiento de expedientes y solicitudes técnicas.</p></article>
+</div>
+</div>
+      <div class="docs-code-wrap">
+  <button class="docs-copy" type="button" data-copy>Copiar código</button>
+  <pre><code class="language-html">&lt;div class=&quot;page-grid page-grid-3&quot;&gt;
+  &lt;article class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-card-corner&quot;&gt;&lt;/span&gt;&lt;div class=&quot;service-card-icon&quot;&gt;&lt;div class=&quot;service-card-icon-badge&quot;&gt;R&lt;/div&gt;&lt;/div&gt;&lt;h3 class=&quot;service-card-title&quot;&gt;Rentas municipal&lt;/h3&gt;&lt;span class=&quot;service-card-line&quot;&gt;&lt;/span&gt;&lt;p class=&quot;service-card-description&quot;&gt;Consultá deuda, generá cedulones y revisá pagos.&lt;/p&gt;&lt;/article&gt;
+  &lt;article class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-card-corner&quot;&gt;&lt;/span&gt;&lt;div class=&quot;service-card-icon&quot;&gt;&lt;div class=&quot;service-card-icon-badge&quot;&gt;H&lt;/div&gt;&lt;/div&gt;&lt;h3 class=&quot;service-card-title&quot;&gt;Habilitaciones&lt;/h3&gt;&lt;span class=&quot;service-card-line&quot;&gt;&lt;/span&gt;&lt;p class=&quot;service-card-description&quot;&gt;Gestioná permisos comerciales y documentación.&lt;/p&gt;&lt;/article&gt;
+  &lt;article class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-card-corner&quot;&gt;&lt;/span&gt;&lt;div class=&quot;service-card-icon&quot;&gt;&lt;div class=&quot;service-card-icon-badge&quot;&gt;O&lt;/div&gt;&lt;/div&gt;&lt;h3 class=&quot;service-card-title&quot;&gt;Obras privadas&lt;/h3&gt;&lt;span class=&quot;service-card-line&quot;&gt;&lt;/span&gt;&lt;p class=&quot;service-card-description&quot;&gt;Seguimiento de expedientes y solicitudes técnicas.&lt;/p&gt;&lt;/article&gt;
+&lt;/div&gt;</code></pre>
+</div>
+    </section><section class="docs-section">
+      <div class="docs-section-header"><div><p class="docs-kicker">Ejemplo</p><h2>Formulario dentro de una card</h2><p>Campos agrupados con footer de acciones claro.</p></div></div>
+      <div class="docs-preview">
+<form class="form card card-primary">
+  <div class="card-header"><div><h3 class="card-title">Nueva solicitud</h3><p class="card-subtitle">Formulario con campos agrupados y acciones claras.</p></div></div>
+  <div class="card-body form">
+    <div class="form-row"><div class="form-col form-group"><label class="form-label form-label-required">Área</label><select class="select"><option>Rentas</option><option>Obras</option></select></div><div class="form-col form-group"><label class="form-label form-label-required">Prioridad</label><select class="select"><option>Normal</option><option>Alta</option></select></div></div>
+    <div class="form-group"><label class="form-label">Descripción</label><textarea class="textarea" placeholder="Describí brevemente la solicitud"></textarea></div>
+    <div class="form-row"><label class="checkbox"><input type="checkbox" checked> Enviar comprobante al vecino</label><label class="checkbox"><input type="checkbox"> Marcar como urgente</label></div>
+  </div>
+  <div class="card-footer"><button class="btn btn-secondary" type="button">Cancelar</button><button class="btn btn-primary" type="button">Guardar solicitud</button></div>
+</form>
+</div>
+      <div class="docs-code-wrap">
+  <button class="docs-copy" type="button" data-copy>Copiar código</button>
+  <pre><code class="language-html">&lt;form class=&quot;form card card-primary&quot;&gt;
+  &lt;div class=&quot;card-header&quot;&gt;&lt;div&gt;&lt;h3 class=&quot;card-title&quot;&gt;Nueva solicitud&lt;/h3&gt;&lt;p class=&quot;card-subtitle&quot;&gt;Formulario con campos agrupados y acciones claras.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;card-body form&quot;&gt;
+    &lt;div class=&quot;form-row&quot;&gt;&lt;div class=&quot;form-col form-group&quot;&gt;&lt;label class=&quot;form-label form-label-required&quot;&gt;Área&lt;/label&gt;&lt;select class=&quot;select&quot;&gt;&lt;option&gt;Rentas&lt;/option&gt;&lt;option&gt;Obras&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;&lt;div class=&quot;form-col form-group&quot;&gt;&lt;label class=&quot;form-label form-label-required&quot;&gt;Prioridad&lt;/label&gt;&lt;select class=&quot;select&quot;&gt;&lt;option&gt;Normal&lt;/option&gt;&lt;option&gt;Alta&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;&lt;label class=&quot;form-label&quot;&gt;Descripción&lt;/label&gt;&lt;textarea class=&quot;textarea&quot; placeholder=&quot;Describí brevemente la solicitud&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+    &lt;div class=&quot;form-row&quot;&gt;&lt;label class=&quot;checkbox&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt; Enviar comprobante al vecino&lt;/label&gt;&lt;label class=&quot;checkbox&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; Marcar como urgente&lt;/label&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-footer&quot;&gt;&lt;button class=&quot;btn btn-secondary&quot; type=&quot;button&quot;&gt;Cancelar&lt;/button&gt;&lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Guardar solicitud&lt;/button&gt;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+</div>
+    </section><section class="docs-section">
+      <div class="docs-section-header"><div><p class="docs-kicker">Ejemplo</p><h2>Estados, alertas y badges</h2><p>Mensajes y etiquetas para comunicar estados del sistema.</p></div></div>
+      <div class="docs-preview">
+<div class="page-grid page-grid-2">
+  <div class="alert alert-success"><span class="alert-icon">✓</span><div class="alert-content"><h3 class="alert-title">Pago confirmado</h3><p class="alert-description">La operación quedó registrada.</p></div></div>
+  <div class="alert alert-warning"><span class="alert-icon">!</span><div class="alert-content"><h3 class="alert-title">Documentación pendiente</h3><p class="alert-description">Falta adjuntar constancia.</p></div></div>
+</div>
+<div class="docs-variant-row">
+  <span class="badge badge-active badge-dot">Activo</span>
+  <span class="badge badge-pending badge-dot">Pendiente</span>
+  <span class="badge badge-approved badge-dot">Aprobado</span>
+  <span class="badge badge-rejected badge-dot">Rechazado</span>
+  <span class="badge badge-outline-info badge-pill">Informativo</span>
+</div>
+</div>
+      <div class="docs-code-wrap">
+  <button class="docs-copy" type="button" data-copy>Copiar código</button>
+  <pre><code class="language-html">&lt;div class=&quot;page-grid page-grid-2&quot;&gt;
+  &lt;div class=&quot;alert alert-success&quot;&gt;&lt;span class=&quot;alert-icon&quot;&gt;✓&lt;/span&gt;&lt;div class=&quot;alert-content&quot;&gt;&lt;h3 class=&quot;alert-title&quot;&gt;Pago confirmado&lt;/h3&gt;&lt;p class=&quot;alert-description&quot;&gt;La operación quedó registrada.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;alert alert-warning&quot;&gt;&lt;span class=&quot;alert-icon&quot;&gt;!&lt;/span&gt;&lt;div class=&quot;alert-content&quot;&gt;&lt;h3 class=&quot;alert-title&quot;&gt;Documentación pendiente&lt;/h3&gt;&lt;p class=&quot;alert-description&quot;&gt;Falta adjuntar constancia.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;docs-variant-row&quot;&gt;
+  &lt;span class=&quot;badge badge-active badge-dot&quot;&gt;Activo&lt;/span&gt;
+  &lt;span class=&quot;badge badge-pending badge-dot&quot;&gt;Pendiente&lt;/span&gt;
+  &lt;span class=&quot;badge badge-approved badge-dot&quot;&gt;Aprobado&lt;/span&gt;
+  &lt;span class=&quot;badge badge-rejected badge-dot&quot;&gt;Rechazado&lt;/span&gt;
+  &lt;span class=&quot;badge badge-outline-info badge-pill&quot;&gt;Informativo&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+</div>
+    </section><section class="docs-section">
+      <div class="docs-section-header"><div><p class="docs-kicker">Ejemplo</p><h2>Estado vacío bien presentado</h2><p>Sin grillas raras ni espacios vacíos confusos.</p></div></div>
+      <div class="docs-preview">
+<div class="empty-state empty-state-dashed empty-state-info">
+  <div class="empty-state-icon">🔎</div>
+  <h3 class="empty-state-title">No encontramos resultados</h3>
+  <p class="empty-state-description">No hay trámites que coincidan con los filtros actuales. Modificá la búsqueda o limpiá los filtros.</p>
+  <div class="empty-state-actions"><button class="btn btn-secondary">Limpiar filtros</button><button class="btn btn-primary">Crear nuevo</button></div>
+</div>
+</div>
+      <div class="docs-code-wrap">
+  <button class="docs-copy" type="button" data-copy>Copiar código</button>
+  <pre><code class="language-html">&lt;div class=&quot;empty-state empty-state-dashed empty-state-info&quot;&gt;
+  &lt;div class=&quot;empty-state-icon&quot;&gt;🔎&lt;/div&gt;
+  &lt;h3 class=&quot;empty-state-title&quot;&gt;No encontramos resultados&lt;/h3&gt;
+  &lt;p class=&quot;empty-state-description&quot;&gt;No hay trámites que coincidan con los filtros actuales. Modificá la búsqueda o limpiá los filtros.&lt;/p&gt;
+  &lt;div class=&quot;empty-state-actions&quot;&gt;&lt;button class=&quot;btn btn-secondary&quot;&gt;Limpiar filtros&lt;/button&gt;&lt;button class=&quot;btn btn-primary&quot;&gt;Crear nuevo&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+    </section><section class="docs-section">
+      <div class="docs-section-header"><div><p class="docs-kicker">Ejemplo</p><h2>Sección de contenido reutilizable</h2><p>Page section con header, acciones, grid y cards.</p></div></div>
+      <div class="docs-preview">
+<section class="page-section">
+  <div class="page-section-header"><div class="page-section-heading"><p class="page-kicker">Bloque de contenido</p><h3 class="page-section-title">Expedientes destacados</h3><p class="page-section-subtitle">Una sección ordenada con cards, estados y acciones.</p></div><div class="page-section-actions"><button class="btn btn-outline-primary">Ver todo</button></div></div>
+  <div class="page-section-body page-grid page-grid-3">
+    <article class="card card-hover"><div class="card-body"><p class="card-kicker">Obras</p><h3 class="card-title">Vereda rota</h3><p class="card-text">Reclamo registrado en barrio Centro.</p></div><div class="card-footer"><span class="badge badge-pending">Pendiente</span></div></article>
+    <article class="card card-hover"><div class="card-body"><p class="card-kicker">Rentas</p><h3 class="card-title">Pago imputado</h3><p class="card-text">Solicitud resuelta automáticamente.</p></div><div class="card-footer"><span class="badge badge-approved">Resuelto</span></div></article>
+    <article class="card card-hover"><div class="card-body"><p class="card-kicker">Atención</p><h3 class="card-title">Consulta general</h3><p class="card-text">Derivada a mesa de entrada.</p></div><div class="card-footer"><span class="badge badge-active">En proceso</span></div></article>
+  </div>
+</section>
+</div>
+      <div class="docs-code-wrap">
+  <button class="docs-copy" type="button" data-copy>Copiar código</button>
+  <pre><code class="language-html">&lt;section class=&quot;page-section&quot;&gt;
+  &lt;div class=&quot;page-section-header&quot;&gt;&lt;div class=&quot;page-section-heading&quot;&gt;&lt;p class=&quot;page-kicker&quot;&gt;Bloque de contenido&lt;/p&gt;&lt;h3 class=&quot;page-section-title&quot;&gt;Expedientes destacados&lt;/h3&gt;&lt;p class=&quot;page-section-subtitle&quot;&gt;Una sección ordenada con cards, estados y acciones.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;page-section-actions&quot;&gt;&lt;button class=&quot;btn btn-outline-primary&quot;&gt;Ver todo&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;page-section-body page-grid page-grid-3&quot;&gt;
+    &lt;article class=&quot;card card-hover&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;&lt;p class=&quot;card-kicker&quot;&gt;Obras&lt;/p&gt;&lt;h3 class=&quot;card-title&quot;&gt;Vereda rota&lt;/h3&gt;&lt;p class=&quot;card-text&quot;&gt;Reclamo registrado en barrio Centro.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card-footer&quot;&gt;&lt;span class=&quot;badge badge-pending&quot;&gt;Pendiente&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;
+    &lt;article class=&quot;card card-hover&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;&lt;p class=&quot;card-kicker&quot;&gt;Rentas&lt;/p&gt;&lt;h3 class=&quot;card-title&quot;&gt;Pago imputado&lt;/h3&gt;&lt;p class=&quot;card-text&quot;&gt;Solicitud resuelta automáticamente.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card-footer&quot;&gt;&lt;span class=&quot;badge badge-approved&quot;&gt;Resuelto&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;
+    &lt;article class=&quot;card card-hover&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;&lt;p class=&quot;card-kicker&quot;&gt;Atención&lt;/p&gt;&lt;h3 class=&quot;card-title&quot;&gt;Consulta general&lt;/h3&gt;&lt;p class=&quot;card-text&quot;&gt;Derivada a mesa de entrada.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card-footer&quot;&gt;&lt;span class=&quot;badge badge-active&quot;&gt;En proceso&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+    </section>
+  </main>
+  <script src="js/docs.js"></script>
+</body>
+</html>

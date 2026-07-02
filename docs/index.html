@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Municipal Utilities DS</title>
-  <link rel="stylesheet" href="../dist/municipal-design-system.min.css" />
-  <link rel="stylesheet" href="./docs.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio · Municipal Design System</title>
+  <link rel="stylesheet" href="css/municipal-design-system.css">
+  <link rel="stylesheet" href="css/docs.css">
 </head>
-
-<body>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <div class="brand">
-        <h1>Municipal Utilities DS</h1>
-        <p>Documentación de clases utilitarias para GeneXus. Buscador, regiones y ejemplos de uso.</p>
-      </div>
-      <div class="nav-title">Regiones</div>
-      <nav id="sidebarNav" class="nav-list"></nav>
-      <p class="footer-note">Tip: usá el buscador para encontrar clases como <b>p-4</b>, <b>bg-primary</b>, <b>flex</b>
-        o <b>rounded</b>.</p>
-    </aside>
-
-    <main class="main">
-      <section class="hero">
-        <h2>Documentación del Design System</h2>
-        <p>Esta web se puede subir al mismo GitHub Pages o servidor donde publiques el CSS. Los ejemplos usan el archivo
-          <b>municipal-utilities.min.css</b> cargado localmente.</p>
-      </section>
-
-      <section class="toolbar">
-        <div class="search-box">
-          <span>🔎</span>
-          <input id="searchInput" type="search"
-            placeholder="Buscar clase, propiedad o región... ej: bg-primary, padding, flex, shadow" />
-        </div>
-        <div id="count" class="counter"></div>
-      </section>
-
-      <section class="region-head">
-        <h2 id="regionTitle">Todas las utilidades</h2>
-        <p id="regionDescription">Buscá por nombre de clase, propiedad CSS o región.</p>
-      </section>
-
-      <section id="results" class="results"></section>
-    </main>
+<body class="docs-body ">
+  <header class="docs-topbar">
+    <a class="docs-brand" href="index.html" aria-label="Ir al inicio">
+      <span class="docs-brand-mark">M</span>
+      <span>
+        <strong>Municipal DS</strong>
+        <small>Documentación</small>
+      </span>
+    </a>
+    <nav class="docs-nav" aria-label="Navegación principal">
+      <a class="docs-nav-link is-active" href="index.html">Inicio</a><a class="docs-nav-link " href="componentes.html">Componentes</a><a class="docs-nav-link " href="utilidades.html">Utilidades</a><a class="docs-nav-link " href="tokens.html">Tokens</a><a class="docs-nav-link " href="ejemplos.html">Ejemplos</a>
+    </nav>
+  </header>
+  <main class="docs-main">
+    <section class="docs-hero">
+  <p class="docs-kicker">Sistema de diseño municipal</p>
+  <h1>Documentación limpia y completa del CSS</h1>
+  <p>Guía visual para consultar tokens, utilidades, componentes y ejemplos reales usando únicamente las clases disponibles en el archivo municipal-design-system.css.</p>
+</section><section class="docs-stats-grid"><article class="docs-stat">
+      <strong>2413</strong>
+      <span>clases CSS detectadas</span>
+    </article><article class="docs-stat">
+      <strong>2172</strong>
+      <span>clases utilitarias / estados</span>
+    </article><article class="docs-stat">
+      <strong>247</strong>
+      <span>clases de componentes</span>
+    </article><article class="docs-stat">
+      <strong>117</strong>
+      <span>tokens CSS</span>
+    </article></section><section class="docs-link-grid">
+  <a class="docs-link-card" href="componentes.html"><h2>Componentes</h2><p>Botones, formularios, cards, alerts, badges, tablas, empty states y layout con variantes y código copiable.</p></a>
+  <a class="docs-link-card" href="utilidades.html"><h2>Utilidades</h2><p>Listado completo de clases utilitarias y variantes de estado, dividido por secciones y con búsqueda por texto.</p></a>
+  <a class="docs-link-card" href="tokens.html"><h2>Tokens</h2><p>Colores, radios, sombras, textos, bordes, estados y variables reutilizables del sistema.</p></a>
+  <a class="docs-link-card" href="ejemplos.html"><h2>Ejemplos</h2><p>Bloques mejor separados para dashboard, tablas, formularios, estados, grillas y tarjetas municipales.</p></a>
+</section><section class="docs-section">
+  <div class="docs-section-header">
+    <div>
+      <p class="docs-kicker">Estructura</p>
+      <h2>Qué incluye este paquete</h2>
+      <p>La navegación queda reducida a lo útil: Inicio, Componentes, Utilidades, Tokens y Ejemplos. Se eliminó la página técnica que no aportaba a la documentación.</p>
+    </div>
   </div>
-
-  <script src="./docs.js"></script>
+  <div class="docs-component-grid">
+    <article class="docs-mini-card"><h3>Más aire visual</h3><p>Se aumentaron separaciones entre secciones, cards y bloques para que no se vea todo apretado.</p></article>
+    <article class="docs-mini-card"><h3>Ejemplos más reales</h3><p>Se reemplazaron ejemplos flojos por pantallas de gestión, trámites, tablas y formularios.</p></article>
+    <article class="docs-mini-card"><h3>Utilidades completas</h3><p>La página de utilidades se genera desde el CSS y muestra todas las clases detectadas.</p></article>
+    <article class="docs-mini-card"><h3>Sin filtros raros</h3><p>En utilidades queda una búsqueda por texto simple; se sacaron los botones de filtro.</p></article>
+  </div>
+</section>
+  </main>
+  <script src="js/docs.js"></script>
 </body>
-
 </html>

@@ -2,7 +2,7 @@
 /* 6. TABLES                                                 */
 /* ========================================================= */
 
-.table-wrapper {
+.uic-table-wrapper {
     width: 100%;
 
     background: var(--component-bg);
@@ -13,13 +13,13 @@
     overflow: hidden;
 }
 
-.table-responsive {
+.uic-table-responsive {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-.table {
+.uic-table {
     width: 100%;
     min-width: 100%;
 
@@ -31,7 +31,7 @@
     line-height: 1.25rem;
 }
 
-.table caption {
+.uic-table caption {
     padding: 0.875rem 1rem;
 
     color: var(--component-text-muted);
@@ -39,8 +39,8 @@
     text-align: left;
 }
 
-.table th,
-.table td {
+.uic-table th,
+.uic-table td {
     padding: 0.75rem 1rem;
 
     border-bottom: 1px solid var(--component-border);
@@ -49,7 +49,7 @@
     vertical-align: middle;
 }
 
-.table th {
+.uic-table th {
     background: var(--component-bg-soft);
 
     color: var(--component-text-strong);
@@ -60,76 +60,76 @@
     letter-spacing: 0.035em;
 }
 
-.table tbody tr:last-child td {
+.uic-table tbody tr:last-child td {
     border-bottom: 0;
 }
 
-.table td {
+.uic-table td {
     background: var(--component-bg);
 }
 
-.table-hover tbody tr {
+.uic-table--hover tbody tr {
     transition:
         background-color var(--component-transition),
         color var(--component-transition);
 }
 
-.table-hover tbody tr:hover td {
+.uic-table--hover tbody tr:hover td {
     background: var(--component-bg-hover);
 }
 
-.table-striped tbody tr:nth-child(even) td {
+.uic-table--striped tbody tr:nth-child(even) td {
     background: var(--component-bg-soft);
 }
 
-.table-bordered th,
-.table-bordered td {
+.uic-table--bordered th,
+.uic-table--bordered td {
     border-right: 1px solid var(--component-border);
 }
 
-.table-bordered th:last-child,
-.table-bordered td:last-child {
+.uic-table--bordered th:last-child,
+.uic-table--bordered td:last-child {
     border-right: 0;
 }
 
 /* Table sizes */
 
-.table-sm th,
-.table-sm td {
+.uic-table--sm th,
+.uic-table--sm td {
     padding: 0.5rem 0.75rem;
     font-size: 0.8125rem;
 }
 
-.table-lg th,
-.table-lg td {
+.uic-table--lg th,
+.uic-table--lg td {
     padding: 1rem 1.25rem;
 }
 
-.table-compact th,
-.table-compact td {
+.uic-table--compact th,
+.uic-table--compact td {
     padding: 0.425rem 0.625rem;
     font-size: 0.8125rem;
 }
 
 /* Table helpers */
 
-.table-nowrap th,
-.table-nowrap td,
-.table-cell-nowrap {
+.uic-table--nowrap th,
+.uic-table--nowrap td,
+.uic-table__cell--nowrap {
     white-space: nowrap;
 }
 
-.table-cell-muted {
+.uic-table__cell--muted {
     color: var(--component-text-muted);
 }
 
-.table-cell-strong {
+.uic-table__cell--strong {
     color: var(--component-text-strong);
     font-weight: 700;
 }
 
-.table-cell-actions,
-.table-actions {
+.uic-table__cell-actions,
+.uic-table__actions {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -137,19 +137,19 @@
     flex-wrap: wrap;
 }
 
-.table-align-center th,
-.table-align-center td {
+.uic-table--align-center th,
+.uic-table--align-center td {
     text-align: center;
 }
 
-.table-align-right th,
-.table-align-right td {
+.uic-table--align-right th,
+.uic-table--align-right td {
     text-align: right;
 }
 
 /* Table toolbar */
 
-.table-toolbar {
+.uic-table__toolbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -162,7 +162,7 @@
     border-bottom: 1px solid var(--component-border);
 }
 
-.table-title {
+.uic-table__title {
     margin: 0;
 
     color: var(--component-text-strong);
@@ -171,7 +171,7 @@
     line-height: 1.375rem;
 }
 
-.table-subtitle {
+.uic-table__subtitle {
     margin: 0.25rem 0 0;
 
     color: var(--component-text-muted);
@@ -179,7 +179,7 @@
     line-height: 1.125rem;
 }
 
-.table-toolbar-actions {
+.uic-table__toolbar-actions {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -189,7 +189,7 @@
 
 /* Empty table */
 
-.table-empty {
+.uic-table__empty {
     padding: 2rem 1rem;
 
     color: var(--component-text-muted);
@@ -198,16 +198,16 @@
 }
 
 @media (max-width: 640px) {
-    .table-toolbar {
+    .uic-table__toolbar {
         align-items: stretch;
         flex-direction: column;
     }
 
-    .table-toolbar-actions {
+    .uic-table__toolbar-actions {
         justify-content: stretch;
     }
 
-    .table-toolbar-actions .btn {
+    .uic-table__toolbar-actions .uic-btn {
         width: 100%;
     }
 }

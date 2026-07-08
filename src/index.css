@@ -1,5 +1,4 @@
 @import url("./theme.css");
-@import url("./utilities.css");
 
 @import url("./components/buttons.css");
 @import url("./components/forms.css");
@@ -9,3 +8,5 @@
 @import url("./components/tables.css");
 @import url("./components/empty-states.css");
 @import url("./components/page-layout.css");
+
+@import url("./utilities.css");

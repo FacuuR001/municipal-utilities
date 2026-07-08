@@ -2,7 +2,7 @@
 /* 1. BUTTONS                                                */
 /* ========================================================= */
 
-.btn {
+.uic-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -32,28 +32,28 @@
 
 }
 
-.btn:hover {
+.uic-btn:hover {
     text-decoration: none;
     transform: translateY(-1px);
     box-shadow: var(--component-shadow-sm);
 }
 
-.btn:active {
+.uic-btn:active {
     transform: translateY(0);
     box-shadow: var(--component-shadow-xs);
 }
 
-.btn:focus {
+.uic-btn:focus {
     outline: none;
 }
 
-.btn:focus-visible {
+.uic-btn:focus-visible {
     box-shadow: var(--component-shadow-xs), var(--component-focus-ring);
 }
 
-.btn:disabled,
-.btn[disabled],
-.btn[aria-disabled="true"] {
+.uic-btn:disabled,
+.uic-btn[disabled],
+.uic-btn[aria-disabled="true"] {
     opacity: 0.55;
     cursor: not-allowed;
     pointer-events: none;
@@ -61,117 +61,117 @@
     box-shadow: none;
 }
 
-.btn svg,
-.btn i,
-.btn .icon {
+.uic-btn svg,
+.uic-btn i,
+.uic-btn .uic-btn__icon {
     flex: 0 0 auto;
 }
 
 /* Solid variants */
 
-.btn-primary {
+.uic-btn--primary {
     background: var(--component-primary);
     border-color: var(--component-primary);
     color: var(--color-white);
 }
 
-.btn-primary:hover {
+.uic-btn--primary:hover {
     background: var(--component-primary-hover);
     border-color: var(--component-primary-hover);
     color: var(--color-white);
 }
 
-.btn-primary:active {
+.uic-btn--primary:active {
     background: var(--component-primary-active);
     border-color: var(--component-primary-active);
     color: var(--color-white);
 }
 
-.btn-secondary {
+.uic-btn--secondary {
     background: var(--component-bg);
     border-color: var(--component-border);
     color: var(--component-text-strong);
 }
 
-.btn-secondary:hover {
+.uic-btn--secondary:hover {
     background: var(--component-bg-soft);
     border-color: var(--component-border-hover);
     color: var(--component-text-strong);
 }
 
-.btn-secondary:active {
+.uic-btn--secondary:active {
     background: var(--component-bg-muted);
     border-color: var(--component-border-hover);
     color: var(--component-text-strong);
 }
 
-.btn-success {
+.uic-btn--success {
     background: var(--component-success);
     border-color: var(--component-success-hover);
     color: var(--color-white);
 }
 
-.btn-success:hover {
+.uic-btn--success:hover {
     background: var(--component-success-hover);
     border-color: var(--component-success-hover);
     color: var(--color-white);
 }
 
-.btn-success:active {
+.uic-btn--success:active {
     background: var(--component-success-hover);
     border-color: var(--component-success-hover);
     color: var(--color-white);
 }
 
-.btn-danger {
+.uic-btn--danger {
     background: var(--component-danger);
     border-color: var(--component-danger-hover);
     color: var(--color-white);
 }
 
-.btn-danger:hover {
+.uic-btn--danger:hover {
     background: var(--component-danger-hover);
     border-color: var(--component-danger-hover);
     color: var(--color-white);
 }
 
-.btn-danger:active {
+.uic-btn--danger:active {
     background: var(--component-danger-hover);
     border-color: var(--component-danger-hover);
     color: var(--color-white);
 }
 
-.btn-warning {
+.uic-btn--warning {
     background: var(--component-warning);
     border-color: var(--component-warning-hover);
     color: var(--color-white);
 }
 
-.btn-warning:hover {
+.uic-btn--warning:hover {
     background: var(--component-warning-hover);
     border-color: var(--component-warning-hover);
     color: var(--color-white);
 }
 
-.btn-warning:active {
+.uic-btn--warning:active {
     background: var(--component-warning-hover);
     border-color: var(--component-warning-hover);
     color: var(--color-white);
 }
 
-.btn-info {
+.uic-btn--info {
     background: var(--component-info);
     border-color: var(--component-info-hover);
     color: var(--color-white);
 }
 
-.btn-info:hover {
+.uic-btn--info:hover {
     background: var(--component-info-hover);
     border-color: var(--component-info-hover);
     color: var(--color-white);
 }
 
-.btn-info:active {
+.uic-btn--info:active {
     background: var(--component-info-hover);
     border-color: var(--component-info-hover);
     color: var(--color-white);
@@ -179,151 +179,151 @@
 
 /* Outline variants */
 
-.btn-outline-primary,
-.btn-outline-success,
-.btn-outline-danger,
-.btn-outline-warning,
-.btn-outline-info,
-.btn-outline-secondary {
+.uic-btn--outline-primary,
+.uic-btn--outline-success,
+.uic-btn--outline-danger,
+.uic-btn--outline-warning,
+.uic-btn--outline-info,
+.uic-btn--outline-secondary {
     background: var(--component-bg);
 }
 
-.btn-outline-primary {
+.uic-btn--outline-primary {
     border-color: rgba(0, 157, 224, 0.55);
     color: var(--component-primary-active);
 }
 
-.btn-outline-primary:hover {
+.uic-btn--outline-primary:hover {
     background: var(--component-primary-soft);
     border-color: var(--component-primary);
     color: var(--component-primary-active);
 }
 
-.btn-outline-secondary {
+.uic-btn--outline-secondary {
     border-color: var(--component-border-hover);
     color: var(--component-text);
 }
 
-.btn-outline-secondary:hover {
+.uic-btn--outline-secondary:hover {
     background: var(--component-bg-soft);
     border-color: var(--component-border-strong);
     color: var(--component-text-strong);
 }
 
-.btn-outline-success {
+.uic-btn--outline-success {
     border-color: var(--component-success-border);
     color: var(--component-success-text);
 }
 
-.btn-outline-success:hover {
+.uic-btn--outline-success:hover {
     background: var(--component-success-soft);
     border-color: var(--component-success);
 }
 
-.btn-outline-danger {
+.uic-btn--outline-danger {
     border-color: var(--component-danger-border);
     color: var(--component-danger-text);
 }
 
-.btn-outline-danger:hover {
+.uic-btn--outline-danger:hover {
     background: var(--component-danger-soft);
     border-color: var(--component-danger);
 }
 
-.btn-outline-warning {
+.uic-btn--outline-warning {
     border-color: var(--component-warning-border);
     color: var(--component-warning-text);
 }
 
-.btn-outline-warning:hover {
+.uic-btn--outline-warning:hover {
     background: var(--component-warning-soft);
     border-color: var(--component-warning);
 }
 
-.btn-outline-info {
+.uic-btn--outline-info {
     border-color: var(--component-info-border);
     color: var(--component-info-text);
 }
 
-.btn-outline-info:hover {
+.uic-btn--outline-info:hover {
     background: var(--component-info-soft);
     border-color: var(--component-info);
 }
 
 /* Soft variants */
 
-.btn-soft-primary {
+.uic-btn--soft-primary {
     background: var(--component-primary-soft);
     border-color: transparent;
     color: var(--component-primary-active);
     box-shadow: none;
 }
 
-.btn-soft-primary:hover {
+.uic-btn--soft-primary:hover {
     background: rgba(0, 157, 224, 0.18);
     color: var(--component-primary-active);
 }
 
-.btn-soft-success {
+.uic-btn--soft-success {
     background: var(--component-success-soft);
     border-color: transparent;
     color: var(--component-success-text);
     box-shadow: none;
 }
 
-.btn-soft-success:hover {
+.uic-btn--soft-success:hover {
     background: #dcfce7;
 }
 
-.btn-soft-danger {
+.uic-btn--soft-danger {
     background: var(--component-danger-soft);
     border-color: transparent;
     color: var(--component-danger-text);
     box-shadow: none;
 }
 
-.btn-soft-danger:hover {
+.uic-btn--soft-danger:hover {
     background: #fee2e2;
 }
 
-.btn-soft-warning {
+.uic-btn--soft-warning {
     background: var(--component-warning-soft);
     border-color: transparent;
     color: var(--component-warning-text);
     box-shadow: none;
 }
 
-.btn-soft-warning:hover {
+.uic-btn--soft-warning:hover {
     background: #fef3c7;
 }
 
-.btn-soft-info {
+.uic-btn--soft-info {
     background: var(--component-info-soft);
     border-color: transparent;
     color: var(--component-info-text);
     box-shadow: none;
 }
 
-.btn-soft-info:hover {
+.uic-btn--soft-info:hover {
     background: #dbeafe;
 }
 
 /* Ghost and link */
 
-.btn-ghost {
+.uic-btn--ghost {
     background: transparent;
     border-color: transparent;
     color: var(--component-text);
     box-shadow: none;
 }
 
-.btn-ghost:hover {
+.uic-btn--ghost:hover {
     background: var(--component-bg-muted);
     color: var(--component-text-strong);
     box-shadow: none;
 }
 
-.btn-link {
+.uic-btn--link {
     min-height: auto;
     padding: 0;
     background: transparent;
@@ -334,7 +334,7 @@
     box-shadow: none;
 }
 
-.btn-link:hover {
+.uic-btn--link:hover {
     color: var(--component-primary-hover);
     text-decoration: underline;
     transform: none;
@@ -343,7 +343,7 @@
 
 /* Sizes */
 
-.btn-xs {
+.uic-btn--xs {
     min-height: 1.75rem;
     padding: 0.25rem 0.5rem;
     border-radius: var(--component-radius-md);
@@ -351,7 +351,7 @@
     line-height: 1rem;
 }
 
-.btn-sm {
+.uic-btn--sm {
     min-height: 2rem;
     padding: 0.375rem 0.75rem;
     border-radius: var(--component-radius-md);
@@ -359,7 +359,7 @@
     line-height: 1.125rem;
 }
 
-.btn-lg {
+.uic-btn--lg {
     min-height: 3rem;
     padding: 0.75rem 1.25rem;
     border-radius: var(--component-radius-xl);
@@ -367,7 +367,7 @@
     line-height: 1.5rem;
 }
 
-.btn-xl {
+.uic-btn--xl {
     min-height: 3.5rem;
     padding: 0.875rem 1.5rem;
     border-radius: var(--component-radius-xl);
@@ -377,56 +377,56 @@
 
 /* Helpers */
 
-.btn-block,
-.btn-full {
+.uic-btn--block,
+.uic-btn--full {
     display: flex;
     width: 100%;
 }
 
-.btn-icon {
+.uic-btn--icon {
     width: 2.5rem;
     min-width: 2.5rem;
     padding-inline: 0;
 }
 
-.btn-icon.btn-xs {
+.uic-btn--icon.uic-btn--xs {
     width: 1.75rem;
     min-width: 1.75rem;
 }
 
-.btn-icon.btn-sm {
+.uic-btn--icon.uic-btn--sm {
     width: 2rem;
     min-width: 2rem;
 }
 
-.btn-icon.btn-lg {
+.uic-btn--icon.uic-btn--lg {
     width: 3rem;
     min-width: 3rem;
 }
 
-.btn-icon.btn-xl {
+.uic-btn--icon.uic-btn--xl {
     width: 3.5rem;
     min-width: 3.5rem;
 }
 
-.btn-rounded {
+.uic-btn--rounded {
     border-radius: var(--component-radius-full);
 }
 
-.btn-shadow {
+.uic-btn--shadow {
     box-shadow: var(--component-shadow-sm);
 }
 
-.btn-shadow:hover {
+.uic-btn--shadow:hover {
     box-shadow: var(--component-shadow-md);
 }
 
-.btn-loading {
+.uic-btn--loading {
     pointer-events: none;
     opacity: 0.82;
 }
 
-.btn-loading::before {
+.uic-btn--loading::before {
     content: "";
     width: 1rem;
     height: 1rem;
@@ -444,45 +444,45 @@
 
 /* Button group */
 
-.btn-group {
+.uic-btn-group {
     display: inline-flex;
     align-items: center;
     isolation: isolate;
 }
 
-.btn-group .btn {
+.uic-btn-group .uic-btn {
     position: relative;
     border-radius: 0;
     box-shadow: none;
 }
 
-.btn-group .btn:hover,
-.btn-group .btn:focus-visible {
+.uic-btn-group .uic-btn:hover,
+.uic-btn-group .uic-btn:focus-visible {
     z-index: 1;
 }
 
-.btn-group .btn:first-child {
+.uic-btn-group .uic-btn:first-child {
     border-top-left-radius: var(--component-radius-lg);
     border-bottom-left-radius: var(--component-radius-lg);
 }
 
-.btn-group .btn:last-child {
+.uic-btn-group .uic-btn:last-child {
     border-top-right-radius: var(--component-radius-lg);
     border-bottom-right-radius: var(--component-radius-lg);
 }
 
-.btn-group .btn+.btn {
+.uic-btn-group .uic-btn+.uic-btn {
     margin-left: -1px;
 }
 
 /* Responsive */
 
 @media (max-width: 640px) {
-    .btn-group {
+    .uic-btn-group {
         width: 100%;
     }
 
-    .btn-group .btn {
+    .uic-btn-group .uic-btn {
         flex: 1 1 0;
     }
 }

@@ -1,573 +1,726 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Componentes · Municipal Design System</title>
-  <link rel="stylesheet" href="css/municipal-design-system.css">
-  <link rel="stylesheet" href="css/docs.css">
+  <link href="css/municipal-design-system.css" rel="stylesheet" />
+  <link href="css/docs.css" rel="stylesheet" />
 </head>
-<body class="docs-body ">
+
+<body class="docs-body">
   <header class="docs-topbar">
-    <a class="docs-brand" href="index.html" aria-label="Ir al inicio">
+    <a aria-label="Ir al inicio" class="docs-brand" href="index.html">
       <span class="docs-brand-mark">M</span>
       <span>
         <strong>Municipal DS</strong>
         <small>Documentación</small>
       </span>
     </a>
-    <nav class="docs-nav" aria-label="Navegación principal">
-      <a class="docs-nav-link " href="index.html">Inicio</a><a class="docs-nav-link is-active" href="componentes.html">Componentes</a><a class="docs-nav-link " href="utilidades.html">Utilidades</a><a class="docs-nav-link " href="tokens.html">Tokens</a><a class="docs-nav-link " href="ejemplos.html">Ejemplos</a>
+    <nav aria-label="Navegación principal" class="docs-nav">
+      <a class="docs-nav-link" href="index.html">Inicio</a><a class="docs-nav-link is-active"
+        href="componentes.html">Componentes</a><a class="docs-nav-link" href="utilidades.html">Utilidades</a><a
+        class="docs-nav-link" href="tokens.html">Tokens</a><a class="docs-nav-link" href="ejemplos.html">Ejemplos</a>
     </nav>
   </header>
   <main class="docs-main">
     <section class="docs-hero">
-  <p class="docs-kicker">Componentes</p>
-  <h1>Todos los componentes y sus variantes</h1>
-  <p>Cada bloque muestra el componente funcionando, el HTML para copiar y el listado de clases detectadas dentro de ese archivo de componente.</p>
-</section><section class="docs-toolbar">
-  <input class="docs-search" type="search" placeholder="Buscar componente, variante o clase..." data-component-search>
-  <span class="docs-counter">247 clases de componentes</span>
-</section><section class="docs-component-section" data-component="buttons">
+      <p class="docs-kicker">Componentes</p>
+      <h1>Todos los componentes y sus variantes</h1>
+      <p>Cada bloque muestra el componente funcionando, el HTML para copiar y el listado de clases uic- disponibles en
+        el componente.</p>
+    </section>
+    <section class="docs-toolbar">
+      <input class="docs-search" data-component-search="" placeholder="Buscar componente, variante o clase..."
+        type="search" />
+      <span class="docs-counter">246 clases de componentes</span>
+    </section>
+    <section class="docs-section">
       <div class="docs-section-header">
         <div>
-          <p class="docs-kicker">buttons</p>
-          <h2>Botones</h2>
-          <p>Botones sólidos, outline, soft, tamaños, grupo, ícono, link y loading.</p>
+          <p class="docs-kicker">Nomenclatura</p>
+          <h2>Convención de componentes</h2>
+          <p>Todos los componentes usan el prefijo <code>uic-</code> para evitar choques con GeneXus, Bootstrap y
+            WorkWithPlus.</p>
         </div>
       </div>
       <div class="docs-preview">
-<div class="docs-variant-row">
-  <button class="btn btn-primary">Primary</button>
-  <button class="btn btn-secondary">Secondary</button>
-  <button class="btn btn-success">Success</button>
-  <button class="btn btn-danger">Danger</button>
-  <button class="btn btn-warning">Warning</button>
-  <button class="btn btn-info">Info</button>
-</div>
-<div class="docs-variant-row">
-  <button class="btn btn-outline-primary">Outline primary</button>
-  <button class="btn btn-outline-secondary">Outline secondary</button>
-  <button class="btn btn-outline-success">Outline success</button>
-  <button class="btn btn-outline-danger">Outline danger</button>
-  <button class="btn btn-outline-warning">Outline warning</button>
-  <button class="btn btn-outline-info">Outline info</button>
-</div>
-<div class="docs-variant-row">
-  <button class="btn btn-soft-primary">Soft primary</button>
-  <button class="btn btn-soft-success">Soft success</button>
-  <button class="btn btn-soft-danger">Soft danger</button>
-  <button class="btn btn-soft-warning">Soft warning</button>
-  <button class="btn btn-soft-info">Soft info</button>
-  <button class="btn btn-ghost">Ghost</button>
-  <a class="btn btn-link" href="#">Link</a>
-</div>
-<div class="docs-variant-row">
-  <button class="btn btn-primary btn-xs">XS</button>
-  <button class="btn btn-primary btn-sm">SM</button>
-  <button class="btn btn-primary">Default</button>
-  <button class="btn btn-primary btn-lg">LG</button>
-  <button class="btn btn-primary btn-xl">XL</button>
-  <button class="btn btn-primary btn-icon" aria-label="Agregar">+</button>
-  <button class="btn btn-primary btn-loading">Cargando</button>
-</div>
-<div class="btn-group">
-  <button class="btn btn-secondary">Día</button>
-  <button class="btn btn-secondary">Semana</button>
-  <button class="btn btn-secondary">Mes</button>
-</div>
-</div>
+        <div class="docs-chip-list">
+          <code>uic-[componente]</code>
+          <code>uic-[componente]--[variante]</code>
+          <code>uic-[componente]__[elemento]</code>
+        </div>
+      </div>
       <div class="docs-code-wrap">
-  <button class="docs-copy" type="button" data-copy>Copiar código</button>
-  <pre><code class="language-html">&lt;div class=&quot;docs-variant-row&quot;&gt;
-  &lt;button class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
-  &lt;button class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
-  &lt;button class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
-  &lt;button class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
-  &lt;button class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
-  &lt;button class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class=&quot;docs-variant-row&quot;&gt;
-  &lt;button class=&quot;btn btn-outline-primary&quot;&gt;Outline primary&lt;/button&gt;
-  &lt;button class=&quot;btn btn-outline-secondary&quot;&gt;Outline secondary&lt;/button&gt;
-  &lt;button class=&quot;btn btn-outline-success&quot;&gt;Outline success&lt;/button&gt;
-  &lt;button class=&quot;btn btn-outline-danger&quot;&gt;Outline danger&lt;/button&gt;
-  &lt;button class=&quot;btn btn-outline-warning&quot;&gt;Outline warning&lt;/button&gt;
-  &lt;button class=&quot;btn btn-outline-info&quot;&gt;Outline info&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class=&quot;docs-variant-row&quot;&gt;
-  &lt;button class=&quot;btn btn-soft-primary&quot;&gt;Soft primary&lt;/button&gt;
-  &lt;button class=&quot;btn btn-soft-success&quot;&gt;Soft success&lt;/button&gt;
-  &lt;button class=&quot;btn btn-soft-danger&quot;&gt;Soft danger&lt;/button&gt;
-  &lt;button class=&quot;btn btn-soft-warning&quot;&gt;Soft warning&lt;/button&gt;
-  &lt;button class=&quot;btn btn-soft-info&quot;&gt;Soft info&lt;/button&gt;
-  &lt;button class=&quot;btn btn-ghost&quot;&gt;Ghost&lt;/button&gt;
-  &lt;a class=&quot;btn btn-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;docs-variant-row&quot;&gt;
-  &lt;button class=&quot;btn btn-primary btn-xs&quot;&gt;XS&lt;/button&gt;
-  &lt;button class=&quot;btn btn-primary btn-sm&quot;&gt;SM&lt;/button&gt;
-  &lt;button class=&quot;btn btn-primary&quot;&gt;Default&lt;/button&gt;
-  &lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;LG&lt;/button&gt;
-  &lt;button class=&quot;btn btn-primary btn-xl&quot;&gt;XL&lt;/button&gt;
-  &lt;button class=&quot;btn btn-primary btn-icon&quot; aria-label=&quot;Agregar&quot;&gt;+&lt;/button&gt;
-  &lt;button class=&quot;btn btn-primary btn-loading&quot;&gt;Cargando&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class=&quot;btn-group&quot;&gt;
-  &lt;button class=&quot;btn btn-secondary&quot;&gt;Día&lt;/button&gt;
-  &lt;button class=&quot;btn btn-secondary&quot;&gt;Semana&lt;/button&gt;
-  &lt;button class=&quot;btn btn-secondary&quot;&gt;Mes&lt;/button&gt;
+        <button class="docs-copy" data-copy="" type="button">Copiar código</button>
+        <pre><code class="language-html">&lt;button class="uic-btn uic-btn--primary"&gt;Guardar&lt;/button&gt;
+
+&lt;div class="uic-card uic-card--shadow"&gt;
+  &lt;div class="uic-card__header"&gt;
+    &lt;h3 class="uic-card__title"&gt;Título&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="uic-card__body"&gt;Contenido&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div>
-      
-      <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
-      <h3 style="margin:0 0 .75rem;">Clases disponibles en Botones</h3>
-      <div class="docs-chip-list"><code>btn</code><code>btn-block</code><code>btn-danger</code><code>btn-full</code><code>btn-ghost</code><code>btn-group</code><code>btn-icon</code><code>btn-info</code><code>btn-lg</code><code>btn-link</code><code>btn-loading</code><code>btn-outline-danger</code><code>btn-outline-info</code><code>btn-outline-primary</code><code>btn-outline-secondary</code><code>btn-outline-success</code><code>btn-outline-warning</code><code>btn-primary</code><code>btn-rounded</code><code>btn-secondary</code><code>btn-shadow</code><code>btn-sm</code><code>btn-soft-danger</code><code>btn-soft-info</code><code>btn-soft-primary</code><code>btn-soft-success</code><code>btn-soft-warning</code><code>btn-success</code><code>btn-warning</code><code>btn-xl</code><code>btn-xs</code><code>form</code><code>icon</code></div>
-    </div>
-    </section><section class="docs-component-section" data-component="forms">
-      <div class="docs-section-header">
-        <div>
-          <p class="docs-kicker">forms</p>
-          <h2>Formularios</h2>
-          <p>Inputs, selects, textareas, validaciones, grupos, fieldsets, checkbox, radio y acciones.</p>
-        </div>
       </div>
-      <div class="docs-preview">
-<form class="form">
-  <div class="form-row">
-    <div class="form-col form-group">
-      <label class="form-label form-label-required">Nombre</label>
-      <input class="input" placeholder="Ej: Mesa de entrada">
-      <p class="form-help">Texto de ayuda para el campo.</p>
-    </div>
-    <div class="form-col form-group">
-      <label class="form-label">Tipo</label>
-      <select class="select">
-        <option>Trámite</option>
-        <option>Servicio</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-col form-group">
-      <label class="form-label">Input success</label>
-      <input class="input input-success" value="Dato válido">
-      <p class="form-success">El dato fue validado correctamente.</p>
-    </div>
-    <div class="form-col form-group">
-      <label class="form-label">Input error</label>
-      <input class="input input-error" value="Dato inválido">
-      <p class="form-error">Revisá este campo.</p>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="form-label">Detalle</label>
-    <textarea class="textarea" placeholder="Descripción breve"></textarea>
-  </div>
-  <div class="input-group">
-    <span class="input-group-text">CUIT</span>
-    <input class="input" placeholder="20-00000000-0">
-    <button class="btn btn-primary">Buscar</button>
-  </div>
-  <fieldset class="fieldset">
-    <legend class="legend">Opciones</legend>
-    <label class="checkbox"><input type="checkbox" checked> Notificar al vecino</label>
-    <label class="radio"><input type="radio" name="prio" checked> Prioridad normal</label>
-  </fieldset>
-  <div class="form-actions">
-    <button class="btn btn-secondary" type="button">Cancelar</button>
-    <button class="btn btn-primary" type="button">Guardar</button>
-  </div>
-</form>
-</div>
-      <div class="docs-code-wrap">
-  <button class="docs-copy" type="button" data-copy>Copiar código</button>
-  <pre><code class="language-html">&lt;form class=&quot;form&quot;&gt;
-  &lt;div class=&quot;form-row&quot;&gt;
-    &lt;div class=&quot;form-col form-group&quot;&gt;
-      &lt;label class=&quot;form-label form-label-required&quot;&gt;Nombre&lt;/label&gt;
-      &lt;input class=&quot;input&quot; placeholder=&quot;Ej: Mesa de entrada&quot;&gt;
-      &lt;p class=&quot;form-help&quot;&gt;Texto de ayuda para el campo.&lt;/p&gt;
+      <section class="docs-component-section" data-component="buttons">
+        <div class="docs-section-header">
+          <div>
+            <p class="docs-kicker">buttons</p>
+            <h2>Botones</h2>
+            <p>Botones sólidos, outline, soft, tamaños, grupo, ícono, link y loading.</p>
+          </div>
+        </div>
+        <div class="docs-preview">
+          <div class="docs-variant-row">
+            <button class="uic-btn uic-btn--primary">Primary</button>
+            <button class="uic-btn uic-btn--secondary">Secondary</button>
+            <button class="uic-btn uic-btn--success">Success</button>
+            <button class="uic-btn uic-btn--danger">Danger</button>
+            <button class="uic-btn uic-btn--warning">Warning</button>
+            <button class="uic-btn uic-btn--info">Info</button>
+          </div>
+          <div class="docs-variant-row">
+            <button class="uic-btn uic-btn--outline-primary">Outline primary</button>
+            <button class="uic-btn uic-btn--outline-secondary">Outline secondary</button>
+            <button class="uic-btn uic-btn--outline-success">Outline success</button>
+            <button class="uic-btn uic-btn--outline-danger">Outline danger</button>
+            <button class="uic-btn uic-btn--outline-warning">Outline warning</button>
+            <button class="uic-btn uic-btn--outline-info">Outline info</button>
+          </div>
+          <div class="docs-variant-row">
+            <button class="uic-btn uic-btn--soft-primary">Soft primary</button>
+            <button class="uic-btn uic-btn--soft-success">Soft success</button>
+            <button class="uic-btn uic-btn--soft-danger">Soft danger</button>
+            <button class="uic-btn uic-btn--soft-warning">Soft warning</button>
+            <button class="uic-btn uic-btn--soft-info">Soft info</button>
+            <button class="uic-btn uic-btn--ghost">Ghost</button>
+            <a class="uic-btn uic-btn--link" href="#">Link</a>
+          </div>
+          <div class="docs-variant-row">
+            <button class="uic-btn uic-btn--primary uic-btn--xs">XS</button>
+            <button class="uic-btn uic-btn--primary uic-btn--sm">SM</button>
+            <button class="uic-btn uic-btn--primary">Default</button>
+            <button class="uic-btn uic-btn--primary uic-btn--lg">LG</button>
+            <button class="uic-btn uic-btn--primary uic-btn--xl">XL</button>
+            <button aria-label="Agregar" class="uic-btn uic-btn--primary uic-btn--icon">+</button>
+            <button class="uic-btn uic-btn--primary uic-btn--loading">Cargando</button>
+          </div>
+          <div class="uic-btn-group">
+            <button class="uic-btn uic-btn--secondary">Día</button>
+            <button class="uic-btn uic-btn--secondary">Semana</button>
+            <button class="uic-btn uic-btn--secondary">Mes</button>
+          </div>
+        </div>
+        <div class="docs-code-wrap">
+          <button class="docs-copy" data-copy="" type="button">Copiar código</button>
+          <pre><code class="language-html">&lt;div class="docs-variant-row"&gt;
+  &lt;button class="uic-btn uic-btn--primary"&gt;Primary&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--secondary"&gt;Secondary&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--success"&gt;Success&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--danger"&gt;Danger&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--warning"&gt;Warning&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--info"&gt;Info&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="docs-variant-row"&gt;
+  &lt;button class="uic-btn uic-btn--outline-primary"&gt;Outline primary&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--outline-secondary"&gt;Outline secondary&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--outline-success"&gt;Outline success&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--outline-danger"&gt;Outline danger&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--outline-warning"&gt;Outline warning&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--outline-info"&gt;Outline info&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="docs-variant-row"&gt;
+  &lt;button class="uic-btn uic-btn--soft-primary"&gt;Soft primary&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--soft-success"&gt;Soft success&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--soft-danger"&gt;Soft danger&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--soft-warning"&gt;Soft warning&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--soft-info"&gt;Soft info&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--ghost"&gt;Ghost&lt;/button&gt;
+  &lt;a class="uic-btn uic-btn--link" href="#"&gt;Link&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="docs-variant-row"&gt;
+  &lt;button class="uic-btn uic-btn--primary uic-btn--xs"&gt;XS&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--primary uic-btn--sm"&gt;SM&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--primary"&gt;Default&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--primary uic-btn--lg"&gt;LG&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--primary uic-btn--xl"&gt;XL&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--primary uic-btn--icon" aria-label="Agregar"&gt;+&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--primary uic-btn--loading"&gt;Cargando&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="uic-btn-group"&gt;
+  &lt;button class="uic-btn uic-btn--secondary"&gt;Día&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--secondary"&gt;Semana&lt;/button&gt;
+  &lt;button class="uic-btn uic-btn--secondary"&gt;Mes&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
+          <h3 style="margin:0 0 .75rem;">Clases disponibles en Botones</h3>
+          <div class="docs-chip-list">
+            <code>uic-btn</code><code>uic-btn--block</code><code>uic-btn--danger</code><code>uic-btn--full</code><code>uic-btn--ghost</code><code>uic-btn--icon</code><code>uic-btn--info</code><code>uic-btn--lg</code><code>uic-btn--link</code><code>uic-btn--loading</code><code>uic-btn--outline-danger</code><code>uic-btn--outline-info</code><code>uic-btn--outline-primary</code><code>uic-btn--outline-secondary</code><code>uic-btn--outline-success</code><code>uic-btn--outline-warning</code><code>uic-btn--primary</code><code>uic-btn--rounded</code><code>uic-btn--secondary</code><code>uic-btn--shadow</code><code>uic-btn--sm</code><code>uic-btn--soft-danger</code><code>uic-btn--soft-info</code><code>uic-btn--soft-primary</code><code>uic-btn--soft-success</code><code>uic-btn--soft-warning</code><code>uic-btn--success</code><code>uic-btn--warning</code><code>uic-btn--xl</code><code>uic-btn--xs</code><code>uic-btn-group</code><code>uic-btn__icon</code>
+          </div>
+        </div>
+      </section>
+      <section class="docs-component-section" data-component="forms">
+        <div class="docs-section-header">
+          <div>
+            <p class="docs-kicker">forms</p>
+            <h2>Formularios</h2>
+            <p>Inputs, selects, textareas, validaciones, grupos, fieldsets, checkbox, radio y acciones.</p>
+          </div>
+        </div>
+        <div class="docs-preview">
+          <form class="uic-form">
+            <div class="uic-form__row">
+              <div class="uic-form__col uic-form__group">
+                <label class="uic-form__label uic-form__label--required">Nombre</label>
+                <input class="uic-input" placeholder="Ej: Mesa de entrada" />
+                <p class="uic-form__help">Texto de ayuda para el campo.</p>
+              </div>
+              <div class="uic-form__col uic-form__group">
+                <label class="uic-form__label">Tipo</label>
+                <select class="uic-select">
+                  <option>Trámite</option>
+                  <option>Servicio</option>
+                </select>
+              </div>
+            </div>
+            <div class="uic-form__row">
+              <div class="uic-form__col uic-form__group">
+                <label class="uic-form__label">Input success</label>
+                <input class="uic-input uic-input--success" value="Dato válido" />
+                <p class="uic-form__success">El dato fue validado correctamente.</p>
+              </div>
+              <div class="uic-form__col uic-form__group">
+                <label class="uic-form__label">Input error</label>
+                <input class="uic-input uic-input--error" value="Dato inválido" />
+                <p class="uic-form__error">Revisá este campo.</p>
+              </div>
+            </div>
+            <div class="uic-form__group">
+              <label class="uic-form__label">Detalle</label>
+              <textarea class="uic-textarea" placeholder="Descripción breve"></textarea>
+            </div>
+            <div class="uic-input-group">
+              <span class="uic-input-group__text">CUIT</span>
+              <input class="uic-input" placeholder="20-00000000-0" />
+              <button class="uic-btn uic-btn--primary">Buscar</button>
+            </div>
+            <fieldset class="uic-fieldset">
+              <legend class="uic-legend">Opciones</legend>
+              <label class="uic-checkbox"><input checked="" type="checkbox" /> Notificar al vecino</label>
+              <label class="uic-radio"><input checked="" name="prio" type="radio" /> Prioridad normal</label>
+            </fieldset>
+            <div class="uic-form__actions">
+              <button class="uic-btn uic-btn--secondary" type="button">Cancelar</button>
+              <button class="uic-btn uic-btn--primary" type="button">Guardar</button>
+            </div>
+          </form>
+        </div>
+        <div class="docs-code-wrap">
+          <button class="docs-copy" data-copy="" type="button">Copiar código</button>
+          <pre><code class="language-html">&lt;form class="uic-form"&gt;
+  &lt;div class="uic-form__row"&gt;
+    &lt;div class="uic-form__col uic-form__group"&gt;
+      &lt;label class="uic-form__label uic-form__label--required"&gt;Nombre&lt;/label&gt;
+      &lt;input class="uic-input" placeholder="Ej: Mesa de entrada"&gt;
+      &lt;p class="uic-form__help"&gt;Texto de ayuda para el campo.&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;form-col form-group&quot;&gt;
-      &lt;label class=&quot;form-label&quot;&gt;Tipo&lt;/label&gt;
-      &lt;select class=&quot;select&quot;&gt;
+    &lt;div class="uic-form__col uic-form__group"&gt;
+      &lt;label class="uic-form__label"&gt;Tipo&lt;/label&gt;
+      &lt;select class="uic-select"&gt;
         &lt;option&gt;Trámite&lt;/option&gt;
         &lt;option&gt;Servicio&lt;/option&gt;
       &lt;/select&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;form-row&quot;&gt;
-    &lt;div class=&quot;form-col form-group&quot;&gt;
-      &lt;label class=&quot;form-label&quot;&gt;Input success&lt;/label&gt;
-      &lt;input class=&quot;input input-success&quot; value=&quot;Dato válido&quot;&gt;
-      &lt;p class=&quot;form-success&quot;&gt;El dato fue validado correctamente.&lt;/p&gt;
+  &lt;div class="uic-form__row"&gt;
+    &lt;div class="uic-form__col uic-form__group"&gt;
+      &lt;label class="uic-form__label"&gt;Input success&lt;/label&gt;
+      &lt;input class="uic-input uic-input--success" value="Dato válido"&gt;
+      &lt;p class="uic-form__success"&gt;El dato fue validado correctamente.&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;form-col form-group&quot;&gt;
-      &lt;label class=&quot;form-label&quot;&gt;Input error&lt;/label&gt;
-      &lt;input class=&quot;input input-error&quot; value=&quot;Dato inválido&quot;&gt;
-      &lt;p class=&quot;form-error&quot;&gt;Revisá este campo.&lt;/p&gt;
+    &lt;div class="uic-form__col uic-form__group"&gt;
+      &lt;label class="uic-form__label"&gt;Input error&lt;/label&gt;
+      &lt;input class="uic-input uic-input--error" value="Dato inválido"&gt;
+      &lt;p class="uic-form__error"&gt;Revisá este campo.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label class=&quot;form-label&quot;&gt;Detalle&lt;/label&gt;
-    &lt;textarea class=&quot;textarea&quot; placeholder=&quot;Descripción breve&quot;&gt;&lt;/textarea&gt;
+  &lt;div class="uic-form__group"&gt;
+    &lt;label class="uic-form__label"&gt;Detalle&lt;/label&gt;
+    &lt;textarea class="uic-textarea" placeholder="Descripción breve"&gt;&lt;/textarea&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;input-group&quot;&gt;
-    &lt;span class=&quot;input-group-text&quot;&gt;CUIT&lt;/span&gt;
-    &lt;input class=&quot;input&quot; placeholder=&quot;20-00000000-0&quot;&gt;
-    &lt;button class=&quot;btn btn-primary&quot;&gt;Buscar&lt;/button&gt;
+  &lt;div class="uic-input-group"&gt;
+    &lt;span class="uic-input-group__text"&gt;CUIT&lt;/span&gt;
+    &lt;input class="uic-input" placeholder="20-00000000-0"&gt;
+    &lt;button class="uic-btn uic-btn--primary"&gt;Buscar&lt;/button&gt;
   &lt;/div&gt;
-  &lt;fieldset class=&quot;fieldset&quot;&gt;
-    &lt;legend class=&quot;legend&quot;&gt;Opciones&lt;/legend&gt;
-    &lt;label class=&quot;checkbox&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt; Notificar al vecino&lt;/label&gt;
-    &lt;label class=&quot;radio&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;prio&quot; checked&gt; Prioridad normal&lt;/label&gt;
+  &lt;fieldset class="uic-fieldset"&gt;
+    &lt;legend class="uic-legend"&gt;Opciones&lt;/legend&gt;
+    &lt;label class="uic-checkbox"&gt;&lt;input type="checkbox" checked&gt; Notificar al vecino&lt;/label&gt;
+    &lt;label class="uic-radio"&gt;&lt;input type="radio" name="prio" checked&gt; Prioridad normal&lt;/label&gt;
   &lt;/fieldset&gt;
-  &lt;div class=&quot;form-actions&quot;&gt;
-    &lt;button class=&quot;btn btn-secondary&quot; type=&quot;button&quot;&gt;Cancelar&lt;/button&gt;
-    &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Guardar&lt;/button&gt;
+  &lt;div class="uic-form__actions"&gt;
+    &lt;button class="uic-btn uic-btn--secondary" type="button"&gt;Cancelar&lt;/button&gt;
+    &lt;button class="uic-btn uic-btn--primary" type="button"&gt;Guardar&lt;/button&gt;
   &lt;/div&gt;
 &lt;/form&gt;</code></pre>
-</div>
-      
-      <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
-      <h3 style="margin:0 0 .75rem;">Clases disponibles en Formularios</h3>
-      <div class="docs-chip-list"><code>btn</code><code>card</code><code>checkbox</code><code>checkbox-disabled</code><code>error-text</code><code>fieldset</code><code>form-actions</code><code>form-actions-between</code><code>form-actions-start</code><code>form-col</code><code>form-control</code><code>form-control-error</code><code>form-control-success</code><code>form-error</code><code>form-group</code><code>form-help</code><code>form-label</code><code>form-label-required</code><code>form-row</code><code>form-success</code><code>help-text</code><code>input</code><code>input-error</code><code>input-group</code><code>input-group-text</code><code>input-lg</code><code>input-sm</code><code>input-success</code><code>is-invalid</code><code>is-valid</code><code>label</code><code>label-required</code><code>legend</code><code>radio</code><code>radio-disabled</code><code>select</code><code>select-error</code><code>select-lg</code><code>select-sm</code><code>select-success</code><code>success-text</code><code>textarea</code><code>textarea-error</code><code>textarea-lg</code><code>textarea-sm</code><code>textarea-success</code></div>
-    </div>
-    </section><section class="docs-component-section" data-component="cards">
-      <div class="docs-section-header">
-        <div>
-          <p class="docs-kicker">cards</p>
-          <h2>Tarjetas</h2>
-          <p>Tarjetas base, acentuadas, soft, stat cards y service cards municipales.</p>
         </div>
-      </div>
-      <div class="docs-preview">
-<div class="page-grid page-grid-3">
-  <article class="card card-primary card-hover">
-    <div class="card-header"><div><h3 class="card-title">Card primary</h3><p class="card-subtitle">Con borde superior</p></div></div>
-    <div class="card-body"><p class="card-text">Contenido de tarjeta municipal con acciones.</p></div>
-    <div class="card-footer"><button class="btn btn-sm btn-primary">Ver</button></div>
-  </article>
-  <article class="card card-soft-success">
-    <div class="card-body"><p class="card-kicker">Aprobado</p><h3 class="card-title">Solicitud recibida</h3><p class="card-text">Variante soft para estados positivos.</p></div>
-  </article>
-  <article class="stat-card stat-info">
-    <p class="stat-label">Trámites activos</p>
-    <p class="stat-value">128</p>
-    <p class="stat-description">Actualizado hoy</p>
-  </article>
-</div>
-<div class="page-grid page-grid-3">
-  <article class="service-card service-card-sm">
-    <span class="service-card-corner"></span>
-    <div class="service-card-icon"><div class="service-card-icon-badge">T</div></div>
-    <h3 class="service-card-title">Trámites online</h3>
-    <span class="service-card-line"></span>
-    <p class="service-card-description">Accesos rápidos para vecinos.</p>
-  </article>
-  <article class="service-card service-card-sm service-card-no-corner">
-    <div class="service-card-icon"><div class="service-card-icon-badge">P</div></div>
-    <h3 class="service-card-title">Pagos</h3>
-    <span class="service-card-line"></span>
-    <p class="service-card-description">Consulta y pago de tasas.</p>
-  </article>
-  <article class="service-card service-card-sm service-card-no-line">
-    <span class="service-card-corner"></span>
-    <div class="service-card-icon"><div class="service-card-icon-badge">C</div></div>
-    <h3 class="service-card-title">Contactos</h3>
-    <p class="service-card-description">Canales de atención municipal.</p>
-  </article>
-</div>
-</div>
-      <div class="docs-code-wrap">
-  <button class="docs-copy" type="button" data-copy>Copiar código</button>
-  <pre><code class="language-html">&lt;div class=&quot;page-grid page-grid-3&quot;&gt;
-  &lt;article class=&quot;card card-primary card-hover&quot;&gt;
-    &lt;div class=&quot;card-header&quot;&gt;&lt;div&gt;&lt;h3 class=&quot;card-title&quot;&gt;Card primary&lt;/h3&gt;&lt;p class=&quot;card-subtitle&quot;&gt;Con borde superior&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;div class=&quot;card-body&quot;&gt;&lt;p class=&quot;card-text&quot;&gt;Contenido de tarjeta municipal con acciones.&lt;/p&gt;&lt;/div&gt;
-    &lt;div class=&quot;card-footer&quot;&gt;&lt;button class=&quot;btn btn-sm btn-primary&quot;&gt;Ver&lt;/button&gt;&lt;/div&gt;
+        <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
+          <h3 style="margin:0 0 .75rem;">Clases disponibles en Formularios</h3>
+          <div class="docs-chip-list">
+            <code>uic-checkbox</code><code>uic-checkbox--disabled</code><code>uic-error-text</code><code>uic-fieldset</code><code>uic-form</code><code>uic-form__actions</code><code>uic-form__actions--between</code><code>uic-form__actions--start</code><code>uic-form__col</code><code>uic-form__error</code><code>uic-form__group</code><code>uic-form__group--error</code><code>uic-form__group--success</code><code>uic-form__help</code><code>uic-form__label</code><code>uic-form__label--required</code><code>uic-form__row</code><code>uic-form__success</code><code>uic-help-text</code><code>uic-input</code><code>uic-input--error</code><code>uic-input--invalid</code><code>uic-input--lg</code><code>uic-input--sm</code><code>uic-input--success</code><code>uic-input--valid</code><code>uic-input-group</code><code>uic-input-group__text</code><code>uic-label</code><code>uic-label--required</code><code>uic-legend</code><code>uic-radio</code><code>uic-radio--disabled</code><code>uic-select</code><code>uic-select--error</code><code>uic-select--lg</code><code>uic-select--sm</code><code>uic-select--success</code><code>uic-success-text</code><code>uic-textarea</code><code>uic-textarea--error</code><code>uic-textarea--lg</code><code>uic-textarea--sm</code><code>uic-textarea--success</code>
+          </div>
+        </div>
+      </section>
+      <section class="docs-component-section" data-component="cards">
+        <div class="docs-section-header">
+          <div>
+            <p class="docs-kicker">cards</p>
+            <h2>Tarjetas</h2>
+            <p>Tarjetas base, acentuadas, soft, stat cards y service cards municipales.</p>
+          </div>
+        </div>
+        <div class="docs-preview">
+          <div class="uic-page__grid uic-page__grid--3">
+            <article class="uic-card uic-card--primary uic-card--hover">
+              <div class="uic-card__header">
+                <div>
+                  <h3 class="uic-card__title">Card primary</h3>
+                  <p class="uic-card__subtitle">Con borde superior</p>
+                </div>
+              </div>
+              <div class="uic-card__body">
+                <p class="uic-card__text">Contenido de tarjeta municipal con acciones.</p>
+              </div>
+              <div class="uic-card__footer"><button class="uic-btn uic-btn--sm uic-btn--primary">Ver</button></div>
+            </article>
+            <article class="uic-card uic-card--soft-success">
+              <div class="uic-card__body">
+                <p class="uic-card__kicker">Aprobado</p>
+                <h3 class="uic-card__title">Solicitud recibida</h3>
+                <p class="uic-card__text">Variante soft para estados positivos.</p>
+              </div>
+            </article>
+            <article class="uic-stat-card uic-stat-card--info">
+              <p class="uic-stat-card__label">Trámites activos</p>
+              <p class="uic-stat-card__value">128</p>
+              <p class="uic-stat-card__description">Actualizado hoy</p>
+            </article>
+          </div>
+          <div class="uic-page__grid uic-page__grid--3">
+            <article class="uic-service-card uic-service-card--sm">
+              <span class="uic-service-card__corner"></span>
+              <div class="uic-service-card__icon">
+                <div class="uic-service-card__icon-badge">T</div>
+              </div>
+              <h3 class="uic-service-card__title">Trámites online</h3>
+              <span class="uic-service-card__line"></span>
+              <p class="uic-service-card__description">Accesos rápidos para vecinos.</p>
+            </article>
+            <article class="uic-service-card uic-service-card--sm uic-service-card--no-corner">
+              <div class="uic-service-card__icon">
+                <div class="uic-service-card__icon-badge">P</div>
+              </div>
+              <h3 class="uic-service-card__title">Pagos</h3>
+              <span class="uic-service-card__line"></span>
+              <p class="uic-service-card__description">Consulta y pago de tasas.</p>
+            </article>
+            <article class="uic-service-card uic-service-card--sm uic-service-card--no-line">
+              <span class="uic-service-card__corner"></span>
+              <div class="uic-service-card__icon">
+                <div class="uic-service-card__icon-badge">C</div>
+              </div>
+              <h3 class="uic-service-card__title">Contactos</h3>
+              <p class="uic-service-card__description">Canales de atención municipal.</p>
+            </article>
+          </div>
+        </div>
+        <div class="docs-code-wrap">
+          <button class="docs-copy" data-copy="" type="button">Copiar código</button>
+          <pre><code class="language-html">&lt;div class="uic-page__grid uic-page__grid--3"&gt;
+  &lt;article class="uic-card uic-card--primary uic-card--hover"&gt;
+    &lt;div class="uic-card__header"&gt;&lt;div&gt;&lt;h3 class="uic-card__title"&gt;Card primary&lt;/h3&gt;&lt;p class="uic-card__subtitle"&gt;Con borde superior&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="uic-card__body"&gt;&lt;p class="uic-card__text"&gt;Contenido de tarjeta municipal con acciones.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="uic-card__footer"&gt;&lt;button class="uic-btn uic-btn--sm uic-btn--primary"&gt;Ver&lt;/button&gt;&lt;/div&gt;
   &lt;/article&gt;
-  &lt;article class=&quot;card card-soft-success&quot;&gt;
-    &lt;div class=&quot;card-body&quot;&gt;&lt;p class=&quot;card-kicker&quot;&gt;Aprobado&lt;/p&gt;&lt;h3 class=&quot;card-title&quot;&gt;Solicitud recibida&lt;/h3&gt;&lt;p class=&quot;card-text&quot;&gt;Variante soft para estados positivos.&lt;/p&gt;&lt;/div&gt;
+  &lt;article class="uic-card uic-card--soft-success"&gt;
+    &lt;div class="uic-card__body"&gt;&lt;p class="uic-card__kicker"&gt;Aprobado&lt;/p&gt;&lt;h3 class="uic-card__title"&gt;Solicitud recibida&lt;/h3&gt;&lt;p class="uic-card__text"&gt;Variante soft para estados positivos.&lt;/p&gt;&lt;/div&gt;
   &lt;/article&gt;
-  &lt;article class=&quot;stat-card stat-info&quot;&gt;
-    &lt;p class=&quot;stat-label&quot;&gt;Trámites activos&lt;/p&gt;
-    &lt;p class=&quot;stat-value&quot;&gt;128&lt;/p&gt;
-    &lt;p class=&quot;stat-description&quot;&gt;Actualizado hoy&lt;/p&gt;
+  &lt;article class="uic-stat-card uic-stat-card--info"&gt;
+    &lt;p class="uic-stat-card__label"&gt;Trámites activos&lt;/p&gt;
+    &lt;p class="uic-stat-card__value"&gt;128&lt;/p&gt;
+    &lt;p class="uic-stat-card__description"&gt;Actualizado hoy&lt;/p&gt;
   &lt;/article&gt;
 &lt;/div&gt;
-&lt;div class=&quot;page-grid page-grid-3&quot;&gt;
-  &lt;article class=&quot;service-card service-card-sm&quot;&gt;
-    &lt;span class=&quot;service-card-corner&quot;&gt;&lt;/span&gt;
-    &lt;div class=&quot;service-card-icon&quot;&gt;&lt;div class=&quot;service-card-icon-badge&quot;&gt;T&lt;/div&gt;&lt;/div&gt;
-    &lt;h3 class=&quot;service-card-title&quot;&gt;Trámites online&lt;/h3&gt;
-    &lt;span class=&quot;service-card-line&quot;&gt;&lt;/span&gt;
-    &lt;p class=&quot;service-card-description&quot;&gt;Accesos rápidos para vecinos.&lt;/p&gt;
+&lt;div class="uic-page__grid uic-page__grid--3"&gt;
+  &lt;article class="uic-service-card uic-service-card--sm"&gt;
+    &lt;span class="uic-service-card__corner"&gt;&lt;/span&gt;
+    &lt;div class="uic-service-card__icon"&gt;&lt;div class="uic-service-card__icon-badge"&gt;T&lt;/div&gt;&lt;/div&gt;
+    &lt;h3 class="uic-service-card__title"&gt;Trámites online&lt;/h3&gt;
+    &lt;span class="uic-service-card__line"&gt;&lt;/span&gt;
+    &lt;p class="uic-service-card__description"&gt;Accesos rápidos para vecinos.&lt;/p&gt;
   &lt;/article&gt;
-  &lt;article class=&quot;service-card service-card-sm service-card-no-corner&quot;&gt;
-    &lt;div class=&quot;service-card-icon&quot;&gt;&lt;div class=&quot;service-card-icon-badge&quot;&gt;P&lt;/div&gt;&lt;/div&gt;
-    &lt;h3 class=&quot;service-card-title&quot;&gt;Pagos&lt;/h3&gt;
-    &lt;span class=&quot;service-card-line&quot;&gt;&lt;/span&gt;
-    &lt;p class=&quot;service-card-description&quot;&gt;Consulta y pago de tasas.&lt;/p&gt;
+  &lt;article class="uic-service-card uic-service-card--sm uic-service-card--no-corner"&gt;
+    &lt;div class="uic-service-card__icon"&gt;&lt;div class="uic-service-card__icon-badge"&gt;P&lt;/div&gt;&lt;/div&gt;
+    &lt;h3 class="uic-service-card__title"&gt;Pagos&lt;/h3&gt;
+    &lt;span class="uic-service-card__line"&gt;&lt;/span&gt;
+    &lt;p class="uic-service-card__description"&gt;Consulta y pago de tasas.&lt;/p&gt;
   &lt;/article&gt;
-  &lt;article class=&quot;service-card service-card-sm service-card-no-line&quot;&gt;
-    &lt;span class=&quot;service-card-corner&quot;&gt;&lt;/span&gt;
-    &lt;div class=&quot;service-card-icon&quot;&gt;&lt;div class=&quot;service-card-icon-badge&quot;&gt;C&lt;/div&gt;&lt;/div&gt;
-    &lt;h3 class=&quot;service-card-title&quot;&gt;Contactos&lt;/h3&gt;
-    &lt;p class=&quot;service-card-description&quot;&gt;Canales de atención municipal.&lt;/p&gt;
+  &lt;article class="uic-service-card uic-service-card--sm uic-service-card--no-line"&gt;
+    &lt;span class="uic-service-card__corner"&gt;&lt;/span&gt;
+    &lt;div class="uic-service-card__icon"&gt;&lt;div class="uic-service-card__icon-badge"&gt;C&lt;/div&gt;&lt;/div&gt;
+    &lt;h3 class="uic-service-card__title"&gt;Contactos&lt;/h3&gt;
+    &lt;p class="uic-service-card__description"&gt;Canales de atención municipal.&lt;/p&gt;
   &lt;/article&gt;
 &lt;/div&gt;</code></pre>
-</div>
-      
-      <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
-      <h3 style="margin:0 0 .75rem;">Clases disponibles en Tarjetas</h3>
-      <div class="docs-chip-list"><code>alert</code><code>btn</code><code>card-actions</code><code>card-body</code><code>card-compact</code><code>card-danger</code><code>card-divider</code><code>card-flat</code><code>card-footer</code><code>card-glass</code><code>card-header</code><code>card-hover</code><code>card-info</code><code>card-kicker</code><code>card-lg</code><code>card-media</code><code>card-muted</code><code>card-primary</code><code>card-section</code><code>card-shadow</code><code>card-sm</code><code>card-soft-danger</code><code>card-soft-info</code><code>card-soft-primary</code><code>card-soft-success</code><code>card-soft-warning</code><code>card-subtitle</code><code>card-success</code><code>card-text</code><code>card-title</code><code>card-warning</code><code>service-card</code><code>service-card-corner</code><code>service-card-description</code><code>service-card-icon</code><code>service-card-icon-badge</code><code>service-card-line</code><code>service-card-no-corner</code><code>service-card-no-line</code><code>service-card-sm</code><code>service-card-title</code><code>stat-card</code><code>stat-description</code><code>stat-label</code><code>stat-value</code></div>
-    </div>
-    </section><section class="docs-component-section" data-component="alerts">
-      <div class="docs-section-header">
-        <div>
-          <p class="docs-kicker">alerts</p>
-          <h2>Alertas</h2>
-          <p>Mensajes de éxito, error, advertencia, información, primario, muted y variaciones.</p>
         </div>
-      </div>
-      <div class="docs-preview">
-<div class="docs-example-grid">
-  <div class="alert alert-success"><span class="alert-icon">✓</span><div class="alert-content"><h3 class="alert-title">Operación exitosa</h3><p class="alert-description">El trámite fue guardado correctamente.</p></div><button class="alert-close">×</button></div>
-  <div class="alert alert-danger"><span class="alert-icon">!</span><div class="alert-content"><h3 class="alert-title">Error</h3><p class="alert-description">No se pudo completar la acción.</p></div></div>
-  <div class="alert alert-warning alert-border-left"><span class="alert-icon">!</span><div class="alert-content"><h3 class="alert-title">Atención</h3><p class="alert-description">Revisá la documentación presentada.</p></div></div>
-  <div class="alert alert-info alert-lg"><span class="alert-icon">i</span><div class="alert-content"><h3 class="alert-title">Información</h3><p class="alert-description">Mensaje informativo con tamaño grande.</p></div></div>
-  <div class="alert alert-primary alert-sm"><span class="alert-icon">i</span><div class="alert-content"><h3 class="alert-title">Primario</h3></div></div>
-  <div class="alert alert-muted alert-center"><span class="alert-icon">•</span><div class="alert-content"><h3 class="alert-title">Muted centrado</h3></div></div>
-</div>
-</div>
-      <div class="docs-code-wrap">
-  <button class="docs-copy" type="button" data-copy>Copiar código</button>
-  <pre><code class="language-html">&lt;div class=&quot;docs-example-grid&quot;&gt;
-  &lt;div class=&quot;alert alert-success&quot;&gt;&lt;span class=&quot;alert-icon&quot;&gt;✓&lt;/span&gt;&lt;div class=&quot;alert-content&quot;&gt;&lt;h3 class=&quot;alert-title&quot;&gt;Operación exitosa&lt;/h3&gt;&lt;p class=&quot;alert-description&quot;&gt;El trámite fue guardado correctamente.&lt;/p&gt;&lt;/div&gt;&lt;button class=&quot;alert-close&quot;&gt;×&lt;/button&gt;&lt;/div&gt;
-  &lt;div class=&quot;alert alert-danger&quot;&gt;&lt;span class=&quot;alert-icon&quot;&gt;!&lt;/span&gt;&lt;div class=&quot;alert-content&quot;&gt;&lt;h3 class=&quot;alert-title&quot;&gt;Error&lt;/h3&gt;&lt;p class=&quot;alert-description&quot;&gt;No se pudo completar la acción.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;alert alert-warning alert-border-left&quot;&gt;&lt;span class=&quot;alert-icon&quot;&gt;!&lt;/span&gt;&lt;div class=&quot;alert-content&quot;&gt;&lt;h3 class=&quot;alert-title&quot;&gt;Atención&lt;/h3&gt;&lt;p class=&quot;alert-description&quot;&gt;Revisá la documentación presentada.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;alert alert-info alert-lg&quot;&gt;&lt;span class=&quot;alert-icon&quot;&gt;i&lt;/span&gt;&lt;div class=&quot;alert-content&quot;&gt;&lt;h3 class=&quot;alert-title&quot;&gt;Información&lt;/h3&gt;&lt;p class=&quot;alert-description&quot;&gt;Mensaje informativo con tamaño grande.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;alert alert-primary alert-sm&quot;&gt;&lt;span class=&quot;alert-icon&quot;&gt;i&lt;/span&gt;&lt;div class=&quot;alert-content&quot;&gt;&lt;h3 class=&quot;alert-title&quot;&gt;Primario&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;alert alert-muted alert-center&quot;&gt;&lt;span class=&quot;alert-icon&quot;&gt;•&lt;/span&gt;&lt;div class=&quot;alert-content&quot;&gt;&lt;h3 class=&quot;alert-title&quot;&gt;Muted centrado&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;
+        <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
+          <h3 style="margin:0 0 .75rem;">Clases disponibles en Tarjetas</h3>
+          <div class="docs-chip-list">
+            <code>uic-card</code><code>uic-card--compact</code><code>uic-card--danger</code><code>uic-card--flat</code><code>uic-card--glass</code><code>uic-card--hover</code><code>uic-card--info</code><code>uic-card--lg</code><code>uic-card--muted</code><code>uic-card--primary</code><code>uic-card--shadow</code><code>uic-card--sm</code><code>uic-card--soft-danger</code><code>uic-card--soft-info</code><code>uic-card--soft-primary</code><code>uic-card--soft-success</code><code>uic-card--soft-warning</code><code>uic-card--success</code><code>uic-card--warning</code><code>uic-card__actions</code><code>uic-card__body</code><code>uic-card__divider</code><code>uic-card__footer</code><code>uic-card__header</code><code>uic-card__kicker</code><code>uic-card__media</code><code>uic-card__section</code><code>uic-card__subtitle</code><code>uic-card__text</code><code>uic-card__title</code><code>uic-service-card</code><code>uic-service-card--no-corner</code><code>uic-service-card--no-line</code><code>uic-service-card--sm</code><code>uic-service-card__corner</code><code>uic-service-card__description</code><code>uic-service-card__icon</code><code>uic-service-card__icon-badge</code><code>uic-service-card__line</code><code>uic-service-card__title</code><code>uic-stat-card</code><code>uic-stat-card--danger</code><code>uic-stat-card--info</code><code>uic-stat-card--primary</code><code>uic-stat-card--success</code><code>uic-stat-card--warning</code><code>uic-stat-card__description</code><code>uic-stat-card__label</code><code>uic-stat-card__value</code>
+          </div>
+        </div>
+      </section>
+      <section class="docs-component-section" data-component="alerts">
+        <div class="docs-section-header">
+          <div>
+            <p class="docs-kicker">alerts</p>
+            <h2>Alertas</h2>
+            <p>Mensajes de éxito, error, advertencia, información, primario, muted y variaciones.</p>
+          </div>
+        </div>
+        <div class="docs-preview">
+          <div class="docs-example-grid">
+            <div class="uic-alert uic-alert--success"><span class="uic-alert__icon">✓</span>
+              <div class="uic-alert__content">
+                <h3 class="uic-alert__title">Operación exitosa</h3>
+                <p class="uic-alert__description">El trámite fue guardado correctamente.</p>
+              </div><button class="uic-alert__close">×</button>
+            </div>
+            <div class="uic-alert uic-alert--danger"><span class="uic-alert__icon">!</span>
+              <div class="uic-alert__content">
+                <h3 class="uic-alert__title">Error</h3>
+                <p class="uic-alert__description">No se pudo completar la acción.</p>
+              </div>
+            </div>
+            <div class="uic-alert uic-alert--warning uic-alert--border-left"><span class="uic-alert__icon">!</span>
+              <div class="uic-alert__content">
+                <h3 class="uic-alert__title">Atención</h3>
+                <p class="uic-alert__description">Revisá la documentación presentada.</p>
+              </div>
+            </div>
+            <div class="uic-alert uic-alert--info uic-alert--lg"><span class="uic-alert__icon">i</span>
+              <div class="uic-alert__content">
+                <h3 class="uic-alert__title">Información</h3>
+                <p class="uic-alert__description">Mensaje informativo con tamaño grande.</p>
+              </div>
+            </div>
+            <div class="uic-alert uic-alert--primary uic-alert--sm"><span class="uic-alert__icon">i</span>
+              <div class="uic-alert__content">
+                <h3 class="uic-alert__title">Primario</h3>
+              </div>
+            </div>
+            <div class="uic-alert uic-alert--muted uic-alert--center"><span class="uic-alert__icon">•</span>
+              <div class="uic-alert__content">
+                <h3 class="uic-alert__title">Muted centrado</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="docs-code-wrap">
+          <button class="docs-copy" data-copy="" type="button">Copiar código</button>
+          <pre><code class="language-html">&lt;div class="docs-example-grid"&gt;
+  &lt;div class="uic-alert uic-alert--success"&gt;&lt;span class="uic-alert__icon"&gt;✓&lt;/span&gt;&lt;div class="uic-alert__content"&gt;&lt;h3 class="uic-alert__title"&gt;Operación exitosa&lt;/h3&gt;&lt;p class="uic-alert__description"&gt;El trámite fue guardado correctamente.&lt;/p&gt;&lt;/div&gt;&lt;button class="uic-alert__close"&gt;×&lt;/button&gt;&lt;/div&gt;
+  &lt;div class="uic-alert uic-alert--danger"&gt;&lt;span class="uic-alert__icon"&gt;!&lt;/span&gt;&lt;div class="uic-alert__content"&gt;&lt;h3 class="uic-alert__title"&gt;Error&lt;/h3&gt;&lt;p class="uic-alert__description"&gt;No se pudo completar la acción.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="uic-alert uic-alert--warning uic-alert--border-left"&gt;&lt;span class="uic-alert__icon"&gt;!&lt;/span&gt;&lt;div class="uic-alert__content"&gt;&lt;h3 class="uic-alert__title"&gt;Atención&lt;/h3&gt;&lt;p class="uic-alert__description"&gt;Revisá la documentación presentada.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="uic-alert uic-alert--info uic-alert--lg"&gt;&lt;span class="uic-alert__icon"&gt;i&lt;/span&gt;&lt;div class="uic-alert__content"&gt;&lt;h3 class="uic-alert__title"&gt;Información&lt;/h3&gt;&lt;p class="uic-alert__description"&gt;Mensaje informativo con tamaño grande.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="uic-alert uic-alert--primary uic-alert--sm"&gt;&lt;span class="uic-alert__icon"&gt;i&lt;/span&gt;&lt;div class="uic-alert__content"&gt;&lt;h3 class="uic-alert__title"&gt;Primario&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="uic-alert uic-alert--muted uic-alert--center"&gt;&lt;span class="uic-alert__icon"&gt;•&lt;/span&gt;&lt;div class="uic-alert__content"&gt;&lt;h3 class="uic-alert__title"&gt;Muted centrado&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div>
-      
-      <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
-      <h3 style="margin:0 0 .75rem;">Clases disponibles en Alertas</h3>
-      <div class="docs-chip-list"><code>alert-border-left</code><code>alert-center</code><code>alert-close</code><code>alert-content</code><code>alert-danger</code><code>alert-description</code><code>alert-error</code><code>alert-full</code><code>alert-icon</code><code>alert-info</code><code>alert-lg</code><code>alert-muted</code><code>alert-outline</code><code>alert-primary</code><code>alert-sm</code><code>alert-soft</code><code>alert-success</code><code>alert-title</code><code>alert-warning</code><code>badge</code></div>
-    </div>
-    </section><section class="docs-component-section" data-component="badges">
-      <div class="docs-section-header">
-        <div>
-          <p class="docs-kicker">badges</p>
-          <h2>Badges / Estados</h2>
-          <p>Etiquetas de estado, variantes sólidas, soft, outline, tamaños y alias comunes.</p>
         </div>
-      </div>
-      <div class="docs-preview">
-<div class="docs-variant-row">
-  <span class="badge badge-primary">Primary</span>
-  <span class="badge badge-success">Success</span>
-  <span class="badge badge-danger">Danger</span>
-  <span class="badge badge-warning">Warning</span>
-  <span class="badge badge-info">Info</span>
-  <span class="badge badge-muted">Muted</span>
-</div>
-<div class="docs-variant-row">
-  <span class="badge badge-soft-primary">Soft primary</span>
-  <span class="badge badge-soft-success">Soft success</span>
-  <span class="badge badge-soft-danger">Soft danger</span>
-  <span class="badge badge-soft-warning">Soft warning</span>
-  <span class="badge badge-soft-info">Soft info</span>
-</div>
-<div class="docs-variant-row">
-  <span class="badge badge-outline-primary badge-pill">Outline pill</span>
-  <span class="badge badge-outline-success badge-dot">Activo</span>
-  <span class="badge badge-sm badge-pending">Pendiente</span>
-  <span class="badge badge-lg badge-approved">Aprobado</span>
-  <span class="badge badge-square badge-rejected">!</span>
-</div>
-</div>
-      <div class="docs-code-wrap">
-  <button class="docs-copy" type="button" data-copy>Copiar código</button>
-  <pre><code class="language-html">&lt;div class=&quot;docs-variant-row&quot;&gt;
-  &lt;span class=&quot;badge badge-primary&quot;&gt;Primary&lt;/span&gt;
-  &lt;span class=&quot;badge badge-success&quot;&gt;Success&lt;/span&gt;
-  &lt;span class=&quot;badge badge-danger&quot;&gt;Danger&lt;/span&gt;
-  &lt;span class=&quot;badge badge-warning&quot;&gt;Warning&lt;/span&gt;
-  &lt;span class=&quot;badge badge-info&quot;&gt;Info&lt;/span&gt;
-  &lt;span class=&quot;badge badge-muted&quot;&gt;Muted&lt;/span&gt;
+        <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
+          <h3 style="margin:0 0 .75rem;">Clases disponibles en Alertas</h3>
+          <div class="docs-chip-list">
+            <code>uic-alert</code><code>uic-alert--border-left</code><code>uic-alert--center</code><code>uic-alert--danger</code><code>uic-alert--error</code><code>uic-alert--full</code><code>uic-alert--info</code><code>uic-alert--lg</code><code>uic-alert--muted</code><code>uic-alert--outline</code><code>uic-alert--primary</code><code>uic-alert--sm</code><code>uic-alert--soft</code><code>uic-alert--success</code><code>uic-alert--warning</code><code>uic-alert__close</code><code>uic-alert__content</code><code>uic-alert__description</code><code>uic-alert__icon</code><code>uic-alert__title</code>
+          </div>
+        </div>
+      </section>
+      <section class="docs-component-section" data-component="badges">
+        <div class="docs-section-header">
+          <div>
+            <p class="docs-kicker">badges</p>
+            <h2>Badges / Estados</h2>
+            <p>Etiquetas de estado, variantes sólidas, soft, outline, tamaños y alias comunes.</p>
+          </div>
+        </div>
+        <div class="docs-preview">
+          <div class="docs-variant-row">
+            <span class="uic-badge uic-badge--primary">Primary</span>
+            <span class="uic-badge uic-badge--success">Success</span>
+            <span class="uic-badge uic-badge--danger">Danger</span>
+            <span class="uic-badge uic-badge--warning">Warning</span>
+            <span class="uic-badge uic-badge--info">Info</span>
+            <span class="uic-badge uic-badge--muted">Muted</span>
+          </div>
+          <div class="docs-variant-row">
+            <span class="uic-badge uic-badge--soft-primary">Soft primary</span>
+            <span class="uic-badge uic-badge--soft-success">Soft success</span>
+            <span class="uic-badge uic-badge--soft-danger">Soft danger</span>
+            <span class="uic-badge uic-badge--soft-warning">Soft warning</span>
+            <span class="uic-badge uic-badge--soft-info">Soft info</span>
+          </div>
+          <div class="docs-variant-row">
+            <span class="uic-badge uic-badge--outline-primary uic-badge--pill">Outline pill</span>
+            <span class="uic-badge uic-badge--outline-success uic-badge--dot">Activo</span>
+            <span class="uic-badge uic-badge--sm uic-badge--pending">Pendiente</span>
+            <span class="uic-badge uic-badge--lg uic-badge--approved">Aprobado</span>
+            <span class="uic-badge uic-badge--square uic-badge--rejected">!</span>
+          </div>
+        </div>
+        <div class="docs-code-wrap">
+          <button class="docs-copy" data-copy="" type="button">Copiar código</button>
+          <pre><code class="language-html">&lt;div class="docs-variant-row"&gt;
+  &lt;span class="uic-badge uic-badge--primary"&gt;Primary&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--success"&gt;Success&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--danger"&gt;Danger&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--warning"&gt;Warning&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--info"&gt;Info&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--muted"&gt;Muted&lt;/span&gt;
 &lt;/div&gt;
-&lt;div class=&quot;docs-variant-row&quot;&gt;
-  &lt;span class=&quot;badge badge-soft-primary&quot;&gt;Soft primary&lt;/span&gt;
-  &lt;span class=&quot;badge badge-soft-success&quot;&gt;Soft success&lt;/span&gt;
-  &lt;span class=&quot;badge badge-soft-danger&quot;&gt;Soft danger&lt;/span&gt;
-  &lt;span class=&quot;badge badge-soft-warning&quot;&gt;Soft warning&lt;/span&gt;
-  &lt;span class=&quot;badge badge-soft-info&quot;&gt;Soft info&lt;/span&gt;
+&lt;div class="docs-variant-row"&gt;
+  &lt;span class="uic-badge uic-badge--soft-primary"&gt;Soft primary&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--soft-success"&gt;Soft success&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--soft-danger"&gt;Soft danger&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--soft-warning"&gt;Soft warning&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--soft-info"&gt;Soft info&lt;/span&gt;
 &lt;/div&gt;
-&lt;div class=&quot;docs-variant-row&quot;&gt;
-  &lt;span class=&quot;badge badge-outline-primary badge-pill&quot;&gt;Outline pill&lt;/span&gt;
-  &lt;span class=&quot;badge badge-outline-success badge-dot&quot;&gt;Activo&lt;/span&gt;
-  &lt;span class=&quot;badge badge-sm badge-pending&quot;&gt;Pendiente&lt;/span&gt;
-  &lt;span class=&quot;badge badge-lg badge-approved&quot;&gt;Aprobado&lt;/span&gt;
-  &lt;span class=&quot;badge badge-square badge-rejected&quot;&gt;!&lt;/span&gt;
+&lt;div class="docs-variant-row"&gt;
+  &lt;span class="uic-badge uic-badge--outline-primary uic-badge--pill"&gt;Outline pill&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--outline-success uic-badge--dot"&gt;Activo&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--sm uic-badge--pending"&gt;Pendiente&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--lg uic-badge--approved"&gt;Aprobado&lt;/span&gt;
+  &lt;span class="uic-badge uic-badge--square uic-badge--rejected"&gt;!&lt;/span&gt;
 &lt;/div&gt;</code></pre>
-</div>
-      
-      <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
-      <h3 style="margin:0 0 .75rem;">Clases disponibles en Badges / Estados</h3>
-      <div class="docs-chip-list"><code>badge-active</code><code>badge-approved</code><code>badge-danger</code><code>badge-dot</code><code>badge-error</code><code>badge-icon</code><code>badge-inactive</code><code>badge-info</code><code>badge-lg</code><code>badge-muted</code><code>badge-outline-danger</code><code>badge-outline-error</code><code>badge-outline-info</code><code>badge-outline-muted</code><code>badge-outline-primary</code><code>badge-outline-success</code><code>badge-outline-warning</code><code>badge-pending</code><code>badge-pill</code><code>badge-primary</code><code>badge-rejected</code><code>badge-secondary</code><code>badge-sm</code><code>badge-soft-danger</code><code>badge-soft-error</code><code>badge-soft-info</code><code>badge-soft-primary</code><code>badge-soft-success</code><code>badge-soft-warning</code><code>badge-square</code><code>badge-success</code><code>badge-warning</code><code>table-wrapper</code></div>
-    </div>
-    </section><section class="docs-component-section" data-component="tables">
-      <div class="docs-section-header">
-        <div>
-          <p class="docs-kicker">tables</p>
-          <h2>Tablas</h2>
-          <p>Tablas responsive, hover, striped, bordered, tamaños, toolbar, acciones y empty row.</p>
         </div>
-      </div>
-      <div class="docs-preview">
-<div class="table-wrapper">
-  <div class="table-toolbar">
-    <div><h3 class="table-title">Solicitudes recientes</h3><p class="table-subtitle">Tabla responsive con hover, badges y acciones.</p></div>
-    <div class="table-toolbar-actions"><button class="btn btn-sm btn-primary">Nueva</button></div>
-  </div>
-  <div class="table-responsive">
-    <table class="table table-hover table-striped table-bordered">
-      <thead><tr><th>N°</th><th>Vecino</th><th>Estado</th><th>Área</th><th class="table-cell-actions">Acciones</th></tr></thead>
-      <tbody>
-        <tr><td class="table-cell-strong">0012</td><td>María Gómez</td><td><span class="badge badge-pending">Pendiente</span></td><td>Obras</td><td class="table-actions"><button class="btn btn-xs btn-outline-primary">Ver</button></td></tr>
-        <tr><td class="table-cell-strong">0013</td><td>Carlos Díaz</td><td><span class="badge badge-approved">Aprobado</span></td><td>Rentas</td><td class="table-actions"><button class="btn btn-xs btn-outline-primary">Ver</button></td></tr>
-        <tr><td class="table-cell-strong">0014</td><td>Ana Pérez</td><td><span class="badge badge-rejected">Rechazado</span></td><td>Habilitaciones</td><td class="table-actions"><button class="btn btn-xs btn-outline-primary">Ver</button></td></tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-</div>
-      <div class="docs-code-wrap">
-  <button class="docs-copy" type="button" data-copy>Copiar código</button>
-  <pre><code class="language-html">&lt;div class=&quot;table-wrapper&quot;&gt;
-  &lt;div class=&quot;table-toolbar&quot;&gt;
-    &lt;div&gt;&lt;h3 class=&quot;table-title&quot;&gt;Solicitudes recientes&lt;/h3&gt;&lt;p class=&quot;table-subtitle&quot;&gt;Tabla responsive con hover, badges y acciones.&lt;/p&gt;&lt;/div&gt;
-    &lt;div class=&quot;table-toolbar-actions&quot;&gt;&lt;button class=&quot;btn btn-sm btn-primary&quot;&gt;Nueva&lt;/button&gt;&lt;/div&gt;
+        <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
+          <h3 style="margin:0 0 .75rem;">Clases disponibles en Badges / Estados</h3>
+          <div class="docs-chip-list">
+            <code>uic-badge</code><code>uic-badge--active</code><code>uic-badge--approved</code><code>uic-badge--danger</code><code>uic-badge--dot</code><code>uic-badge--error</code><code>uic-badge--icon</code><code>uic-badge--inactive</code><code>uic-badge--info</code><code>uic-badge--lg</code><code>uic-badge--muted</code><code>uic-badge--outline-danger</code><code>uic-badge--outline-error</code><code>uic-badge--outline-info</code><code>uic-badge--outline-muted</code><code>uic-badge--outline-primary</code><code>uic-badge--outline-success</code><code>uic-badge--outline-warning</code><code>uic-badge--pending</code><code>uic-badge--pill</code><code>uic-badge--primary</code><code>uic-badge--rejected</code><code>uic-badge--secondary</code><code>uic-badge--sm</code><code>uic-badge--soft-danger</code><code>uic-badge--soft-error</code><code>uic-badge--soft-info</code><code>uic-badge--soft-primary</code><code>uic-badge--soft-success</code><code>uic-badge--soft-warning</code><code>uic-badge--square</code><code>uic-badge--success</code><code>uic-badge--warning</code>
+          </div>
+        </div>
+      </section>
+      <section class="docs-component-section" data-component="tables">
+        <div class="docs-section-header">
+          <div>
+            <p class="docs-kicker">tables</p>
+            <h2>Tablas</h2>
+            <p>Tablas responsive, hover, striped, bordered, tamaños, toolbar, acciones y empty row.</p>
+          </div>
+        </div>
+        <div class="docs-preview">
+          <div class="uic-table-wrapper">
+            <div class="uic-table__toolbar">
+              <div>
+                <h3 class="uic-table__title">Solicitudes recientes</h3>
+                <p class="uic-table__subtitle">Tabla responsive con hover, badges y acciones.</p>
+              </div>
+              <div class="uic-table__toolbar-actions"><button
+                  class="uic-btn uic-btn--sm uic-btn--primary">Nueva</button></div>
+            </div>
+            <div class="uic-table-responsive">
+              <table class="uic-table uic-table--hover uic-table--striped uic-table--bordered">
+                <thead>
+                  <tr>
+                    <th>N°</th>
+                    <th>Vecino</th>
+                    <th>Estado</th>
+                    <th>Área</th>
+                    <th class="uic-table__cell-actions">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="uic-table__cell--strong">0012</td>
+                    <td>María Gómez</td>
+                    <td><span class="uic-badge uic-badge--pending">Pendiente</span></td>
+                    <td>Obras</td>
+                    <td class="uic-table__actions"><button
+                        class="uic-btn uic-btn--xs uic-btn--outline-primary">Ver</button></td>
+                  </tr>
+                  <tr>
+                    <td class="uic-table__cell--strong">0013</td>
+                    <td>Carlos Díaz</td>
+                    <td><span class="uic-badge uic-badge--approved">Aprobado</span></td>
+                    <td>Rentas</td>
+                    <td class="uic-table__actions"><button
+                        class="uic-btn uic-btn--xs uic-btn--outline-primary">Ver</button></td>
+                  </tr>
+                  <tr>
+                    <td class="uic-table__cell--strong">0014</td>
+                    <td>Ana Pérez</td>
+                    <td><span class="uic-badge uic-badge--rejected">Rechazado</span></td>
+                    <td>Habilitaciones</td>
+                    <td class="uic-table__actions"><button
+                        class="uic-btn uic-btn--xs uic-btn--outline-primary">Ver</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="docs-code-wrap">
+          <button class="docs-copy" data-copy="" type="button">Copiar código</button>
+          <pre><code class="language-html">&lt;div class="uic-table-wrapper"&gt;
+  &lt;div class="uic-table__toolbar"&gt;
+    &lt;div&gt;&lt;h3 class="uic-table__title"&gt;Solicitudes recientes&lt;/h3&gt;&lt;p class="uic-table__subtitle"&gt;Tabla responsive con hover, badges y acciones.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="uic-table__toolbar-actions"&gt;&lt;button class="uic-btn uic-btn--sm uic-btn--primary"&gt;Nueva&lt;/button&gt;&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;table-responsive&quot;&gt;
-    &lt;table class=&quot;table table-hover table-striped table-bordered&quot;&gt;
-      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;N°&lt;/th&gt;&lt;th&gt;Vecino&lt;/th&gt;&lt;th&gt;Estado&lt;/th&gt;&lt;th&gt;Área&lt;/th&gt;&lt;th class=&quot;table-cell-actions&quot;&gt;Acciones&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;div class="uic-table-responsive"&gt;
+    &lt;table class="uic-table uic-table--hover uic-table--striped uic-table--bordered"&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;N°&lt;/th&gt;&lt;th&gt;Vecino&lt;/th&gt;&lt;th&gt;Estado&lt;/th&gt;&lt;th&gt;Área&lt;/th&gt;&lt;th class="uic-table__cell-actions"&gt;Acciones&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
       &lt;tbody&gt;
-        &lt;tr&gt;&lt;td class=&quot;table-cell-strong&quot;&gt;0012&lt;/td&gt;&lt;td&gt;María Gómez&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;badge badge-pending&quot;&gt;Pendiente&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Obras&lt;/td&gt;&lt;td class=&quot;table-actions&quot;&gt;&lt;button class=&quot;btn btn-xs btn-outline-primary&quot;&gt;Ver&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td class=&quot;table-cell-strong&quot;&gt;0013&lt;/td&gt;&lt;td&gt;Carlos Díaz&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;badge badge-approved&quot;&gt;Aprobado&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Rentas&lt;/td&gt;&lt;td class=&quot;table-actions&quot;&gt;&lt;button class=&quot;btn btn-xs btn-outline-primary&quot;&gt;Ver&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td class=&quot;table-cell-strong&quot;&gt;0014&lt;/td&gt;&lt;td&gt;Ana Pérez&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;badge badge-rejected&quot;&gt;Rechazado&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Habilitaciones&lt;/td&gt;&lt;td class=&quot;table-actions&quot;&gt;&lt;button class=&quot;btn btn-xs btn-outline-primary&quot;&gt;Ver&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td class="uic-table__cell--strong"&gt;0012&lt;/td&gt;&lt;td&gt;María Gómez&lt;/td&gt;&lt;td&gt;&lt;span class="uic-badge uic-badge--pending"&gt;Pendiente&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Obras&lt;/td&gt;&lt;td class="uic-table__actions"&gt;&lt;button class="uic-btn uic-btn--xs uic-btn--outline-primary"&gt;Ver&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td class="uic-table__cell--strong"&gt;0013&lt;/td&gt;&lt;td&gt;Carlos Díaz&lt;/td&gt;&lt;td&gt;&lt;span class="uic-badge uic-badge--approved"&gt;Aprobado&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Rentas&lt;/td&gt;&lt;td class="uic-table__actions"&gt;&lt;button class="uic-btn uic-btn--xs uic-btn--outline-primary"&gt;Ver&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td class="uic-table__cell--strong"&gt;0014&lt;/td&gt;&lt;td&gt;Ana Pérez&lt;/td&gt;&lt;td&gt;&lt;span class="uic-badge uic-badge--rejected"&gt;Rechazado&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Habilitaciones&lt;/td&gt;&lt;td class="uic-table__actions"&gt;&lt;button class="uic-btn uic-btn--xs uic-btn--outline-primary"&gt;Ver&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
       &lt;/tbody&gt;
     &lt;/table&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div>
-      
-      <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
-      <h3 style="margin:0 0 .75rem;">Clases disponibles en Tablas</h3>
-      <div class="docs-chip-list"><code>btn</code><code>empty-state</code><code>table</code><code>table-actions</code><code>table-align-center</code><code>table-align-right</code><code>table-bordered</code><code>table-cell-actions</code><code>table-cell-muted</code><code>table-cell-nowrap</code><code>table-cell-strong</code><code>table-compact</code><code>table-empty</code><code>table-hover</code><code>table-lg</code><code>table-nowrap</code><code>table-responsive</code><code>table-sm</code><code>table-striped</code><code>table-subtitle</code><code>table-title</code><code>table-toolbar</code><code>table-toolbar-actions</code></div>
-    </div>
-    </section><section class="docs-component-section" data-component="empty-states">
-      <div class="docs-section-header">
-        <div>
-          <p class="docs-kicker">empty-states</p>
-          <h2>Estados vacíos</h2>
-          <p>Estados vacíos con icono, descripción, acciones, tamaños y variantes semánticas.</p>
         </div>
-      </div>
-      <div class="docs-preview">
-<div class="docs-example-grid">
-  <div class="empty-state empty-state-primary">
-    <div class="empty-state-icon">📄</div>
-    <h3 class="empty-state-title">No hay trámites</h3>
-    <p class="empty-state-description">Cuando se carguen solicitudes, van a aparecer en este panel.</p>
-    <div class="empty-state-actions"><button class="btn btn-primary">Crear trámite</button></div>
-  </div>
-  <div class="empty-state empty-state-dashed empty-state-sm empty-state-muted">
-    <div class="empty-state-icon">🔎</div>
-    <h3 class="empty-state-title">Sin resultados</h3>
-    <p class="empty-state-description">Probá con otro texto de búsqueda.</p>
-  </div>
-</div>
-</div>
-      <div class="docs-code-wrap">
-  <button class="docs-copy" type="button" data-copy>Copiar código</button>
-  <pre><code class="language-html">&lt;div class=&quot;docs-example-grid&quot;&gt;
-  &lt;div class=&quot;empty-state empty-state-primary&quot;&gt;
-    &lt;div class=&quot;empty-state-icon&quot;&gt;📄&lt;/div&gt;
-    &lt;h3 class=&quot;empty-state-title&quot;&gt;No hay trámites&lt;/h3&gt;
-    &lt;p class=&quot;empty-state-description&quot;&gt;Cuando se carguen solicitudes, van a aparecer en este panel.&lt;/p&gt;
-    &lt;div class=&quot;empty-state-actions&quot;&gt;&lt;button class=&quot;btn btn-primary&quot;&gt;Crear trámite&lt;/button&gt;&lt;/div&gt;
+        <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
+          <h3 style="margin:0 0 .75rem;">Clases disponibles en Tablas</h3>
+          <div class="docs-chip-list">
+            <code>uic-table</code><code>uic-table--align-center</code><code>uic-table--align-right</code><code>uic-table--bordered</code><code>uic-table--compact</code><code>uic-table--hover</code><code>uic-table--lg</code><code>uic-table--nowrap</code><code>uic-table--sm</code><code>uic-table--striped</code><code>uic-table-responsive</code><code>uic-table-wrapper</code><code>uic-table__actions</code><code>uic-table__cell--muted</code><code>uic-table__cell--nowrap</code><code>uic-table__cell--strong</code><code>uic-table__cell-actions</code><code>uic-table__empty</code><code>uic-table__subtitle</code><code>uic-table__title</code><code>uic-table__toolbar</code><code>uic-table__toolbar-actions</code>
+          </div>
+        </div>
+      </section>
+      <section class="docs-component-section" data-component="empty-states">
+        <div class="docs-section-header">
+          <div>
+            <p class="docs-kicker">empty-states</p>
+            <h2>Estados vacíos</h2>
+            <p>Estados vacíos con icono, descripción, acciones, tamaños y variantes semánticas.</p>
+          </div>
+        </div>
+        <div class="docs-preview">
+          <div class="docs-example-grid">
+            <div class="uic-empty-state uic-empty-state--primary">
+              <div class="uic-empty-state__icon">📄</div>
+              <h3 class="uic-empty-state__title">No hay trámites</h3>
+              <p class="uic-empty-state__description">Cuando se carguen solicitudes, van a aparecer en este panel.</p>
+              <div class="uic-empty-state__actions"><button class="uic-btn uic-btn--primary">Crear trámite</button>
+              </div>
+            </div>
+            <div class="uic-empty-state uic-empty-state--dashed uic-empty-state--sm uic-empty-state--muted">
+              <div class="uic-empty-state__icon">🔎</div>
+              <h3 class="uic-empty-state__title">Sin resultados</h3>
+              <p class="uic-empty-state__description">Probá con otro texto de búsqueda.</p>
+            </div>
+          </div>
+        </div>
+        <div class="docs-code-wrap">
+          <button class="docs-copy" data-copy="" type="button">Copiar código</button>
+          <pre><code class="language-html">&lt;div class="docs-example-grid"&gt;
+  &lt;div class="uic-empty-state uic-empty-state--primary"&gt;
+    &lt;div class="uic-empty-state__icon"&gt;📄&lt;/div&gt;
+    &lt;h3 class="uic-empty-state__title"&gt;No hay trámites&lt;/h3&gt;
+    &lt;p class="uic-empty-state__description"&gt;Cuando se carguen solicitudes, van a aparecer en este panel.&lt;/p&gt;
+    &lt;div class="uic-empty-state__actions"&gt;&lt;button class="uic-btn uic-btn--primary"&gt;Crear trámite&lt;/button&gt;&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;empty-state empty-state-dashed empty-state-sm empty-state-muted&quot;&gt;
-    &lt;div class=&quot;empty-state-icon&quot;&gt;🔎&lt;/div&gt;
-    &lt;h3 class=&quot;empty-state-title&quot;&gt;Sin resultados&lt;/h3&gt;
-    &lt;p class=&quot;empty-state-description&quot;&gt;Probá con otro texto de búsqueda.&lt;/p&gt;
+  &lt;div class="uic-empty-state uic-empty-state--dashed uic-empty-state--sm uic-empty-state--muted"&gt;
+    &lt;div class="uic-empty-state__icon"&gt;🔎&lt;/div&gt;
+    &lt;h3 class="uic-empty-state__title"&gt;Sin resultados&lt;/h3&gt;
+    &lt;p class="uic-empty-state__description"&gt;Probá con otro texto de búsqueda.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div>
-      
-      <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
-      <h3 style="margin:0 0 .75rem;">Clases disponibles en Estados vacíos</h3>
-      <div class="docs-chip-list"><code>btn</code><code>empty-state-actions</code><code>empty-state-danger</code><code>empty-state-dashed</code><code>empty-state-description</code><code>empty-state-error</code><code>empty-state-icon</code><code>empty-state-info</code><code>empty-state-lg</code><code>empty-state-muted</code><code>empty-state-plain</code><code>empty-state-primary</code><code>empty-state-sm</code><code>empty-state-success</code><code>empty-state-title</code><code>empty-state-warning</code><code>page</code></div>
-    </div>
-    </section><section class="docs-component-section" data-component="page-layout">
-      <div class="docs-section-header">
-        <div>
-          <p class="docs-kicker">page-layout</p>
-          <h2>Page layout</h2>
-          <p>Estructura de página, contenedores, headers, secciones, toolbars, grids y stacks.</p>
         </div>
-      </div>
-      <div class="docs-preview">
-<div class="page">
-  <div class="page-container">
-    <header class="page-header">
-      <div class="page-heading"><p class="page-kicker">Gestión</p><h2 class="page-title">Panel de atención</h2><p class="page-subtitle">Layout de página con acciones, toolbar, secciones y grilla.</p></div>
-      <div class="page-actions"><button class="btn btn-primary">Nuevo</button></div>
-    </header>
-    <div class="page-toolbar"><div class="page-toolbar-group"><input class="input" placeholder="Buscar"></div><div class="page-toolbar-group"><button class="btn btn-secondary">Filtrar</button></div></div>
-    <section class="page-section">
-      <div class="page-section-header"><div class="page-section-heading"><h3 class="page-section-title">Resumen</h3><p class="page-section-subtitle">Sección con grilla interna.</p></div></div>
-      <div class="page-section-body page-grid page-grid-3">
-        <div class="stat-card"><p class="stat-label">Ingresados</p><p class="stat-value">42</p></div>
-        <div class="stat-card stat-success"><p class="stat-label">Resueltos</p><p class="stat-value">31</p></div>
-        <div class="stat-card stat-warning"><p class="stat-label">Pendientes</p><p class="stat-value">11</p></div>
-      </div>
-    </section>
-  </div>
-</div>
-</div>
-      <div class="docs-code-wrap">
-  <button class="docs-copy" type="button" data-copy>Copiar código</button>
-  <pre><code class="language-html">&lt;div class=&quot;page&quot;&gt;
-  &lt;div class=&quot;page-container&quot;&gt;
-    &lt;header class=&quot;page-header&quot;&gt;
-      &lt;div class=&quot;page-heading&quot;&gt;&lt;p class=&quot;page-kicker&quot;&gt;Gestión&lt;/p&gt;&lt;h2 class=&quot;page-title&quot;&gt;Panel de atención&lt;/h2&gt;&lt;p class=&quot;page-subtitle&quot;&gt;Layout de página con acciones, toolbar, secciones y grilla.&lt;/p&gt;&lt;/div&gt;
-      &lt;div class=&quot;page-actions&quot;&gt;&lt;button class=&quot;btn btn-primary&quot;&gt;Nuevo&lt;/button&gt;&lt;/div&gt;
+        <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
+          <h3 style="margin:0 0 .75rem;">Clases disponibles en Estados vacíos</h3>
+          <div class="docs-chip-list">
+            <code>uic-empty-state</code><code>uic-empty-state--danger</code><code>uic-empty-state--dashed</code><code>uic-empty-state--error</code><code>uic-empty-state--info</code><code>uic-empty-state--lg</code><code>uic-empty-state--muted</code><code>uic-empty-state--plain</code><code>uic-empty-state--primary</code><code>uic-empty-state--sm</code><code>uic-empty-state--success</code><code>uic-empty-state--warning</code><code>uic-empty-state__actions</code><code>uic-empty-state__description</code><code>uic-empty-state__icon</code><code>uic-empty-state__title</code>
+          </div>
+        </div>
+      </section>
+      <section class="docs-component-section" data-component="page-layout">
+        <div class="docs-section-header">
+          <div>
+            <p class="docs-kicker">page-layout</p>
+            <h2>Page layout</h2>
+            <p>Estructura de página, contenedores, headers, secciones, toolbars, grids y stacks.</p>
+          </div>
+        </div>
+        <div class="docs-preview">
+          <div class="uic-page">
+            <div class="uic-page__container">
+              <header class="uic-page__header">
+                <div class="uic-page__heading">
+                  <p class="uic-page__kicker">Gestión</p>
+                  <h2 class="uic-page__title">Panel de atención</h2>
+                  <p class="uic-page__subtitle">Layout de página con acciones, toolbar, secciones y grilla.</p>
+                </div>
+                <div class="uic-page__actions"><button class="uic-btn uic-btn--primary">Nuevo</button></div>
+              </header>
+              <div class="uic-page__toolbar">
+                <div class="uic-page__toolbar-group"><input class="uic-input" placeholder="Buscar" /></div>
+                <div class="uic-page__toolbar-group"><button class="uic-btn uic-btn--secondary">Filtrar</button></div>
+              </div>
+              <section class="uic-page__section">
+                <div class="uic-page__section-header">
+                  <div class="uic-page__section-heading">
+                    <h3 class="uic-page__section-title">Resumen</h3>
+                    <p class="uic-page__section-subtitle">Sección con grilla interna.</p>
+                  </div>
+                </div>
+                <div class="uic-page__section-body uic-page__grid uic-page__grid--3">
+                  <div class="uic-stat-card">
+                    <p class="uic-stat-card__label">Ingresados</p>
+                    <p class="uic-stat-card__value">42</p>
+                  </div>
+                  <div class="uic-stat-card uic-stat-card--success">
+                    <p class="uic-stat-card__label">Resueltos</p>
+                    <p class="uic-stat-card__value">31</p>
+                  </div>
+                  <div class="uic-stat-card uic-stat-card--warning">
+                    <p class="uic-stat-card__label">Pendientes</p>
+                    <p class="uic-stat-card__value">11</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="docs-code-wrap">
+          <button class="docs-copy" data-copy="" type="button">Copiar código</button>
+          <pre><code class="language-html">&lt;div class="uic-page"&gt;
+  &lt;div class="uic-page__container"&gt;
+    &lt;header class="uic-page__header"&gt;
+      &lt;div class="uic-page__heading"&gt;&lt;p class="uic-page__kicker"&gt;Gestión&lt;/p&gt;&lt;h2 class="uic-page__title"&gt;Panel de atención&lt;/h2&gt;&lt;p class="uic-page__subtitle"&gt;Layout de página con acciones, toolbar, secciones y grilla.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class="uic-page__actions"&gt;&lt;button class="uic-btn uic-btn--primary"&gt;Nuevo&lt;/button&gt;&lt;/div&gt;
     &lt;/header&gt;
-    &lt;div class=&quot;page-toolbar&quot;&gt;&lt;div class=&quot;page-toolbar-group&quot;&gt;&lt;input class=&quot;input&quot; placeholder=&quot;Buscar&quot;&gt;&lt;/div&gt;&lt;div class=&quot;page-toolbar-group&quot;&gt;&lt;button class=&quot;btn btn-secondary&quot;&gt;Filtrar&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;section class=&quot;page-section&quot;&gt;
-      &lt;div class=&quot;page-section-header&quot;&gt;&lt;div class=&quot;page-section-heading&quot;&gt;&lt;h3 class=&quot;page-section-title&quot;&gt;Resumen&lt;/h3&gt;&lt;p class=&quot;page-section-subtitle&quot;&gt;Sección con grilla interna.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-      &lt;div class=&quot;page-section-body page-grid page-grid-3&quot;&gt;
-        &lt;div class=&quot;stat-card&quot;&gt;&lt;p class=&quot;stat-label&quot;&gt;Ingresados&lt;/p&gt;&lt;p class=&quot;stat-value&quot;&gt;42&lt;/p&gt;&lt;/div&gt;
-        &lt;div class=&quot;stat-card stat-success&quot;&gt;&lt;p class=&quot;stat-label&quot;&gt;Resueltos&lt;/p&gt;&lt;p class=&quot;stat-value&quot;&gt;31&lt;/p&gt;&lt;/div&gt;
-        &lt;div class=&quot;stat-card stat-warning&quot;&gt;&lt;p class=&quot;stat-label&quot;&gt;Pendientes&lt;/p&gt;&lt;p class=&quot;stat-value&quot;&gt;11&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="uic-page__toolbar"&gt;&lt;div class="uic-page__toolbar-group"&gt;&lt;input class="uic-input" placeholder="Buscar"&gt;&lt;/div&gt;&lt;div class="uic-page__toolbar-group"&gt;&lt;button class="uic-btn uic-btn--secondary"&gt;Filtrar&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;section class="uic-page__section"&gt;
+      &lt;div class="uic-page__section-header"&gt;&lt;div class="uic-page__section-heading"&gt;&lt;h3 class="uic-page__section-title"&gt;Resumen&lt;/h3&gt;&lt;p class="uic-page__section-subtitle"&gt;Sección con grilla interna.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class="uic-page__section-body uic-page__grid uic-page__grid--3"&gt;
+        &lt;div class="uic-stat-card"&gt;&lt;p class="uic-stat-card__label"&gt;Ingresados&lt;/p&gt;&lt;p class="uic-stat-card__value"&gt;42&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="uic-stat-card uic-stat-card--success"&gt;&lt;p class="uic-stat-card__label"&gt;Resueltos&lt;/p&gt;&lt;p class="uic-stat-card__value"&gt;31&lt;/p&gt;&lt;/div&gt;
+        &lt;div class="uic-stat-card uic-stat-card--warning"&gt;&lt;p class="uic-stat-card__label"&gt;Pendientes&lt;/p&gt;&lt;p class="uic-stat-card__value"&gt;11&lt;/p&gt;&lt;/div&gt;
       &lt;/div&gt;
     &lt;/section&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div>
-      
-      <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
-      <h3 style="margin:0 0 .75rem;">Clases disponibles en Page layout</h3>
-      <div class="docs-chip-list"><code>btn</code><code>page-actions</code><code>page-container</code><code>page-container-lg</code><code>page-container-md</code><code>page-container-sm</code><code>page-container-xl</code><code>page-content</code><code>page-divider</code><code>page-grid</code><code>page-grid-2</code><code>page-grid-3</code><code>page-grid-4</code><code>page-header</code><code>page-heading</code><code>page-kicker</code><code>page-row</code><code>page-section</code><code>page-section-actions</code><code>page-section-body</code><code>page-section-footer</code><code>page-section-header</code><code>page-section-heading</code><code>page-section-subtitle</code><code>page-section-title</code><code>page-stack</code><code>page-subtitle</code><code>page-title</code><code>page-toolbar</code><code>page-toolbar-group</code></div>
-    </div>
+        </div>
+        <div class="docs-section" style="margin-top:1.25rem; box-shadow:none;">
+          <h3 style="margin:0 0 .75rem;">Clases disponibles en Page layout</h3>
+          <div class="docs-chip-list">
+            <code>uic-page</code><code>uic-page__actions</code><code>uic-page__container</code><code>uic-page__container--lg</code><code>uic-page__container--md</code><code>uic-page__container--sm</code><code>uic-page__container--xl</code><code>uic-page__content</code><code>uic-page__divider</code><code>uic-page__grid</code><code>uic-page__grid--2</code><code>uic-page__grid--3</code><code>uic-page__grid--4</code><code>uic-page__header</code><code>uic-page__heading</code><code>uic-page__kicker</code><code>uic-page__row</code><code>uic-page__section</code><code>uic-page__section-actions</code><code>uic-page__section-body</code><code>uic-page__section-footer</code><code>uic-page__section-header</code><code>uic-page__section-heading</code><code>uic-page__section-subtitle</code><code>uic-page__section-title</code><code>uic-page__stack</code><code>uic-page__subtitle</code><code>uic-page__title</code><code>uic-page__toolbar</code><code>uic-page__toolbar-group</code>
+          </div>
+        </div>
+      </section>
     </section>
   </main>
   <script src="js/docs.js"></script>
 </body>
+
 </html>

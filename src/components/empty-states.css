@@ -2,7 +2,7 @@
 /* 7. EMPTY STATES                                           */
 /* ========================================================= */
 
-.empty-state {
+.uic-empty-state {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,7 @@
     box-shadow: var(--component-shadow-xs);
 }
 
-.empty-state-icon {
+.uic-empty-state__icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +40,7 @@
     line-height: 1;
 }
 
-.empty-state-title {
+.uic-empty-state__title {
     margin: 0;
 
     color: var(--component-text-strong);
@@ -50,7 +50,7 @@
     letter-spacing: -0.015em;
 }
 
-.empty-state-description {
+.uic-empty-state__description {
     max-width: 28rem;
     margin: 0.5rem 0 0;
 
@@ -59,7 +59,7 @@
     line-height: 1.5rem;
 }
 
-.empty-state-actions {
+.uic-empty-state__actions {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,45 +71,45 @@
 
 /* Empty state variants */
 
-.empty-state-primary .empty-state-icon {
+.uic-empty-state--primary .uic-empty-state__icon {
     background: var(--component-primary-soft);
     color: var(--component-primary);
 }
 
-.empty-state-success .empty-state-icon {
+.uic-empty-state--success .uic-empty-state__icon {
     background: var(--component-success-soft);
     color: var(--component-success);
 }
 
-.empty-state-danger .empty-state-icon,
-.empty-state-error .empty-state-icon {
+.uic-empty-state--danger .uic-empty-state__icon,
+.uic-empty-state--error .uic-empty-state__icon {
     background: var(--component-danger-soft);
     color: var(--component-danger);
 }
 
-.empty-state-warning .empty-state-icon {
+.uic-empty-state--warning .uic-empty-state__icon {
     background: var(--component-warning-soft);
     color: var(--component-warning);
 }
 
-.empty-state-info .empty-state-icon {
+.uic-empty-state--info .uic-empty-state__icon {
     background: var(--component-info-soft);
     color: var(--component-info);
 }
 
-.empty-state-muted .empty-state-icon {
+.uic-empty-state--muted .uic-empty-state__icon {
     background: var(--component-bg-muted);
     color: var(--component-text-muted);
 }
 
 /* Empty state sizes */
 
-.empty-state-sm {
+.uic-empty-state--sm {
     min-height: 11rem;
     padding: 1.5rem 1rem;
 }
 
-.empty-state-sm .empty-state-icon {
+.uic-empty-state--sm .uic-empty-state__icon {
     width: 3rem;
     height: 3rem;
 
@@ -118,41 +118,41 @@
     font-size: 1.25rem;
 }
 
-.empty-state-sm .empty-state-title {
+.uic-empty-state--sm .uic-empty-state__title {
     font-size: 1rem;
     line-height: 1.375rem;
 }
 
-.empty-state-lg {
+.uic-empty-state--lg {
     min-height: 22rem;
     padding: 3rem 2rem;
 }
 
-.empty-state-lg .empty-state-icon {
+.uic-empty-state--lg .uic-empty-state__icon {
     width: 5rem;
     height: 5rem;
 
     font-size: 2rem;
 }
 
-.empty-state-plain {
+.uic-empty-state--plain {
     background: transparent;
     border-color: transparent;
     box-shadow: none;
 }
 
-.empty-state-dashed {
+.uic-empty-state--dashed {
     border-style: dashed;
 }
 
 @media (max-width: 640px) {
-    .empty-state-actions {
+    .uic-empty-state__actions {
         width: 100%;
         flex-direction: column;
         align-items: stretch;
     }
 
-    .empty-state-actions .btn {
+    .uic-empty-state__actions .uic-btn {
         width: 100%;
     }
 }

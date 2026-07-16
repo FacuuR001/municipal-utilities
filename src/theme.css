@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hibur+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hibur+Mono&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     /* ========================================================= */
@@ -152,6 +151,13 @@
     --component-text-strong: #0F172A;
     --component-text-muted: #64748B;
     --component-text-soft: #94A3B8;
+    
+    /* Font Family */
+    --font-inter: "Inter", Arial, sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+    --font-manrope: "Manrope", Arial, sans-serif;
+    --font-plex: "IBM Plex Sans", Arial, sans-serif;
+    --font-hibur: "Hibur Mono", monospace sans-serif;
 
     /* Border */
     --component-border: #E2E8F0;
@@ -166,6 +172,19 @@
 
     /* Focus */
     --component-focus-ring: 0 0 0 4px var(--component-primary-ring);
+
+    /* AutoFill */
+    --autofill-gray-16-bg: var(--color-gray-16);
+    --autofill-gray-16-text: var(--color-white-100);
+
+    --autofill-gray-20-bg: var(--color-gray-20);
+    --autofill-gray-20-text: var(--color-white-100);
+
+    --autofill-white-bg: var(--color-white-100);
+    --autofill-white-text: var(--color-gray-16);
+
+    --autofill-primary-bg: var(--color-primary);
+    --autofill-primary-text: var(--color-white-100);
 
     /* Transitions */
     --component-transition-fast: 150ms ease;

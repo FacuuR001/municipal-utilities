@@ -8,8 +8,7 @@
 /* src/theme.css */
 /* ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hibur+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hibur+Mono&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     /* ========================================================= */
@@ -162,6 +161,13 @@
     --component-text-strong: #0F172A;
     --component-text-muted: #64748B;
     --component-text-soft: #94A3B8;
+    
+    /* Font Family */
+    --font-inter: "Inter", Arial, sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+    --font-manrope: "Manrope", Arial, sans-serif;
+    --font-plex: "IBM Plex Sans", Arial, sans-serif;
+    --font-hibur: "Hibur Mono", monospace sans-serif;
 
     /* Border */
     --component-border: #E2E8F0;
@@ -176,6 +182,19 @@
 
     /* Focus */
     --component-focus-ring: 0 0 0 4px var(--component-primary-ring);
+
+    /* AutoFill */
+    --autofill-gray-16-bg: var(--color-gray-16);
+    --autofill-gray-16-text: var(--color-white-100);
+
+    --autofill-gray-20-bg: var(--color-gray-20);
+    --autofill-gray-20-text: var(--color-white-100);
+
+    --autofill-white-bg: var(--color-white-100);
+    --autofill-white-text: var(--color-gray-16);
+
+    --autofill-primary-bg: var(--color-primary);
+    --autofill-primary-text: var(--color-white-100);
 
     /* Transitions */
     --component-transition-fast: 150ms ease;
@@ -4636,11 +4655,21 @@
 /* #endregion */
 /* #region Typography */
     /***********************/
+    /* ---- FONT FAMILY ---- */
+    /***********************/
+    .u-font-inter { font-family: var(--font-inter) !important; }
+    .u-font-roboto { font-family: var(--font-roboto) !important; }
+    .u-font-manrope { font-family: var(--font-manrope) !important; }
+    .u-font-plex { font-family: var(--font-plex) !important; }
+    .u-font-hibur { font-family: var(--font-hibur) !important; }
+
+    /***********************/
     /* ---- FONT SIZE ---- */
     /***********************/
     .u-text-xs   { font-size: 0.75rem; line-height: 1rem; }
     .u-text-sm   { font-size: 0.875rem; line-height: 1.25rem; }
     .u-text-base { font-size: 1rem; line-height: 1.5rem; }
+    .u-text-md   { font-size: 1.0625rem; line-height: 1.625rem; }
     .u-text-lg   { font-size: 1.125rem; line-height: 1.75rem; }
     .u-text-xl   { font-size: 1.25rem; line-height: 1.75rem; }
     .u-text-2xl  { font-size: 1.5rem; line-height: 2rem; }
@@ -4655,15 +4684,25 @@
     /*************************/
     /* ---- FONT WEIGHT ---- */
     /*************************/
-    .u-font-thin       { font-weight: 100; }
-    .u-font-extralight { font-weight: 200; }
-    .u-font-light      { font-weight: 300; }
-    .u-font-normal     { font-weight: 400; }
-    .u-font-medium     { font-weight: 500; }
-    .u-font-semibold   { font-weight: 600; }
-    .u-font-bold       { font-weight: 700; }
-    .u-font-extrabold  { font-weight: 800; }
-    .u-font-black      { font-weight: 900; }
+    .u-font-thin       { font-weight: 100 !important; }
+    .u-font-extralight { font-weight: 200 !important; }
+    .u-font-light      { font-weight: 300 !important; }
+    .u-font-normal     { font-weight: 400 !important; }
+    .u-font-medium     { font-weight: 500 !important; }
+    .u-font-semibold   { font-weight: 600 !important; }
+    .u-font-bold       { font-weight: 700 !important; }
+    .u-font-extrabold  { font-weight: 800 !important; }
+    .u-font-black      { font-weight: 900 !important; }
+
+    /****************************/
+    /* ---- LETTER SPACING ---- */
+    /****************************/
+
+    .u-tracking-tight  { letter-spacing: -0.025em !important; }
+    .u-tracking-normal { letter-spacing: 0 !important; }
+    .u-tracking-wide   { letter-spacing: 0.025em !important; }
+    .u-tracking-wider  { letter-spacing: 0.05em !important; }
+    .u-tracking-widest { letter-spacing: 0.1em !important; }
 
     /************************/
     /* ---- FONT STYLE ---- */
@@ -4894,6 +4933,78 @@
     .u-opacity-90  { opacity: 0.9; }
     .u-opacity-95  { opacity: 0.95; }
     .u-opacity-100 { opacity: 1; }
+
+    /**********************/
+    /* ---- AUTOFILL ---- */
+    /**********************/
+    .u-autofill-gray-16:-webkit-autofill,
+    .u-autofill-gray-16:-webkit-autofill:hover,
+    .u-autofill-gray-16:-webkit-autofill:focus,
+    .u-autofill-gray-16:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px var(--autofill-gray-16-bg) inset !important;
+        box-shadow: 0 0 0 1000px var(--autofill-gray-16-bg) inset !important;
+
+        -webkit-text-fill-color: var(--autofill-gray-16-text) !important;
+        color: var(--autofill-gray-16-text) !important;
+        caret-color: var(--autofill-gray-16-text) !important;
+
+        background-color: transparent !important;
+        background-image: none !important;
+
+        transition: background-color 9999s ease-out 0s;
+    }
+
+    .u-autofill-gray-20:-webkit-autofill,
+    .u-autofill-gray-20:-webkit-autofill:hover,
+    .u-autofill-gray-20:-webkit-autofill:focus,
+    .u-autofill-gray-20:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px var(--autofill-gray-20-bg) inset !important;
+        box-shadow: 0 0 0 1000px var(--autofill-gray-20-bg) inset !important;
+
+        -webkit-text-fill-color: var(--autofill-gray-20-text) !important;
+        color: var(--autofill-gray-20-text) !important;
+        caret-color: var(--autofill-gray-20-text) !important;
+
+        background-color: transparent !important;
+        background-image: none !important;
+
+        transition: background-color 9999s ease-out 0s;
+    }
+
+    .u-autofill-white:-webkit-autofill,
+    .u-autofill-white:-webkit-autofill:hover,
+    .u-autofill-white:-webkit-autofill:focus,
+    .u-autofill-white:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px var(--autofill-white-bg) inset !important;
+        box-shadow: 0 0 0 1000px var(--autofill-white-bg) inset !important;
+
+        -webkit-text-fill-color: var(--autofill-white-text) !important;
+        color: var(--autofill-white-text) !important;
+        caret-color: var(--autofill-white-text) !important;
+
+        background-color: transparent !important;
+        background-image: none !important;
+
+        transition: background-color 9999s ease-out 0s;
+    }
+
+    .u-autofill-primary:-webkit-autofill,
+    .u-autofill-primary:-webkit-autofill:hover,
+    .u-autofill-primary:-webkit-autofill:focus,
+    .u-autofill-primary:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px var(--autofill-primary-bg) inset !important;
+        box-shadow: 0 0 0 1000px var(--autofill-primary-bg) inset !important;
+
+        -webkit-text-fill-color: var(--autofill-primary-text) !important;
+        color: var(--autofill-primary-text) !important;
+        caret-color: var(--autofill-primary-text) !important;
+
+        background-color: transparent !important;
+        background-image: none !important;
+
+        transition: background-color 9999s ease-out 0s;
+    }
+
 /* #endregion */
 /* #region Interactivity */
     /********************/

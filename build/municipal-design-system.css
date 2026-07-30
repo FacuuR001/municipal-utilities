@@ -1,6 +1,6 @@
 /*
  * Municipal Design System
- * Archivo generado automáticamente desde /src
+ * Archivo generado automÃ¡ticamente desde /src
  * No editar directamente este archivo.
  */
 
@@ -23,6 +23,8 @@
     --color-page: #EEEEEE;
     --color-surface: #FFFFFF;
     --color-text: #565A5C;
+    --color-border: #CCCCCC;
+    --color-text-legacy: #575B5D;
 
     --color-white-100: #FFFFFF;
     --color-white-300: #DDE1E6;

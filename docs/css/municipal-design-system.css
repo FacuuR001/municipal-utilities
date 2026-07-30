@@ -23,8 +23,8 @@
     --color-page: #EEEEEE;
     --color-surface: #FFFFFF;
     --color-text: #565A5C;
-    --color-border: #CCCCCC;
-    --color-text-legacy: #575B5D;
+    --color-gray-80: #CCCCCC;
+    --color-gray-35: #575B5D;
 
     --color-white-100: #FFFFFF;
     --color-white-300: #DDE1E6;
@@ -3490,6 +3490,7 @@
     .u-border-primary-hover { border-color: var(--color-primary-hover-border); }
     .u-border-focus         { border-color: var(--color-focus); }
     .u-border-default       { border-color: var(--color-gray-400); }
+    .u-border-gray-80        { border-color: var(--color-gray-80); }
     .u-border-muted         { border-color: var(--color-gray-500); }
 
     /* Blue */
@@ -4733,6 +4734,7 @@
     .u-text-primary       { color: var(--color-primary); }
     .u-text-primary-hover { color: var(--color-primary-hover); }
     .u-text-default       { color: var(--color-text); }
+    .u-text-gray-35        { color: var(--color-gray-35); }
     .u-text-muted         { color: var(--color-gray-500); }
 
     /* Blue */

@@ -2731,7 +2731,7 @@
     /* --- Display --- */
     /*******************/
     .u-hidden       { display: none !important; }
-    .u-block        { display: block; }
+    .u-block        { display: block !important; }
     .u-inline       { display: inline; }
     .u-inline-block { display: inline-block; }
     .u-flex         { display: flex; }

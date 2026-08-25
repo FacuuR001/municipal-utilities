@@ -13,7 +13,6 @@
 <body class="docs-body">
   <header class="docs-topbar">
     <a aria-label="Ir al inicio" class="docs-brand" href="index.html">
-      <span class="docs-brand-mark">M</span>
       <span>
         <strong>Municipal DS</strong>
         <small>Documentación</small>
@@ -26,17 +25,46 @@
     </nav>
   </header>
   <main class="docs-main">
-    <section class="docs-hero">
-      <p class="docs-kicker">Componentes</p>
-      <h1>Todos los componentes y sus variantes</h1>
-      <p>Cada bloque muestra el componente funcionando, el HTML para copiar y el listado de clases uic- disponibles en
-        el componente.</p>
+    <section class="docs-hero docs-hero--compact">
+      <div class="docs-hero__content">
+        <p class="docs-kicker">Componentes</p>
+        <h1>Biblioteca de componentes lista para consultar</h1>
+        <p>Buscá por nombre, variante o clase, revisá la vista previa y copiá el HTML sin perderte en una página larga.</p>
+      </div>
+      <div class="docs-hero__aside" aria-label="Resumen de componentes">
+        <span><strong>8</strong> familias</span>
+        <span><strong>246</strong> clases</span>
+        <span><strong>uic-</strong> prefijo</span>
+      </div>
     </section>
-    <section class="docs-toolbar">
-      <input class="docs-search" data-component-search="" placeholder="Buscar componente, variante o clase..."
-        type="search" />
-      <span class="docs-counter">246 clases de componentes</span>
+    <section class="docs-toolbar" aria-label="Buscar componentes">
+      <div class="docs-toolbar-main">
+        <label class="docs-search-wrap">
+          <span class="docs-search-label">Buscar en componentes</span>
+          <input class="docs-search" data-component-search="" placeholder="Ej: botón, badge, tabla, uic-card"
+            type="search" />
+        </label>
+        <span class="docs-counter" data-component-count>8 componentes visibles</span>
+      </div>
+      <div class="docs-toolbar-actions" aria-label="Filtros rápidos de componentes">
+        <button class="docs-filter-button is-active" data-component-filter="all" type="button">Todos</button>
+        <button class="docs-filter-button" data-component-filter="forms" type="button">Formularios</button>
+        <button class="docs-filter-button" data-component-filter="cards" type="button">Tarjetas</button>
+        <button class="docs-filter-button" data-component-filter="tables" type="button">Tablas</button>
+        <button class="docs-control-button" data-clear-search type="button">Limpiar</button>
+      </div>
     </section>
+    <section class="docs-component-index" aria-label="Índice de componentes">
+      <a href="#buttons"><span>Botones</span><strong>31 clases</strong></a>
+      <a href="#forms"><span>Formularios</span><strong>44 clases</strong></a>
+      <a href="#cards"><span>Tarjetas</span><strong>50 clases</strong></a>
+      <a href="#alerts"><span>Alertas</span><strong>28 clases</strong></a>
+      <a href="#badges"><span>Badges</span><strong>33 clases</strong></a>
+      <a href="#tables"><span>Tablas</span><strong>21 clases</strong></a>
+      <a href="#empty-states"><span>Estados vacíos</span><strong>16 clases</strong></a>
+      <a href="#page-layout"><span>Page layout</span><strong>29 clases</strong></a>
+    </section>
+    <div class="docs-no-results docs-hidden" data-component-empty>No hay componentes que coincidan con la búsqueda.</div>
     <section class="docs-section">
       <div class="docs-section-header">
         <div>
@@ -64,7 +92,8 @@
   &lt;div class="uic-card__body"&gt;Contenido&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </div>
-      <section class="docs-component-section" data-component="buttons">
+    </section>
+    <section class="docs-component-section" data-component="buttons" id="buttons">
         <div class="docs-section-header">
           <div>
             <p class="docs-kicker">buttons</p>
@@ -162,7 +191,7 @@
           </div>
         </div>
       </section>
-      <section class="docs-component-section" data-component="forms">
+      <section class="docs-component-section" data-component="forms" id="forms">
         <div class="docs-section-header">
           <div>
             <p class="docs-kicker">forms</p>
@@ -274,7 +303,7 @@
           </div>
         </div>
       </section>
-      <section class="docs-component-section" data-component="cards">
+      <section class="docs-component-section" data-component="cards" id="cards">
         <div class="docs-section-header">
           <div>
             <p class="docs-kicker">cards</p>
@@ -383,7 +412,7 @@
           </div>
         </div>
       </section>
-      <section class="docs-component-section" data-component="alerts">
+      <section class="docs-component-section" data-component="alerts" id="alerts">
         <div class="docs-section-header">
           <div>
             <p class="docs-kicker">alerts</p>
@@ -447,7 +476,7 @@
           </div>
         </div>
       </section>
-      <section class="docs-component-section" data-component="badges">
+      <section class="docs-component-section" data-component="badges" id="badges">
         <div class="docs-section-header">
           <div>
             <p class="docs-kicker">badges</p>
@@ -511,7 +540,7 @@
           </div>
         </div>
       </section>
-      <section class="docs-component-section" data-component="tables">
+      <section class="docs-component-section" data-component="tables" id="tables">
         <div class="docs-section-header">
           <div>
             <p class="docs-kicker">tables</p>
@@ -596,7 +625,7 @@
           </div>
         </div>
       </section>
-      <section class="docs-component-section" data-component="empty-states">
+      <section class="docs-component-section" data-component="empty-states" id="empty-states">
         <div class="docs-section-header">
           <div>
             <p class="docs-kicker">empty-states</p>
@@ -643,7 +672,7 @@
           </div>
         </div>
       </section>
-      <section class="docs-component-section" data-component="page-layout">
+      <section class="docs-component-section" data-component="page-layout" id="page-layout">
         <div class="docs-section-header">
           <div>
             <p class="docs-kicker">page-layout</p>
@@ -718,7 +747,6 @@
           </div>
         </div>
       </section>
-    </section>
   </main>
   <script src="js/docs.js"></script>
 </body>

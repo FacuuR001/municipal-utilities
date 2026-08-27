@@ -1375,6 +1375,7 @@
 
     .u-w-auto   { width: auto; }
     .u-w-full   { width: 100%; }
+    .u-w-full-force { width: 100% !important; }
     .u-w-screen { width: 100vw; }
     .u-w-dvw    { width: 100dvw; }
     .u-w-dvh    { width: 100dvh; }
@@ -3173,6 +3174,29 @@
 /* #endregion */
 
 /* #region GeneXus */
+    /*************************************/
+    /* ---- GeneXus generated grids ---- */
+    /*************************************/
+    .u-gx-grid-cards-equal .row > [data-gxrow],
+    .u-gx-grid-items-stretch .row > [data-gxrow] {
+        display: flex !important;
+        min-width: 0;
+    }
+
+    .u-gx-grid-cards-equal .row > [data-gxrow] > *,
+    .u-gx-grid-items-full .row > [data-gxrow] > *,
+    .u-gx-grid-cards-equal .row > [data-gxrow] > * > .Table,
+    .u-gx-grid-items-full .row > [data-gxrow] > * > .Table,
+    .u-gx-grid-cards-equal .row > [data-gxrow] > * > table,
+    .u-gx-grid-items-full .row > [data-gxrow] > * > table,
+    .u-gx-grid-cards-equal .row > [data-gxrow] > * > [id^="UNNAMEDTABLE"],
+    .u-gx-grid-items-full .row > [data-gxrow] > * > [id^="UNNAMEDTABLE"] {
+        width: 100% !important;
+        max-width: 100%;
+        min-width: 0;
+        flex: 1 1 auto !important;
+    }
+
     /*************************************/
     /* ---- GeneXus generated rows ---- */
     /*************************************/

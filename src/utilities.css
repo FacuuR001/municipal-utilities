@@ -2672,7 +2672,9 @@
     /* ---- WORD WRAP - BREAK ---- */
     /*******************************/
     .u-break-normal { overflow-wrap: normal; word-break: normal; }
-    .u-break-words  { overflow-wrap: break-word; }
+    .u-break-words,
+    .u-word-wrap    { overflow-wrap: break-word; word-wrap: break-word; }
+    .u-wrap-anywhere { overflow-wrap: anywhere; word-wrap: break-word; }
     .u-break-all    { word-break: break-all; }
     .u-break-keep   { word-break: keep-all; }
 /* #endregion */

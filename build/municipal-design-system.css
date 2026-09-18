@@ -2738,6 +2738,18 @@
     .u-inline-flex  { display: inline-flex; }
     .reference    {}
 
+    /***************/
+    /* --- Float --- */
+    /***************/
+    .u-float-left  { float: left; }
+    .u-float-right { float: right; }
+    .u-float-none  { float: none; }
+    .u-clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
     /********************/
     /* --- Position --- */
     /********************/

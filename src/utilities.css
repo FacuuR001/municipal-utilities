@@ -5,6 +5,13 @@
 */
 
 /* #region Layout */
+
+    /**********************/
+    /* --- Box Sizing --- */
+    /**********************/
+    .u-box-border  { box-sizing: border-box !important; }
+    .u-box-content { box-sizing: content-box !important; }
+
     /*******************/
     /* --- Display --- */
     /*******************/
@@ -2166,73 +2173,73 @@
     /* ---- Margin X Axis ---- */
     /**************************/
 
-    .u-mx-0  { margin-left: 0; margin-right: 0; }
-    .u-mx-px { margin-left: 1px; margin-right: 1px; }
-    .u-mx-1  { margin-left: 0.25rem; margin-right: 0.25rem; }
-    .u-mx-2  { margin-left: 0.5rem; margin-right: 0.5rem; }
-    .u-mx-3  { margin-left: 0.75rem; margin-right: 0.75rem; }
-    .u-mx-4  { margin-left: 1rem; margin-right: 1rem; }
-    .u-mx-5  { margin-left: 1.25rem; margin-right: 1.25rem; }
-    .u-mx-6  { margin-left: 1.5rem; margin-right: 1.5rem; }
-    .u-mx-7  { margin-left: 1.75rem; margin-right: 1.75rem; }
-    .u-mx-8  { margin-left: 2rem; margin-right: 2rem; }
-    .u-mx-9  { margin-left: 2.25rem; margin-right: 2.25rem; }
-    .u-mx-10 { margin-left: 2.5rem; margin-right: 2.5rem; }
-    .u-mx-11 { margin-left: 2.75rem; margin-right: 2.75rem; }
-    .u-mx-12 { margin-left: 3rem; margin-right: 3rem; }
-    .u-mx-14 { margin-left: 3.5rem; margin-right: 3.5rem; }
-    .u-mx-16 { margin-left: 4rem; margin-right: 4rem; }
-    .u-mx-20 { margin-left: 5rem; margin-right: 5rem; }
-    .u-mx-24 { margin-left: 6rem; margin-right: 6rem; }
-    .u-mx-28 { margin-left: 7rem; margin-right: 7rem; }
-    .u-mx-32 { margin-left: 8rem; margin-right: 8rem; }
-    .u-mx-36 { margin-left: 9rem; margin-right: 9rem; }
-    .u-mx-40 { margin-left: 10rem; margin-right: 10rem; }
-    .u-mx-44 { margin-left: 11rem; margin-right: 11rem; }
-    .u-mx-48 { margin-left: 12rem; margin-right: 12rem; }
-    .u-mx-52 { margin-left: 13rem; margin-right: 13rem; }
-    .u-mx-56 { margin-left: 14rem; margin-right: 14rem; }
-    .u-mx-60 { margin-left: 15rem; margin-right: 15rem; }
-    .u-mx-64 { margin-left: 16rem; margin-right: 16rem; }
-    .u-mx-72 { margin-left: 18rem; margin-right: 18rem; }
-    .u-mx-80 { margin-left: 20rem; margin-right: 20rem; }
-    .u-mx-96 { margin-left: 24rem; margin-right: 24rem; }
+    .u-mx-0  { margin-left: 0 !important; margin-right: 0 !important; }
+    .u-mx-px { margin-left: 1px !important; margin-right: 1px !important; }
+    .u-mx-1  { margin-left: 0.25rem !important; margin-right: 0.25rem !important; }
+    .u-mx-2  { margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
+    .u-mx-3  { margin-left: 0.75rem !important; margin-right: 0.75rem !important; }
+    .u-mx-4  { margin-left: 1rem !important; margin-right: 1rem !important; }
+    .u-mx-5  { margin-left: 1.25rem !important; margin-right: 1.25rem !important; }
+    .u-mx-6  { margin-left: 1.5rem !important; margin-right: 1.5rem !important; }
+    .u-mx-7  { margin-left: 1.75rem !important; margin-right: 1.75rem !important; }
+    .u-mx-8  { margin-left: 2rem !important; margin-right: 2rem !important; }
+    .u-mx-9  { margin-left: 2.25rem !important; margin-right: 2.25rem !important; }
+    .u-mx-10 { margin-left: 2.5rem !important; margin-right: 2.5rem !important; }
+    .u-mx-11 { margin-left: 2.75rem !important; margin-right: 2.75rem !important; }
+    .u-mx-12 { margin-left: 3rem !important; margin-right: 3rem !important; }
+    .u-mx-14 { margin-left: 3.5rem !important; margin-right: 3.5rem !important; }
+    .u-mx-16 { margin-left: 4rem !important; margin-right: 4rem !important; }
+    .u-mx-20 { margin-left: 5rem !important; margin-right: 5rem !important; }
+    .u-mx-24 { margin-left: 6rem !important; margin-right: 6rem !important; }
+    .u-mx-28 { margin-left: 7rem !important; margin-right: 7rem !important; }
+    .u-mx-32 { margin-left: 8rem !important; margin-right: 8rem !important; }
+    .u-mx-36 { margin-left: 9rem !important; margin-right: 9rem !important; }
+    .u-mx-40 { margin-left: 10rem !important; margin-right: 10rem !important; }
+    .u-mx-44 { margin-left: 11rem !important; margin-right: 11rem !important; }
+    .u-mx-48 { margin-left: 12rem !important; margin-right: 12rem !important; }
+    .u-mx-52 { margin-left: 13rem !important; margin-right: 13rem !important; }
+    .u-mx-56 { margin-left: 14rem !important; margin-right: 14rem !important; }
+    .u-mx-60 { margin-left: 15rem !important; margin-right: 15rem !important; }
+    .u-mx-64 { margin-left: 16rem !important; margin-right: 16rem !important; }
+    .u-mx-72 { margin-left: 18rem !important; margin-right: 18rem !important; }
+    .u-mx-80 { margin-left: 20rem !important; margin-right: 20rem !important; }
+    .u-mx-96 { margin-left: 24rem !important; margin-right: 24rem !important; }
 
     /**************************/
     /* ---- Margin Y Axis ---- */
     /**************************/
 
-    .u-my-0  { margin-top: 0; margin-bottom: 0; }
-    .u-my-px { margin-top: 1px; margin-bottom: 1px; }
-    .u-my-1  { margin-top: 0.25rem; margin-bottom: 0.25rem; }
-    .u-my-2  { margin-top: 0.5rem; margin-bottom: 0.5rem; }
-    .u-my-3  { margin-top: 0.75rem; margin-bottom: 0.75rem; }
-    .u-my-4  { margin-top: 1rem; margin-bottom: 1rem; }
-    .u-my-5  { margin-top: 1.25rem; margin-bottom: 1.25rem; }
-    .u-my-6  { margin-top: 1.5rem; margin-bottom: 1.5rem; }
-    .u-my-7  { margin-top: 1.75rem; margin-bottom: 1.75rem; }
-    .u-my-8  { margin-top: 2rem; margin-bottom: 2rem; }
-    .u-my-9  { margin-top: 2.25rem; margin-bottom: 2.25rem; }
-    .u-my-10 { margin-top: 2.5rem; margin-bottom: 2.5rem; }
-    .u-my-11 { margin-top: 2.75rem; margin-bottom: 2.75rem; }
-    .u-my-12 { margin-top: 3rem; margin-bottom: 3rem; }
-    .u-my-14 { margin-top: 3.5rem; margin-bottom: 3.5rem; }
-    .u-my-16 { margin-top: 4rem; margin-bottom: 4rem; }
-    .u-my-20 { margin-top: 5rem; margin-bottom: 5rem; }
-    .u-my-24 { margin-top: 6rem; margin-bottom: 6rem; }
-    .u-my-28 { margin-top: 7rem; margin-bottom: 7rem; }
-    .u-my-32 { margin-top: 8rem; margin-bottom: 8rem; }
-    .u-my-36 { margin-top: 9rem; margin-bottom: 9rem; }
-    .u-my-40 { margin-top: 10rem; margin-bottom: 10rem; }
-    .u-my-44 { margin-top: 11rem; margin-bottom: 11rem; }
-    .u-my-48 { margin-top: 12rem; margin-bottom: 12rem; }
-    .u-my-52 { margin-top: 13rem; margin-bottom: 13rem; }
-    .u-my-56 { margin-top: 14rem; margin-bottom: 14rem; }
-    .u-my-60 { margin-top: 15rem; margin-bottom: 15rem; }
-    .u-my-64 { margin-top: 16rem; margin-bottom: 16rem; }
-    .u-my-72 { margin-top: 18rem; margin-bottom: 18rem; }
-    .u-my-80 { margin-top: 20rem; margin-bottom: 20rem; }
-    .u-my-96 { margin-top: 24rem; margin-bottom: 24rem; }
+    .u-my-0  { margin-top: 0 !important; margin-bottom: 0 !important; }
+    .u-my-px { margin-top: 1px !important; margin-bottom: 1px !important; }
+    .u-my-1  { margin-top: 0.25rem !important; margin-bottom: 0.25rem !important; }
+    .u-my-2  { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+    .u-my-3  { margin-top: 0.75rem !important; margin-bottom: 0.75rem !important; }
+    .u-my-4  { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+    .u-my-5  { margin-top: 1.25rem !important; margin-bottom: 1.25rem !important; }
+    .u-my-6  { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+    .u-my-7  { margin-top: 1.75rem !important; margin-bottom: 1.75rem !important; }
+    .u-my-8  { margin-top: 2rem !important; margin-bottom: 2rem !important; }
+    .u-my-9  { margin-top: 2.25rem !important; margin-bottom: 2.25rem !important; }
+    .u-my-10 { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
+    .u-my-11 { margin-top: 2.75rem !important; margin-bottom: 2.75rem !important; }
+    .u-my-12 { margin-top: 3rem !important; margin-bottom: 3rem !important; }
+    .u-my-14 { margin-top: 3.5rem !important; margin-bottom: 3.5rem !important; }
+    .u-my-16 { margin-top: 4rem !important; margin-bottom: 4rem !important; }
+    .u-my-20 { margin-top: 5rem !important; margin-bottom: 5rem !important; }
+    .u-my-24 { margin-top: 6rem !important; margin-bottom: 6rem !important; }
+    .u-my-28 { margin-top: 7rem !important; margin-bottom: 7rem !important; }
+    .u-my-32 { margin-top: 8rem !important; margin-bottom: 8rem !important; }
+    .u-my-36 { margin-top: 9rem !important; margin-bottom: 9rem !important; }
+    .u-my-40 { margin-top: 10rem !important; margin-bottom: 10rem !important; }
+    .u-my-44 { margin-top: 11rem !important; margin-bottom: 11rem !important; }
+    .u-my-48 { margin-top: 12rem !important; margin-bottom: 12rem !important; }
+    .u-my-52 { margin-top: 13rem !important; margin-bottom: 13rem !important; }
+    .u-my-56 { margin-top: 14rem !important; margin-bottom: 14rem !important; }
+    .u-my-60 { margin-top: 15rem !important; margin-bottom: 15rem !important; }
+    .u-my-64 { margin-top: 16rem !important; margin-bottom: 16rem !important; }
+    .u-my-72 { margin-top: 18rem !important; margin-bottom: 18rem !important; }
+    .u-my-80 { margin-top: 20rem !important; margin-bottom: 20rem !important; }
+    .u-my-96 { margin-top: 24rem !important; margin-bottom: 24rem !important; }
 
     /*****************************/
     /* ---- Negative Margin ---- */

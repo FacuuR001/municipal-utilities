@@ -12,10 +12,10 @@ municipal-utilities/
 ├── src/
 │   ├── theme.css
 │   ├── utilities.css
-│   ├── components.css
+│   ├── components/*.css
 │   └── index.css
 │
-├── dist/
+├── build/
 │   ├── municipal-design-system.css
 │   └── municipal-design-system.min.css
 │
@@ -38,26 +38,35 @@ municipal-utilities/
 Contiene los archivos editables del Design System.
 
 - `theme.css`: variables, colores, tokens, sombras, radios, fuentes y base global.
-- `utilities.css`: clases utilitarias tipo `flex`, `p-4`, `bg-primary`, `hover:bg-primary`, `md:hidden`.
-- `components.css`: componentes reutilizables como `btn`, `card`, `input`, `badge`, `alert`, `table`.
+- `utilities.css`: clases utilitarias tipo `u-flex`, `u-p-4`, `u-bg-primary`, `u-hover:bg-primary`, `u-md:hidden`.
+- `components/*.css`: componentes reutilizables como `uic-btn`, `uic-card`, `uic-input`, `uic-badge`, `uic-alert`, `uic-table`.
 - `index.css`: archivo de entrada que importa theme, utilities y components.
 
 Contenido de `src/index.css`:
 
 ```css
 @import url("./theme.css");
+
+@import url("./components/buttons.css");
+@import url("./components/forms.css");
+@import url("./components/cards.css");
+@import url("./components/alerts.css");
+@import url("./components/badges.css");
+@import url("./components/tables.css");
+@import url("./components/empty-states.css");
+@import url("./components/page-layout.css");
+
 @import url("./utilities.css");
-@import url("./components.css");
 ```
 
-### `dist/`
+### `build/`
 
 Contiene los archivos finales generados automáticamente.
 
 - `municipal-design-system.css`: CSS completo sin minificar.
 - `municipal-design-system.min.css`: CSS minificado para usar en GeneXus.
 
-No editar manualmente los archivos de `dist/`.
+No editar manualmente los archivos de `build/`.
 
 ### `docs/`
 
@@ -71,7 +80,7 @@ Contiene la documentación web.
 
 Contiene scripts de automatización.
 
-- `build-css.js`: compila los CSS de `src/` y genera los archivos de `dist/`.
+- `build-css.js`: compila los CSS de `src/` y genera los archivos de `build/`.
 
 ## Instalación
 
@@ -110,8 +119,8 @@ npm run build:css
 Esto genera:
 
 ```txt
-dist/municipal-design-system.css
-dist/municipal-design-system.min.css
+build/municipal-design-system.css
+build/municipal-design-system.min.css
 ```
 
 ## Modo desarrollo
@@ -127,7 +136,7 @@ Este comando escucha cambios en:
 ```txt
 src/theme.css
 src/utilities.css
-src/components.css
+src/components/*.css
 ```
 
 ## Flujo recomendado
@@ -145,7 +154,7 @@ src/components.css
 Desde la Master Page:
 
 ```gx
-Form.HeaderRawHTML += !'<link rel="stylesheet" type="text/css" href="https://facuur001.github.io/municipal-utilities/dist/municipal-design-system.min.css?v=1">'
+Form.HeaderRawHTML += !'<link rel="stylesheet" type="text/css" href="https://facuur001.github.io/municipal-utilities/build/municipal-design-system.min.css?v=1">'
 ```
 
 El parámetro `?v=1` ayuda a evitar problemas de caché. Cuando se actualice el CSS se puede cambiar a `?v=2`, `?v=3`, etc.
@@ -155,25 +164,25 @@ El parámetro `?v=1` ayuda a evitar problemas de caché. Cuando se actualice el 
 Botón con utilities:
 
 ```txt
-bg-primary text-white px-4 py-2 rounded shadow-md hover:bg-primary-hover transition
+u-bg-primary u-text-white u-px-4 u-py-2 u-rounded u-shadow-md u-hover:bg-primary-hover u-transition
 ```
 
 Botón con componente:
 
 ```txt
-btn btn-primary hover:shadow-md active:scale-95
+uic-btn uic-btn--primary u-hover:shadow-md u-active:scale-95
 ```
 
 Tarjeta:
 
 ```txt
-card p-4 shadow-md rounded bg-surface
+uic-card u-p-4 u-shadow-md u-rounded u-bg-surface
 ```
 
 Grid responsive:
 
 ```txt
-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4
+u-grid u-grid-cols-1 u-md:grid-cols-2 u-lg:grid-cols-3 u-gap-4
 ```
 
 ## Responsive
@@ -191,7 +200,7 @@ xl:  desde 1280px
 Ejemplo:
 
 ```txt
-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+u-grid u-grid-cols-1 u-md:grid-cols-2 u-lg:grid-cols-3
 ```
 
 Resultado:
@@ -207,19 +216,19 @@ Desktop: 3 columnas
 Oculto siempre:
 
 ```txt
-hidden
+u-hidden
 ```
 
 Oculto en mobile, visible desde `md`:
 
 ```txt
-hidden md:block
+u-hidden u-md:block
 ```
 
 Visible en mobile, oculto desde `md`:
 
 ```txt
-block md:hidden
+u-block u-md:hidden
 ```
 
 ## Pseudo-clases
@@ -227,7 +236,7 @@ block md:hidden
 En CSS se definen escapadas:
 
 ```css
-.hover\:bg-primary:hover {
+.u-hover\:bg-primary:hover {
   background-color: var(--color-primary);
 }
 ```
@@ -235,28 +244,28 @@ En CSS se definen escapadas:
 En GeneXus se usan normales:
 
 ```txt
-hover:bg-primary
+u-hover:bg-primary
 ```
 
 Ejemplos:
 
 ```txt
-hover:bg-primary
-hover:bg-primary-hover
-hover:text-white
-hover:border-primary
-hover:shadow-md
-hover:opacity-80
-hover:scale-105
-focus:border-primary
-focus:outline-primary
-focus-visible:outline-primary
-active:bg-primary-hover
-active:scale-95
-disabled:opacity-50
-disabled:cursor-not-allowed
-placeholder:text-muted
-placeholder:opacity-75
+u-hover:bg-primary
+u-hover:bg-primary-hover
+u-hover:text-white
+u-hover:border-primary
+u-hover:shadow-md
+u-hover:opacity-80
+u-hover:scale-105
+u-focus:border-primary
+u-focus:outline-primary
+u-focus-visible:outline-primary
+u-active:bg-primary-hover
+u-active:scale-95
+u-disabled:opacity-50
+u-disabled:cursor-not-allowed
+u-placeholder:text-muted
+u-placeholder:opacity-75
 ```
 
 ## Documentación web
@@ -278,8 +287,8 @@ https://facuur001.github.io/municipal-utilities/docs/
 Para publicar en un servidor estático, subir como mínimo:
 
 ```txt
-dist/municipal-design-system.css
-dist/municipal-design-system.min.css
+build/municipal-design-system.css
+build/municipal-design-system.min.css
 ```
 
 Opcionalmente también subir:
@@ -304,14 +313,14 @@ https://static.riocuarto.gov.ar/design-system/1.0.0/municipal-design-system.min.
 
 ## Reglas de mantenimiento
 
-No editar `dist/` manualmente.
+No editar `build/` manualmente.
 
 Editar siempre:
 
 ```txt
 src/theme.css
 src/utilities.css
-src/components.css
+src/components/*.css
 ```
 
 Después ejecutar:
@@ -324,12 +333,12 @@ npm run build:css
 
 ```txt
 src/  → archivos editables
-dist/ → archivos generados para usar en GeneXus
+build/ → archivos generados para usar en GeneXus
 docs/ → documentación web
 ```
 
 Archivo recomendado para GeneXus:
 
 ```txt
-dist/municipal-design-system.min.css
+build/municipal-design-system.min.css
 ```

@@ -2743,7 +2743,6 @@
     .u-inline-block { display: inline-block; }
     .u-flex         { display: flex; }
     .u-inline-flex  { display: inline-flex; }
-    .reference    {}
 
     /***************/
     /* --- Float --- */
@@ -5915,7 +5914,9 @@
     .u-invisible { visibility: hidden; }
     .u-collapse  { visibility: collapse; }
 /* #endregion */
-
+/* #region Forms */
+    .u-input-ltr { direction: ltr !important; text-align: left !important; }
+/* #endregion */
 /* #region GeneXus */
     /*************************************/
     /* ---- GeneXus generated grids ---- */

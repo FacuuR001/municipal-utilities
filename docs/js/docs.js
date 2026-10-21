@@ -37,6 +37,113 @@
     input.focus();
   }
 
+  var copyIcon = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="9" width="10" height="10" rx="2"></rect><path d="M5 15V7a2 2 0 0 1 2-2h8"></path></svg>';
+  var checkIcon = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"></path></svg>';
+
+  function setCopyIcon(button, copied) {
+    button.innerHTML = copied ? checkIcon : copyIcon;
+  }
+
+  function prepareCopyButton(button, label) {
+    var accessibleLabel = label || button.getAttribute('aria-label') || 'Copiar';
+    button.setAttribute('aria-label', accessibleLabel);
+    button.setAttribute('title', accessibleLabel);
+    setCopyIcon(button, false);
+  }
+
+  function renderCopyState(button) {
+    button.classList.add('is-copied');
+    setCopyIcon(button, true);
+    setTimeout(function () {
+      button.classList.remove('is-copied');
+      setCopyIcon(button, false);
+    }, 1300);
+  }
+
+  function copyClassFromCode(code, button) {
+    var className = (code.textContent || '').trim().replace(/^\./, '');
+    if (!className) return;
+    copyText(className).then(function () {
+      renderCopyState(button);
+    });
+  }
+
+  function initClassCopyButtons() {
+    document.querySelectorAll('.docs-class-card').forEach(function (card) {
+      if (card.querySelector('.docs-class-copy')) return;
+      var code = card.querySelector('code');
+      if (!code) return;
+
+      var actions = document.createElement('div');
+      actions.className = 'docs-class-card__top';
+
+      var button = document.createElement('button');
+      button.className = 'docs-class-copy';
+      button.type = 'button';
+      prepareCopyButton(button, 'Copiar clase ' + code.textContent.trim());
+
+      code.parentNode.insertBefore(actions, code);
+      actions.appendChild(code);
+      actions.appendChild(button);
+
+      button.addEventListener('click', function () {
+        copyClassFromCode(code, button);
+      });
+    });
+
+    document.querySelectorAll('.docs-chip-list code, .docs-inline-list code').forEach(function (code) {
+      if (code.closest('.docs-copy-chip')) return;
+
+      var wrapper = document.createElement('span');
+      wrapper.className = 'docs-copy-chip';
+
+      var button = document.createElement('button');
+      button.className = 'docs-chip-copy';
+      button.type = 'button';
+      prepareCopyButton(button, 'Copiar ' + code.textContent.trim());
+
+      code.parentNode.insertBefore(wrapper, code);
+      wrapper.appendChild(code);
+      wrapper.appendChild(button);
+
+      button.addEventListener('click', function () {
+        copyText((code.textContent || '').trim().replace(/^\./, '')).then(function () {
+          renderCopyState(button);
+        });
+      });
+    });
+  }
+
+  function syncUtilityCounts() {
+    var cards = Array.from(document.querySelectorAll('.docs-class-card'));
+    if (!cards.length) return;
+
+    document.querySelectorAll('[data-class-count]').forEach(function (counter) {
+      counter.textContent = cards.length + ' clases visibles';
+    });
+
+    var asideTotal = document.querySelector('.docs-hero__aside span:first-child strong');
+    if (asideTotal) asideTotal.textContent = cards.length;
+
+    document.querySelectorAll('[data-utility-category]').forEach(function (category) {
+      var count = category.querySelectorAll('.docs-class-card').length;
+      var groups = category.querySelectorAll('.docs-utility-group').length;
+      var kicker = category.querySelector('.docs-utility-category-header .docs-kicker');
+      if (kicker) {
+        kicker.textContent = count + ' clases · ' + groups + (groups === 1 ? ' subsección' : ' subsecciones');
+      }
+
+      var navBadge = document.querySelector('.docs-utility-nav a[href="#' + category.id + '"] span');
+      if (navBadge) navBadge.textContent = count;
+    });
+
+    document.querySelectorAll('.docs-utility-group').forEach(function (group) {
+      var count = group.querySelectorAll('.docs-class-card').length;
+      var kicker = group.querySelector('summary .docs-kicker');
+      if (kicker) kicker.textContent = count + (count === 1 ? ' clase' : ' clases');
+    });
+  }
+
   function ensureId(element, base, index) {
     if (element.id) return element.id;
     var id = 'docs-' + slugify(base) + '-' + index;
@@ -235,21 +342,20 @@
     }
   }
 
+  initClassCopyButtons();
+  syncUtilityCounts();
   initThemeToggle();
   initSideNav();
 
   document.querySelectorAll('[data-copy]').forEach(function (button) {
+    prepareCopyButton(button, button.getAttribute('aria-label') || 'Copiar código');
+
     button.addEventListener('click', function () {
       var wrap = button.closest('.docs-code-wrap');
       var code = wrap ? wrap.querySelector('code') : null;
       if (!code) return;
       copyText(code.innerText).then(function () {
-        button.classList.add('is-copied');
-        button.textContent = 'Copiado';
-        setTimeout(function () {
-          button.classList.remove('is-copied');
-          button.textContent = 'Copiar código';
-        }, 1300);
+        renderCopyState(button);
       });
     });
   });

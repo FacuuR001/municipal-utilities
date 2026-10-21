@@ -21,13 +21,19 @@ const srcFiles = [
 ];
 
 const buildDir = path.join(root, "build");
+const docsCssDir = path.join(root, "docs", "css");
 
 const outputCss = path.join(buildDir, "municipal-design-system.css");
 const outputMinCss = path.join(buildDir, "municipal-design-system.min.css");
+const outputDocsCss = path.join(docsCssDir, "municipal-design-system.css");
 
 function buildCss() {
     if (!fs.existsSync(buildDir)) {
         fs.mkdirSync(buildDir);
+    }
+
+    if (!fs.existsSync(docsCssDir)) {
+        fs.mkdirSync(docsCssDir, { recursive: true });
     }
 
     const banner = `/*
@@ -52,9 +58,10 @@ function buildCss() {
         })
         .join("\n\n");
 
-    const finalCss = banner + css;
+    const finalCss = (banner + css).replace(/\r?\n/g, "\r\n");
 
     fs.writeFileSync(outputCss, finalCss, "utf8");
+    fs.writeFileSync(outputDocsCss, finalCss, "utf8");
 
     const minified = new CleanCSS({
         level: 2,
@@ -71,6 +78,7 @@ function buildCss() {
     console.log("CSS generado correctamente:");
     console.log("build/municipal-design-system.css");
     console.log("build/municipal-design-system.min.css");
+    console.log("docs/css/municipal-design-system.css");
 }
 
 buildCss();

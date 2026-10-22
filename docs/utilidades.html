@@ -26,7 +26,7 @@
     <p>Buscá por clase, propiedad o valor, filtrá por categoría y abrí solo el bloque que necesitás consultar.</p>
   </div>
   <div class="docs-hero__aside" aria-label="Resumen de utilidades">
-    <span><strong>2645</strong> clases</span>
+    <span><strong>2675</strong> clases</span>
     <span><strong>12</strong> categorías</span>
     <span><strong>38</strong> subsecciones de borde</span>
   </div>
@@ -36,7 +36,7 @@
       <span class="docs-search-label">Buscar en utilidades</span>
       <input class="docs-search" type="search" placeholder="Ej: u-flex, margin, primary, hover" data-class-search>
     </label>
-    <span class="docs-counter" data-class-count>2645 clases visibles</span>
+    <span class="docs-counter" data-class-count>2675 clases visibles</span>
   </div>
   <div class="docs-toolbar-actions" aria-label="Filtros rápidos de utilidades">
     <button class="docs-filter-button is-active" data-utility-filter="all" type="button">Todas</button>
@@ -62,7 +62,7 @@
     <p>Entrá por categoría o usá el buscador para encontrar una clase puntual.</p>
   </div>
   <nav class="docs-utility-nav" aria-label="Categorías de utilidades">
-    <a href="#layout"><strong>Layout</strong><span>118</span></a><a href="#flexbox-grid"><strong>Flexbox &amp; Grid</strong><span>211</span></a><a href="#spacing"><strong>Spacing</strong><span>651</span></a><a href="#sizing"><strong>Sizing</strong><span>339</span></a><a href="#typography"><strong>Typography</strong><span>132</span></a><a href="#backgrounds"><strong>Backgrounds</strong><span>84</span></a><a href="#borders"><strong>Borders</strong><span>621</span></a><a href="#effects"><strong>Effects</strong><span>29</span></a><a href="#interactivity"><strong>Interactivity</strong><span>35</span></a><a href="#transitions-transform"><strong>Transitions &amp; Transform</strong><span>175</span></a><a href="#object-media"><strong>Object &amp; Media</strong><span>23</span></a><a href="#state-variants"><strong>State Variants</strong><span>227</span></a>
+    <a href="#layout"><strong>Layout</strong><span>118</span></a><a href="#flexbox-grid"><strong>Flexbox &amp; Grid</strong><span>241</span></a><a href="#spacing"><strong>Spacing</strong><span>651</span></a><a href="#sizing"><strong>Sizing</strong><span>339</span></a><a href="#typography"><strong>Typography</strong><span>132</span></a><a href="#backgrounds"><strong>Backgrounds</strong><span>84</span></a><a href="#borders"><strong>Borders</strong><span>621</span></a><a href="#effects"><strong>Effects</strong><span>29</span></a><a href="#interactivity"><strong>Interactivity</strong><span>35</span></a><a href="#transitions-transform"><strong>Transitions &amp; Transform</strong><span>175</span></a><a href="#object-media"><strong>Object &amp; Media</strong><span>23</span></a><a href="#state-variants"><strong>State Variants</strong><span>227</span></a>
   </nav>
 </section><section class="docs-utility-category" id="layout" data-utility-category>
   <div class="docs-utility-category-header">
@@ -531,7 +531,7 @@
 </section><section class="docs-utility-category" id="flexbox-grid" data-utility-category>
   <div class="docs-utility-category-header">
     <div>
-      <p class="docs-kicker">211 clases · 23 subsecciones</p>
+      <p class="docs-kicker">241 clases · 25 subsecciones</p>
       <h2>Flexbox &amp; Grid</h2>
       <p>Clases para construir layouts flexibles y grillas responsivas.</p>
     </div>
@@ -914,6 +914,131 @@
         </article><article class="docs-class-card" data-class="u-self-stretch align-self: stretch; Flexbox &amp; Grid Align Self">
           <code>.u-self-stretch</code>
           <p class="docs-declaration">align-self: stretch;</p>
+        </article></div>
+    </details><details class="docs-class-section docs-utility-group" open data-utility-group>
+      <summary>
+        <div>
+          <p class="docs-kicker">5 clases</p>
+          <h3>Justify Self</h3>
+          <p>Alineá un elemento dentro de su celda de Grid en el eje inline, horizontal en escritura habitual. Aplicá la clase al hijo.</p>
+        </div>
+      </summary>
+      <p><code>auto</code> toma la alineación de <code>justify-items</code> del contenedor. <code>stretch</code> ocupa el espacio disponible si el ancho es automático. <code>justify-self</code> no tiene efecto sobre elementos flex; <code>u-self-*</code> aplica <code>align-self</code>.</p>
+      <div class="docs-class-grid"><article class="docs-class-card" data-class="u-justify-self-auto justify-self: auto; Flexbox &amp; Grid Justify Self">
+          <code>.u-justify-self-auto</code>
+          <p class="docs-declaration">justify-self: auto;</p>
+        </article><article class="docs-class-card" data-class="u-justify-self-start justify-self: start; Flexbox &amp; Grid Justify Self">
+          <code>.u-justify-self-start</code>
+          <p class="docs-declaration">justify-self: start;</p>
+        </article><article class="docs-class-card" data-class="u-justify-self-end justify-self: end; Flexbox &amp; Grid Justify Self">
+          <code>.u-justify-self-end</code>
+          <p class="docs-declaration">justify-self: end;</p>
+        </article><article class="docs-class-card" data-class="u-justify-self-center justify-self: center; Flexbox &amp; Grid Justify Self">
+          <code>.u-justify-self-center</code>
+          <p class="docs-declaration">justify-self: center;</p>
+        </article><article class="docs-class-card" data-class="u-justify-self-stretch justify-self: stretch; Flexbox &amp; Grid Justify Self">
+          <code>.u-justify-self-stretch</code>
+          <p class="docs-declaration">justify-self: stretch;</p>
+        </article></div>
+      <div class="docs-preview"><div class="u-grid u-grid-cols-1 u-gap-4">
+  <div class="u-justify-self-start u-bg-primary u-text-white u-p-2 u-rounded">Al inicio</div>
+  <div class="u-justify-self-center u-bg-primary u-text-white u-p-2 u-rounded">Centrado</div>
+  <div class="u-justify-self-end u-bg-primary u-text-white u-p-2 u-rounded">Al final</div>
+  <div class="u-justify-self-stretch u-bg-primary u-text-white u-p-2 u-rounded">Ocupa el ancho disponible</div>
+  <div class="u-justify-self-start u-md:justify-self-end u-bg-primary u-text-white u-p-2 u-rounded">Al final desde 768px</div>
+</div></div>
+      <div class="docs-code-wrap">
+        <button class="docs-copy" type="button" data-copy aria-label="Copiar código" title="Copiar código"></button>
+        <pre><code class="language-html">&lt;div class=&quot;u-grid u-grid-cols-1 u-gap-4&quot;&gt;
+  &lt;div class=&quot;u-justify-self-start u-bg-primary u-text-white u-p-2 u-rounded&quot;&gt;Al inicio&lt;/div&gt;
+  &lt;div class=&quot;u-justify-self-center u-bg-primary u-text-white u-p-2 u-rounded&quot;&gt;Centrado&lt;/div&gt;
+  &lt;div class=&quot;u-justify-self-end u-bg-primary u-text-white u-p-2 u-rounded&quot;&gt;Al final&lt;/div&gt;
+  &lt;div class=&quot;u-justify-self-stretch u-bg-primary u-text-white u-p-2 u-rounded&quot;&gt;Ocupa el ancho disponible&lt;/div&gt;
+  &lt;div class=&quot;u-justify-self-start u-md:justify-self-end u-bg-primary u-text-white u-p-2 u-rounded&quot;&gt;Al final desde 768px&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+    </details><details class="docs-class-section docs-utility-group" open data-utility-group>
+      <summary>
+        <div>
+          <p class="docs-kicker">25 clases</p>
+          <h3>Justify Self Responsive</h3>
+          <p>Variantes desde sm (640px), md (768px), lg (1024px), xl (1280px) y 2xl (1536px). Usan !important, igual que las demás utilidades responsive.</p>
+        </div>
+      </summary>
+      <div class="docs-class-grid"><article class="docs-class-card" data-class="u-sm:justify-self-auto justify-self: auto !important; Flexbox &amp; Grid Justify Self Responsive sm min-width: 640px">
+          <code>.u-sm:justify-self-auto</code>
+          <p class="docs-declaration">justify-self: auto !important;</p>
+        </article><article class="docs-class-card" data-class="u-sm:justify-self-start justify-self: start !important; Flexbox &amp; Grid Justify Self Responsive sm min-width: 640px">
+          <code>.u-sm:justify-self-start</code>
+          <p class="docs-declaration">justify-self: start !important;</p>
+        </article><article class="docs-class-card" data-class="u-sm:justify-self-end justify-self: end !important; Flexbox &amp; Grid Justify Self Responsive sm min-width: 640px">
+          <code>.u-sm:justify-self-end</code>
+          <p class="docs-declaration">justify-self: end !important;</p>
+        </article><article class="docs-class-card" data-class="u-sm:justify-self-center justify-self: center !important; Flexbox &amp; Grid Justify Self Responsive sm min-width: 640px">
+          <code>.u-sm:justify-self-center</code>
+          <p class="docs-declaration">justify-self: center !important;</p>
+        </article><article class="docs-class-card" data-class="u-sm:justify-self-stretch justify-self: stretch !important; Flexbox &amp; Grid Justify Self Responsive sm min-width: 640px">
+          <code>.u-sm:justify-self-stretch</code>
+          <p class="docs-declaration">justify-self: stretch !important;</p>
+        </article><article class="docs-class-card" data-class="u-md:justify-self-auto justify-self: auto !important; Flexbox &amp; Grid Justify Self Responsive md min-width: 768px">
+          <code>.u-md:justify-self-auto</code>
+          <p class="docs-declaration">justify-self: auto !important;</p>
+        </article><article class="docs-class-card" data-class="u-md:justify-self-start justify-self: start !important; Flexbox &amp; Grid Justify Self Responsive md min-width: 768px">
+          <code>.u-md:justify-self-start</code>
+          <p class="docs-declaration">justify-self: start !important;</p>
+        </article><article class="docs-class-card" data-class="u-md:justify-self-end justify-self: end !important; Flexbox &amp; Grid Justify Self Responsive md min-width: 768px">
+          <code>.u-md:justify-self-end</code>
+          <p class="docs-declaration">justify-self: end !important;</p>
+        </article><article class="docs-class-card" data-class="u-md:justify-self-center justify-self: center !important; Flexbox &amp; Grid Justify Self Responsive md min-width: 768px">
+          <code>.u-md:justify-self-center</code>
+          <p class="docs-declaration">justify-self: center !important;</p>
+        </article><article class="docs-class-card" data-class="u-md:justify-self-stretch justify-self: stretch !important; Flexbox &amp; Grid Justify Self Responsive md min-width: 768px">
+          <code>.u-md:justify-self-stretch</code>
+          <p class="docs-declaration">justify-self: stretch !important;</p>
+        </article><article class="docs-class-card" data-class="u-lg:justify-self-auto justify-self: auto !important; Flexbox &amp; Grid Justify Self Responsive lg min-width: 1024px">
+          <code>.u-lg:justify-self-auto</code>
+          <p class="docs-declaration">justify-self: auto !important;</p>
+        </article><article class="docs-class-card" data-class="u-lg:justify-self-start justify-self: start !important; Flexbox &amp; Grid Justify Self Responsive lg min-width: 1024px">
+          <code>.u-lg:justify-self-start</code>
+          <p class="docs-declaration">justify-self: start !important;</p>
+        </article><article class="docs-class-card" data-class="u-lg:justify-self-end justify-self: end !important; Flexbox &amp; Grid Justify Self Responsive lg min-width: 1024px">
+          <code>.u-lg:justify-self-end</code>
+          <p class="docs-declaration">justify-self: end !important;</p>
+        </article><article class="docs-class-card" data-class="u-lg:justify-self-center justify-self: center !important; Flexbox &amp; Grid Justify Self Responsive lg min-width: 1024px">
+          <code>.u-lg:justify-self-center</code>
+          <p class="docs-declaration">justify-self: center !important;</p>
+        </article><article class="docs-class-card" data-class="u-lg:justify-self-stretch justify-self: stretch !important; Flexbox &amp; Grid Justify Self Responsive lg min-width: 1024px">
+          <code>.u-lg:justify-self-stretch</code>
+          <p class="docs-declaration">justify-self: stretch !important;</p>
+        </article><article class="docs-class-card" data-class="u-xl:justify-self-auto justify-self: auto !important; Flexbox &amp; Grid Justify Self Responsive xl min-width: 1280px">
+          <code>.u-xl:justify-self-auto</code>
+          <p class="docs-declaration">justify-self: auto !important;</p>
+        </article><article class="docs-class-card" data-class="u-xl:justify-self-start justify-self: start !important; Flexbox &amp; Grid Justify Self Responsive xl min-width: 1280px">
+          <code>.u-xl:justify-self-start</code>
+          <p class="docs-declaration">justify-self: start !important;</p>
+        </article><article class="docs-class-card" data-class="u-xl:justify-self-end justify-self: end !important; Flexbox &amp; Grid Justify Self Responsive xl min-width: 1280px">
+          <code>.u-xl:justify-self-end</code>
+          <p class="docs-declaration">justify-self: end !important;</p>
+        </article><article class="docs-class-card" data-class="u-xl:justify-self-center justify-self: center !important; Flexbox &amp; Grid Justify Self Responsive xl min-width: 1280px">
+          <code>.u-xl:justify-self-center</code>
+          <p class="docs-declaration">justify-self: center !important;</p>
+        </article><article class="docs-class-card" data-class="u-xl:justify-self-stretch justify-self: stretch !important; Flexbox &amp; Grid Justify Self Responsive xl min-width: 1280px">
+          <code>.u-xl:justify-self-stretch</code>
+          <p class="docs-declaration">justify-self: stretch !important;</p>
+        </article><article class="docs-class-card" data-class="u-2xl:justify-self-auto justify-self: auto !important; Flexbox &amp; Grid Justify Self Responsive 2xl min-width: 1536px">
+          <code>.u-2xl:justify-self-auto</code>
+          <p class="docs-declaration">justify-self: auto !important;</p>
+        </article><article class="docs-class-card" data-class="u-2xl:justify-self-start justify-self: start !important; Flexbox &amp; Grid Justify Self Responsive 2xl min-width: 1536px">
+          <code>.u-2xl:justify-self-start</code>
+          <p class="docs-declaration">justify-self: start !important;</p>
+        </article><article class="docs-class-card" data-class="u-2xl:justify-self-end justify-self: end !important; Flexbox &amp; Grid Justify Self Responsive 2xl min-width: 1536px">
+          <code>.u-2xl:justify-self-end</code>
+          <p class="docs-declaration">justify-self: end !important;</p>
+        </article><article class="docs-class-card" data-class="u-2xl:justify-self-center justify-self: center !important; Flexbox &amp; Grid Justify Self Responsive 2xl min-width: 1536px">
+          <code>.u-2xl:justify-self-center</code>
+          <p class="docs-declaration">justify-self: center !important;</p>
+        </article><article class="docs-class-card" data-class="u-2xl:justify-self-stretch justify-self: stretch !important; Flexbox &amp; Grid Justify Self Responsive 2xl min-width: 1536px">
+          <code>.u-2xl:justify-self-stretch</code>
+          <p class="docs-declaration">justify-self: stretch !important;</p>
         </article></div>
     </details><details class="docs-class-section docs-utility-group" open data-utility-group>
       <summary>
@@ -4572,7 +4697,7 @@
 </section><section class="docs-utility-category" id="typography" data-utility-category>
   <div class="docs-utility-category-header">
     <div>
-      <p class="docs-kicker">131 clases · 20 subsecciones</p>
+      <p class="docs-kicker">132 clases · 19 subsecciones</p>
       <h2>Typography</h2>
       <p>Tamaño, peso, color, alineación, transformación y comportamiento de texto.</p>
     </div>

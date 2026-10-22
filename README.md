@@ -185,6 +185,34 @@ Grid responsive:
 u-grid u-grid-cols-1 u-md:grid-cols-2 u-lg:grid-cols-3 u-gap-4
 ```
 
+### Alineación individual con `justify-self`
+
+Aplicá estas clases al elemento hijo de una grilla para alinearlo dentro de su celda en el eje inline (horizontal en escritura habitual):
+
+| Clase | Declaración CSS |
+| --- | --- |
+| `u-justify-self-auto` | `justify-self: auto` |
+| `u-justify-self-start` | `justify-self: start` |
+| `u-justify-self-end` | `justify-self: end` |
+| `u-justify-self-center` | `justify-self: center` |
+| `u-justify-self-stretch` | `justify-self: stretch` |
+
+`auto` toma la alineación definida por `justify-items` en el contenedor. `stretch` ocupa el espacio disponible cuando el ancho del elemento es automático. Estas clases no tienen efecto sobre elementos flex; las clases `u-self-*` existentes aplican `align-self`.
+
+Las cinco clases tienen variantes `u-sm:`, `u-md:`, `u-lg:`, `u-xl:` y `u-2xl:`. Las variantes responsive usan `!important`, igual que las demás utilidades responsive del proyecto.
+
+```html
+<div class="u-grid u-grid-cols-1 u-gap-4">
+  <div class="u-justify-self-start">Al inicio</div>
+  <div class="u-justify-self-center">Centrado</div>
+  <div class="u-justify-self-end">Al final</div>
+  <div class="u-justify-self-stretch">Ocupa el ancho disponible</div>
+  <div class="u-justify-self-start u-md:justify-self-end">
+    Al inicio en mobile y al final desde 768px
+  </div>
+</div>
+```
+
 ## Responsive
 
 Breakpoints:

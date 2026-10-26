@@ -3955,6 +3955,25 @@
     .u-sm\:grid { display: grid !important; }
     .u-sm\:hidden { display: none !important; }
 
+    /* Overflow */
+    .u-sm\:overflow-auto { overflow: auto !important; }
+    .u-sm\:overflow-hidden { overflow: hidden !important; }
+    .u-sm\:overflow-visible { overflow: visible !important; }
+    .u-sm\:overflow-scroll { overflow: scroll !important; }
+    .u-sm\:overflow-clip { overflow: clip !important; }
+
+    .u-sm\:overflow-x-auto { overflow-x: auto !important; }
+    .u-sm\:overflow-x-hidden { overflow-x: hidden !important; }
+    .u-sm\:overflow-x-visible { overflow-x: visible !important; }
+    .u-sm\:overflow-x-scroll { overflow-x: scroll !important; }
+    .u-sm\:overflow-x-clip { overflow-x: clip !important; }
+
+    .u-sm\:overflow-y-auto { overflow-y: auto !important; }
+    .u-sm\:overflow-y-hidden { overflow-y: hidden !important; }
+    .u-sm\:overflow-y-visible { overflow-y: visible !important; }
+    .u-sm\:overflow-y-scroll { overflow-y: scroll !important; }
+    .u-sm\:overflow-y-clip { overflow-y: clip !important; }
+
     /* Flex */
     .u-sm\:flex-row { flex-direction: row !important; }
     .u-sm\:flex-col { flex-direction: column !important; }
@@ -4024,6 +4043,25 @@
     .u-md\:inline-flex { display: inline-flex !important; }
     .u-md\:grid { display: grid !important; }
     .u-md\:hidden { display: none !important; }
+
+    /* Overflow */
+    .u-md\:overflow-auto { overflow: auto !important; }
+    .u-md\:overflow-hidden { overflow: hidden !important; }
+    .u-md\:overflow-visible { overflow: visible !important; }
+    .u-md\:overflow-scroll { overflow: scroll !important; }
+    .u-md\:overflow-clip { overflow: clip !important; }
+
+    .u-md\:overflow-x-auto { overflow-x: auto !important; }
+    .u-md\:overflow-x-hidden { overflow-x: hidden !important; }
+    .u-md\:overflow-x-visible { overflow-x: visible !important; }
+    .u-md\:overflow-x-scroll { overflow-x: scroll !important; }
+    .u-md\:overflow-x-clip { overflow-x: clip !important; }
+
+    .u-md\:overflow-y-auto { overflow-y: auto !important; }
+    .u-md\:overflow-y-hidden { overflow-y: hidden !important; }
+    .u-md\:overflow-y-visible { overflow-y: visible !important; }
+    .u-md\:overflow-y-scroll { overflow-y: scroll !important; }
+    .u-md\:overflow-y-clip { overflow-y: clip !important; }
 
     /* Flex */
     .u-md\:flex-row { flex-direction: row !important; }
@@ -4098,6 +4136,25 @@
     .u-lg\:inline-flex { display: inline-flex !important; }
     .u-lg\:grid { display: grid !important; }
     .u-lg\:hidden { display: none !important; }
+
+    /* Overflow */
+    .u-lg\:overflow-auto { overflow: auto !important; }
+    .u-lg\:overflow-hidden { overflow: hidden !important; }
+    .u-lg\:overflow-visible { overflow: visible !important; }
+    .u-lg\:overflow-scroll { overflow: scroll !important; }
+    .u-lg\:overflow-clip { overflow: clip !important; }
+
+    .u-lg\:overflow-x-auto { overflow-x: auto !important; }
+    .u-lg\:overflow-x-hidden { overflow-x: hidden !important; }
+    .u-lg\:overflow-x-visible { overflow-x: visible !important; }
+    .u-lg\:overflow-x-scroll { overflow-x: scroll !important; }
+    .u-lg\:overflow-x-clip { overflow-x: clip !important; }
+
+    .u-lg\:overflow-y-auto { overflow-y: auto !important; }
+    .u-lg\:overflow-y-hidden { overflow-y: hidden !important; }
+    .u-lg\:overflow-y-visible { overflow-y: visible !important; }
+    .u-lg\:overflow-y-scroll { overflow-y: scroll !important; }
+    .u-lg\:overflow-y-clip { overflow-y: clip !important; }
 
     /* Flex */
     .u-lg\:flex-row { flex-direction: row !important; }
@@ -4175,6 +4232,25 @@
     .u-xl\:grid { display: grid !important; }
     .u-xl\:hidden { display: none !important; }
 
+    /* Overflow */
+    .u-xl\:overflow-auto { overflow: auto !important; }
+    .u-xl\:overflow-hidden { overflow: hidden !important; }
+    .u-xl\:overflow-visible { overflow: visible !important; }
+    .u-xl\:overflow-scroll { overflow: scroll !important; }
+    .u-xl\:overflow-clip { overflow: clip !important; }
+
+    .u-xl\:overflow-x-auto { overflow-x: auto !important; }
+    .u-xl\:overflow-x-hidden { overflow-x: hidden !important; }
+    .u-xl\:overflow-x-visible { overflow-x: visible !important; }
+    .u-xl\:overflow-x-scroll { overflow-x: scroll !important; }
+    .u-xl\:overflow-x-clip { overflow-x: clip !important; }
+
+    .u-xl\:overflow-y-auto { overflow-y: auto !important; }
+    .u-xl\:overflow-y-hidden { overflow-y: hidden !important; }
+    .u-xl\:overflow-y-visible { overflow-y: visible !important; }
+    .u-xl\:overflow-y-scroll { overflow-y: scroll !important; }
+    .u-xl\:overflow-y-clip { overflow-y: clip !important; }
+
     /* Flex */
     .u-xl\:flex-row { flex-direction: row !important; }
     .u-xl\:flex-col { flex-direction: column !important; }
@@ -4250,6 +4326,25 @@
     .u-2xl\:inline-flex { display: inline-flex !important; }
     .u-2xl\:grid { display: grid !important; }
     .u-2xl\:hidden { display: none !important; }
+
+    /* Overflow */
+    .u-2xl\:overflow-auto { overflow: auto !important; }
+    .u-2xl\:overflow-hidden { overflow: hidden !important; }
+    .u-2xl\:overflow-visible { overflow: visible !important; }
+    .u-2xl\:overflow-scroll { overflow: scroll !important; }
+    .u-2xl\:overflow-clip { overflow: clip !important; }
+
+    .u-2xl\:overflow-x-auto { overflow-x: auto !important; }
+    .u-2xl\:overflow-x-hidden { overflow-x: hidden !important; }
+    .u-2xl\:overflow-x-visible { overflow-x: visible !important; }
+    .u-2xl\:overflow-x-scroll { overflow-x: scroll !important; }
+    .u-2xl\:overflow-x-clip { overflow-x: clip !important; }
+
+    .u-2xl\:overflow-y-auto { overflow-y: auto !important; }
+    .u-2xl\:overflow-y-hidden { overflow-y: hidden !important; }
+    .u-2xl\:overflow-y-visible { overflow-y: visible !important; }
+    .u-2xl\:overflow-y-scroll { overflow-y: scroll !important; }
+    .u-2xl\:overflow-y-clip { overflow-y: clip !important; }
 
     /* Flex */
     .u-2xl\:flex-row { flex-direction: row !important; }

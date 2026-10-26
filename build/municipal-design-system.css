@@ -2192,6 +2192,26 @@
     flex-wrap: wrap;
 }
 
+.uic-table th.uic-table__actions-cell,
+.uic-table td.uic-table__actions-cell {
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.uic-table__actions-cell > .uic-table__actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+}
+
+.uic-table__actions-cell > .uic-table__actions > .uic-btn {
+    flex: 0 0 auto;
+}
+
 .uic-table--align-center th,
 .uic-table--align-center td {
     text-align: center;

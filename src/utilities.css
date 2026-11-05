@@ -4121,6 +4121,7 @@
     .u-md\:text-left { text-align: left !important; }
     .u-md\:text-center { text-align: center !important; }
     .u-md\:text-right { text-align: right !important; }
+    .u-md\:text-4xl { font-size: 2.25rem !important; line-height: 2.5rem !important; }
 }
 
 /* ========================= */
@@ -4205,17 +4206,28 @@
 
     .u-lg\:m-0 { margin: 0 !important; }
     .u-lg\:mt-4 { margin-top: 1rem !important; }
+    .u-lg\:mt-20 { margin-top: 5rem !important; }
     .u-lg\:mb-4 { margin-bottom: 1rem !important; }
+    .u-lg\:mb-16 { margin-bottom: 4rem !important; }
 
     /* Sizing */
     .u-lg\:w-full { width: 100% !important; }
     .u-lg\:w-auto { width: auto !important; }
+    .u-lg\:w-24 { width: 6rem !important; }
+    .u-lg\:w-36 { width: 9rem !important; }
+    .u-lg\:h-24 { height: 6rem !important; }
+    .u-lg\:h-36 { height: 9rem !important; }
+    .u-lg\:min-h-96 { min-height: 24rem !important; }
     .u-lg\:max-w-full { max-width: 100% !important; }
 
     /* Text */
     .u-lg\:text-left { text-align: left !important; }
     .u-lg\:text-center { text-align: center !important; }
     .u-lg\:text-right { text-align: right !important; }
+    .u-lg\:text-xl { font-size: 1.25rem !important; line-height: 1.75rem !important; }
+    .u-lg\:text-2xl { font-size: 1.5rem !important; line-height: 2rem !important; }
+    .u-lg\:text-4xl { font-size: 2.25rem !important; line-height: 2.5rem !important; }
+    .u-lg\:text-6xl { font-size: 3.75rem !important; line-height: 1 !important; }
 }
 
 /* ========================= */

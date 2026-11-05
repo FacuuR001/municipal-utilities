@@ -4407,6 +4407,8 @@
     .u-2xl\:w-full { width: 100% !important; }
     .u-2xl\:w-auto { width: auto !important; }
     .u-2xl\:max-w-full { max-width: 100% !important; }
+    .u-2xl\:max-w-88 { max-width: 22rem !important; }
+    .u-2xl\:min-h-88 { min-height: 22rem !important; }
 
     /* Text */
     .u-2xl\:text-left { text-align: left !important; }

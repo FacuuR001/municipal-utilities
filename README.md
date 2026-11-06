@@ -185,6 +185,12 @@ Grid responsive:
 u-grid u-grid-cols-1 u-md:grid-cols-2 u-lg:grid-cols-3 u-gap-4
 ```
 
+### Columnas de tarjetas generadas por GeneXus
+
+Agregá `u-gx-grid-cards-equal` a la propiedad `Class` del contenedor cuya fila `.row` sea hija directa. La utilidad aplica `display: flex !important`, `width: 100% !important` y `min-width: 0` a las columnas `col-*` de esa fila y a los hijos directos de esas columnas.
+
+Reconoce `col-*` tanto al inicio de la lista de clases como después de otras clases. También conserva las reglas existentes para elementos con `data-gxrow`.
+
 ### Alineación individual con `justify-self`
 
 Aplicá estas clases al elemento hijo de una grilla para alinearlo dentro de su celda en el eje inline (horizontal en escritura habitual):

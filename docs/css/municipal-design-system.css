@@ -3608,6 +3608,7 @@
     .u-rounded-none { border-radius: 0 !important; }
     .u-rounded      { border-radius: 5px !important; }
     .u-rounded-xs   { border-radius: 0.125rem !important; }
+    .u-rounded-3px  { border-radius: 3px !important; }
     .u-rounded-sm   { border-radius: 0.25rem !important; }
     .u-rounded-md   { border-radius: 0.375rem !important; }
     .u-rounded-lg   { border-radius: 0.5rem !important; }
@@ -4126,6 +4127,12 @@
     .u-w-72 { width: 18rem; }
     .u-w-80 { width: 20rem; }
     .u-w-96 { width: 24rem; }
+
+    /* Exact pixel widths */
+    .u-w-93  { width: 93px; }
+    .u-w-136 { width: 136px; }
+    .u-w-150 { width: 150px; }
+    .u-w-300 { width: 300px; }
 
     .u-w-3xs { width: 16rem; }
     .u-w-2xs { width: 18rem; }
@@ -5440,6 +5447,7 @@
     /* ---- WORD WRAP - BREAK ---- */
     /*******************************/
     .u-break-normal { overflow-wrap: normal; word-break: normal; }
+    .u-break-anywhere { overflow-wrap: anywhere; }
     .u-break-words,
     .u-word-wrap    { overflow-wrap: break-word; word-wrap: break-word; }
     .u-wrap-anywhere { overflow-wrap: anywhere; word-wrap: break-word; }
@@ -5949,6 +5957,15 @@
     /*************************************/
     /* ---- GeneXus generated grids ---- */
     /*************************************/
+    .u-gx-grid-cards-equal > .row > [class^="col-"],
+    .u-gx-grid-cards-equal > .row > [class*=" col-"],
+    .u-gx-grid-cards-equal > .row > [class^="col-"] > *,
+    .u-gx-grid-cards-equal > .row > [class*=" col-"] > * {
+        display: flex !important;
+        width: 100% !important;
+        min-width: 0;
+    }
+
     .u-gx-grid-cards-equal .row > [data-gxrow],
     .u-gx-grid-items-stretch .row > [data-gxrow] {
         display: flex !important;
@@ -6418,6 +6435,7 @@
 }
 
 .u-focus\:border-primary:focus { border-color: var(--color-primary); }
+.u-focus\:border-blue-500:focus { border-color: #007bff; }
 .u-focus\:border-focus:focus   { border-color: var(--color-focus); }
 .u-focus\:border-danger:focus  { border-color: var(--color-danger); }
 .u-focus\:border-success:focus { border-color: var(--color-success); }
@@ -6429,6 +6447,10 @@
 .u-focus\:text-primary:focus { color: var(--color-primary); }
 .u-focus\:text-danger:focus  { color: var(--color-danger); }
 .u-focus\:text-success:focus { color: var(--color-success); }
+
+.u-focus\:glow-blue:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
 
 .u-focus\:shadow-sm:focus {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
